@@ -1,0 +1,175 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3; 
+    &.open{
+        height: 100%;
+        min-height: 100%;
+    }
+    .logo {
+        height: 47px;
+        display: block;
+        float: left;
+        margin-top: calc(45/1920*100%);
+        margin-left: calc(40/1920*100%);
+        position: relative;
+        z-index: 5;
+        .ori{
+            width: auto;
+            display: block;
+        }
+        .cover{
+            width: auto;
+            display: none;
+        }
+    }
+    .menu-btn { display: none;}
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 20px;
+        margin-top: calc(45/1920*100%);
+        margin-right: calc(40/1920*100%);
+        position: relative;
+        z-index: 5;
+        .navicon {
+            width: 26px;
+            display: block;
+            height: 1px;
+            position: relative;
+            transition: background .2s ease-out;
+            &:before, &:after {
+                content: '';
+                background: #fff;
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+            }
+            &:before { top: 4px;}
+            &:after { top: -4px;}
+        }
+    }
+    .social{
+        float: right;
+        margin-top: calc(45/1920*100%);
+        margin-right: calc(40/1920*100%);
+        position: relative;
+        z-index: 5;
+        li {
+            float: left;
+            a{
+                padding: 10px;
+            }
+        }
+    }
+    .cover_menu{
+        width: 100%;
+        min-height: 100%;
+        background: url(../img/menu_bg.png) center center no-repeat #303439;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        outline: 1px solid red;
+        transition: all .3s linear;
+        display: none;
+        .menu {
+            width: 80%;
+            height: 460px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            overflow: hidden;
+            .box{
+                width: 500px;
+                float: left;
+                li {
+                    width: 100%;
+                    float: left;
+                    a {
+                        display: block;
+                        padding: 0 0 60px;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 100;
+                        letter-spacing: 3px;
+                        span{
+                            color: #fff;
+                            display: block;
+                            font-size: 32px;
+                            font-weight: 400;
+                            text-transform:uppercase;
+                            font-family: 'Playfair Display', serif;
+                        }
+                        &:hover {
+                            opacity: .4;
+                        }
+                    }
+                }
+            }
+        }
+        .copyright{
+            width: 80%;
+            position: absolute;
+            right: 10%;
+            bottom: 50px;
+            &::before{
+                content: "";
+                width: calc(100% - 700px);
+                height: 1px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background-color: #fff;
+            }
+            p{
+                float: right;
+                font-size: 14px;
+                font-weight: 300;
+                color: #fff;
+                letter-spacing: 1px;
+                position: relative;
+            }
+        }
+
+    }
+
+    .menu-btn:checked ~ .cover_menu {
+        display: block;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    .menu-btn:checked ~ .logo {
+        .ori{
+            display: none;
+        }
+        .cover{
+            display: block;
+        }
+    }
+    
+}
+
+
+
+  
+  
