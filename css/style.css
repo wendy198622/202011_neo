@@ -688,6 +688,7 @@ footer .goTop:hover {
 
 section .theme {
   min-height: 500px;
+  position: relative;
 }
 
 section .theme .container {
