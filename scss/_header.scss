@@ -16,6 +16,10 @@
         margin-left: calc(40/1920*100%);
         position: relative;
         z-index: 5;
+        @media (max-width:800px){
+            margin-top: calc(45/800*100%);
+            margin-left: calc(40/800*100%);
+        }
         .ori{
             width: auto;
             display: block;
@@ -35,6 +39,10 @@
         margin-right: calc(40/1920*100%);
         position: relative;
         z-index: 5;
+        @media (max-width:800px){
+            margin-top: calc(45/800*100%);
+            margin-right: calc(40/800*100%);
+        }
         .navicon {
             width: 26px;
             display: block;
@@ -60,10 +68,20 @@
         margin-right: calc(40/1920*100%);
         position: relative;
         z-index: 5;
+        @media (max-width:800px){
+            margin-top: calc(45/800*100%);
+            margin-right: 0;
+        }
         li {
             float: left;
             a{
                 padding: 10px;
+            }
+            @media (max-width:800px){
+                display: none;
+                &:first-child{
+                    display: block;
+                }
             }
         }
     }
@@ -76,9 +94,12 @@
         top: 0;
         left: 0;
         z-index: 0;
-        outline: 1px solid red;
         transition: all .3s linear;
         display: none;
+        @media (max-width:800px){
+            background-position: 90% 90%;
+            background-size: 120% auto;
+        }
         .menu {
             width: 80%;
             height: 460px;
@@ -89,9 +110,24 @@
             left: 0;
             margin: auto;
             overflow: hidden;
+            @media (max-width:800px){
+                height: auto;
+                position: relative;
+                top: unset;
+                right: unset;
+                bottom: unset;
+                left: unset;
+                margin-top: 20%;
+            }
             .box{
                 width: 500px;
                 float: left;
+                @media (max-width:1260px){
+                    width: 50%;
+                }
+                @media (max-width:800px){
+                    width: 100%;
+                }
                 li {
                     width: 100%;
                     float: left;
@@ -103,6 +139,10 @@
                         font-size: 18px;
                         font-weight: 100;
                         letter-spacing: 3px;
+                        @media (max-width:800px){
+                            font-size: 3vw;
+                            padding: 0 0 40px;
+                        }
                         span{
                             color: #fff;
                             display: block;
@@ -110,10 +150,26 @@
                             font-weight: 400;
                             text-transform:uppercase;
                             font-family: 'Playfair Display', serif;
+                            @media (max-width:800px){
+                                font-size: 5vw;
+                            }
                         }
                         &:hover {
                             opacity: .4;
                         }
+                    }
+                }
+            }
+        }
+        .social_mob{
+            display: none;
+            @media (max-width:800px){
+                display: block;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    a{
+                        padding: 10px;
                     }
                 }
             }
@@ -123,6 +179,15 @@
             position: absolute;
             right: 10%;
             bottom: 50px;
+            @media (max-width:800px){
+                width: 90%;
+                position: relative;
+                right: unset;
+                bottom: unset;
+                margin: 0 auto;
+                text-align: center;
+                padding-bottom: 50px;
+            }
             &::before{
                 content: "";
                 width: calc(100% - 700px);
@@ -132,6 +197,10 @@
                 top: 50%;
                 left: 0;
                 background-color: #fff;
+                @media (max-width:800px){
+                    width: 100%;
+                    top: 0;
+                }
             }
             p{
                 float: right;
@@ -140,6 +209,11 @@
                 color: #fff;
                 letter-spacing: 1px;
                 position: relative;
+                @media (max-width:800px){
+                    float: unset;
+                    font-size: 1.8vw;
+                    line-height: 10vw;    
+                }
             }
         }
 
