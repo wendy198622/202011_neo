@@ -3,26 +3,28 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>新理想官網</title>
+	<title>新理想官網-首頁</title>
 	<meta name="author" content="" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="Resource-type" content="" />
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/imgLiquid-min.js"></script>
 	<script type="text/javascript" src="js/fullpage.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
-	<script type="text/javascript" src="js/vue.js"></script>
+	<!-- <script type="text/javascript" src="js/vue.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
@@ -65,16 +67,14 @@
 	<section>
 		<div class="theme">
 			<div class="home_kv">
-				<div class="slider_kv">
-					<div class="item kv_item mob111">
-						<!-- 每一組電腦版kv＆手機版kv排版不同需各一張 -->
-						<img class="pc" src="img/home_kv1.jpg" alt="">
-						<img class="mob" src="img/home_mob_kv1.jpg" alt="">
-					</div>
-					<div class="item kv_item">
-						<img class="pc" src="img/home_kv2.jpg" alt="">
-						<img class="mob" src="img/home_mob_kv2.jpg" alt="">
-					</div>
+				<div class="item mob111">
+					<!-- 每一組電腦版kv＆手機版kv排版不同需各一張 -->
+					<img class="pc" src="img/index/home_kv1.jpg" alt="">
+					<img class="mob" src="img/index/home_mob_kv1.jpg" alt="">
+				</div>
+				<div class="scroll">
+					<p>SCROLL</p>
+					<div class="scroll_content"></div>
 				</div>
 			</div>
 			<div class="overlay_Video">
@@ -85,10 +85,10 @@
 					<i class="material-icons">clear</i>
 				</div>
 			</div>
-			<!-- <div class="test123" style="width: 800px;height: 600px;"></div> -->
-			<div class="mouse_video" id="mouse_video" style="opacity: 0;"><img src="img/videoplay.svg"></div>
+			<div class="mouse_video" id="mouse_video" style="opacity: 0;"><img src="img/index/videoplay.svg"></div>
 		</div>
 		<div class="theme">
+			<div class="blockItem white">current project</div>
 			<div class="home_currentpj">
 				<div id="slider_currentpj">
 					<div class="txtBox">
@@ -130,12 +130,12 @@
 					<div class="imgBox">
 						<div class="innerBox">
 							<div class="slider slider-img">
-								<div class="photo"><img src="img/home_currentpj01.png" alt=""></div>
-								<div class="photo"><img src="img/home_currentpj02.png" alt=""></div>
-								<div class="photo"><img src="img/home_currentpj03.png" alt=""></div>
-								<div class="photo"><img src="img/home_currentpj04.png" alt=""></div>
-								<div class="photo"><img src="img/home_currentpj05.png" alt=""></div>
-								<div class="photo"><img src="img/home_currentpj06.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj01.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj02.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj03.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj04.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj05.png" alt=""></div>
+								<div class="photo"><img src="img/index/home_currentpj06.png" alt=""></div>
 							</div>
 							<div class="pagingInfo">
 								<div class="firstNum">01</div>
@@ -151,6 +151,7 @@
 			<div class="bottomtxt">current project</div>
 		</div>
 		<div class="theme">
+			<div class="blockItem">news</div>
 			<div class="home_news">
 				<div class="txtBox">
 					<div class="number">02</div>
@@ -215,52 +216,34 @@
 					<div class="btn"><a href="#">VIEW ALL<span></span></a></div>
 
 				</div>
-				<div class="slider_event">
-					<div>
-						<a href="#">
-							<img src="img/home_event01.jpg" alt="">
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="img/home_event02.jpg" alt="">
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="img/home_event03.jpg" alt="">
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="img/home_event04.jpg" alt="">
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="img/home_event05.jpg" alt="">
-						</a>
-					</div>
-
+				<div class="eventBox">
+					<ul class="bxslider">
+						<li><img src="img/index/home_event01.jpg" alt=""></li>
+						<li><img src="img/index/home_event02.jpg" alt=""></li>
+						<li><img src="img/index/home_event03.jpg" alt=""></li>
+						<li><img src="img/index/home_event04.jpg" alt=""></li>
+						<li><img src="img/index/home_event05.jpg" alt=""></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="theme">
+			<div class="blockItem">Introduction</div>
 			<div class="home_about">
 				<div class="container clearfix">
 					<div class="topBox">
-						<div class="awards"><img src="img/awards.png" alt=""></div>
+						<div class="awards"><img src="img/index/awards.png" alt=""></div>
 						<h3>有家就有新理想-1991-年創立<br>
 							榮獲福爾摩沙建築金獅獎</h3>
 						<p>第一家房地產代銷通過 ISO9001 國際驗證<br>
 							第一家房地產代銷引進 SGS 國際認證 連續五年蟬聯全國十大代銷公司</p>
 					</div>
 					<div class="txtBox">
-						<div class="number"><img src="img/about_logo.png" alt=""></div>
+						<div class="number"><img src="img/index/about_logo.png" alt=""></div>
 						<div class="title"><span>Introduction</span>公司簡介</div>
 					</div>
 					<div class="serviceBox">
-						<img src="img/service.svg" alt="">
+						<img src="img/index/service.svg" alt="">
 					</div>
 					<div class="txtBox">
 						<h4>全方位「住」的行銷</h4>
@@ -326,7 +309,7 @@
 												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 										</div>
 									</div>
-									<div class="imgBox"><img src="img/home_case01.jpg" alt=""></div>
+									<div class="imgBox"><img src="img/index/home_case01.jpg" alt=""></div>
 								</div>
 								<div>
 									<div class="txtBox">
@@ -339,7 +322,7 @@
 												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 										</div>
 									</div>
-									<div class="imgBox"><img src="img/home_case01.jpg" alt=""></div>
+									<div class="imgBox"><img src="img/index/home_case01.jpg" alt=""></div>
 								</div>
 							</div>
 							<!-- 2019 -->
@@ -354,7 +337,7 @@
 											也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 									</div>
 								</div>
-								<div class="imgBox"><img src="img/home_case01.jpg" alt=""></div>
+								<div class="imgBox"><img src="img/index/home_case01.jpg" alt=""></div>
 							</div>
 							<!-- 2020 -->
 							<div class="caseItem">
@@ -370,7 +353,7 @@
 											園遊會所得將全數捐做公益。</p>
 									</div>
 								</div>
-								<div class="imgBox"><img src="img/home_case01.jpg" alt=""></div>
+								<div class="imgBox"><img src="img/index/home_case01.jpg" alt=""></div>
 							</div>
 							<!-- 2021 -->
 							<div class="caseItem">
@@ -386,7 +369,7 @@
 											園遊會所得將全數捐做公益。</p>
 									</div>
 								</div>
-								<div class="imgBox"><img src="img/home_case01.jpg" alt=""></div>
+								<div class="imgBox"><img src="img/index/home_case01.jpg" alt=""></div>
 							</div>
 						</div>
 						<div class="pagingInfo pagingInfo_charitymemory">
@@ -401,6 +384,7 @@
 			</div>
 		</div>
 		<div class="theme">
+			<div class="blockItem">contact us</div>
 			<div class="home_contact">
 				<div class="txtBox">
 					<div class="number">05</div>
@@ -434,7 +418,7 @@
 							<div class="item noline">
 								<input type="checkbox" id="checkbox" name="checkbox" value="checkbox" v-model="check">
 								<label for="checkbox" class="checktxt">我同意通過電話方式與我聯絡</label>
-								<button v-on:click="sendEmail()">確認送出</button>
+								<button class="send">確認送出</button>
 							</div>
 						</div>
 					</div>
@@ -442,8 +426,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="popup" class="is_acted">
-			<div class="popup_message">aaaaa</div>
+		<div class="popup popup_event">
+			<div class="popup_content popup_img">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<div class="content">
+					<img src="img/index/home_event04_large.jpg" alt="">
+				</div>
+			</div>
+			
+		</div>
+		<div class="popup popup_send">
+			<div class="popup_content popup_message">您已送出資訊，我們將與您聯絡</div>
 		</div>
 	</section>
 	<footer>
@@ -501,21 +494,31 @@
 		})
 		$('.overlay_Video').addClass('is-acted');
 	});
+	
+	$('.bxslider li').on('click', function () {
+		$('.popup_event').addClass('is_acted');
+	});
+	$('.close').on('click', function () {
+		$('.popup_event').removeClass('is_acted');
+	});
+
 
 	$('.video_close').on('click', function () {
 		$('.overlay_Video').removeClass('is-acted');
 	});
 
-	$('.slider_kv').slick({
-		infinite: true,
-		autoplay: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: false
+	$('button').on('click', function () {
+		$('.popup_send').addClass('is_acted');
+		setTimeout(() => {
+			$('.popup_send').removeClass('is_acted');			
+		},5000)
 	});
 
+	$('.close').on('click', function () {
+		$('.overlay_Video').removeClass('is-acted');
+	});
 
+	
 	$(document).ready(function () {
 		new WOW().init();
 		$(".imgLiquidFill").imgLiquid();
@@ -564,16 +567,6 @@
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true
-	});
-
-	//首頁個案輪播
-	$('.slider_event').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: '50px',
-		dots: false,
-		arrows: false
 	});
 
 	//首頁charity輪播
@@ -653,6 +646,21 @@
 			opacity: 0
 		})
 	}
+
+
+	// $(document).ready(function(){
+	// 	$('.bxslider').bxSlider();
+	// });
+
+	$('.bxslider').bxSlider({
+		minSlides: 6,
+		maxSlides: 6,
+		slideWidth: 450,
+		slideMargin: 30,
+		ticker: true,
+		tickerHover:true,
+		speed: 100000,
+	});
 </script>
 
 </html>

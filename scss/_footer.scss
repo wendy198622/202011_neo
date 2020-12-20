@@ -244,4 +244,39 @@ footer{
             top: 40px;
         }
     }
+    &.simple{
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        background: #000;
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        @media (max-width:960px){
+            height: auto;
+        }
+        .copyright{
+            width: 100%;
+            height: 50px;
+            padding-right: 50px;
+            @media (max-width:960px){
+                height: auto;
+                text-align: center;
+                padding-right: 0;
+            }
+            &::before{
+                content: "";display: none;
+                @media (max-width:960px){
+                    display: none;
+                }
+            }
+            p{
+                line-height: 50px;
+                @media (max-width:960px){
+                    line-height: 20px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
 }
