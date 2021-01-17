@@ -1,0 +1,235 @@
+@import '_setting';
+@import '_header';
+@import '_footer';
+
+// *{ outline: 1px solid red;}
+section{
+    .theme{
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 180px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            background: #161616;
+            z-index: -1;
+        }
+        .container{
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            @media (max-width:1600px){
+                width: 90%;
+            }
+        }
+        .top_topic{
+            height: 350px;
+            background: url(../img/contact/title_bg.svg) right 110% no-repeat #cbeeff;
+            background-size: auto 240px;
+            padding: 160px 50px 0;
+            margin-bottom: 120px;
+            overflow: hidden;
+            .topicBox{
+                float: left;
+                .title{
+                    font-size: 18px;
+                    color: #006284;
+                    span{ 
+                        font-size: 110px;
+                        color: #000;
+                        font-family: 'Playfair Display', serif;
+                        font-weight: 200;
+                        margin-right: 20px;
+                        display: inline-block;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .contactBox{
+            .introduction{
+                font-size: 18px;
+                line-height: 30px;
+                font-weight: 300;
+                margin-top: -40px;
+                margin-bottom: 60px;
+            }
+            .contactForm{
+                background: url(../img/contact/form_bg.jpg) center center no-repeat;
+                background-size: cover;
+                padding: 140px 200px;
+                &.container{
+                    width: 90%;
+                    max-width: 1500px;
+                    margin: 60px auto 0;
+                    padding: 50px;
+                }
+                .formBox{
+                    overflow: hidden;
+                    padding-bottom: 30px;
+                    input, button, textarea{
+                        appearance:none;   
+                        -moz-appearance:none;   
+                        -webkit-appearance:none; 
+                        -ms-appearance:none; 
+                        border: 0;
+                        padding: 10px;
+                        position: relative;
+                    }
+                    .group{
+                        width: 48%;
+                        float: left;
+                        margin-right: 4%;
+                        @media (max-width:1200px){
+                            width: 100%;
+                            float: unset;
+                            margin: 0 auto;
+                        }
+                        &:nth-child(2){
+                            margin-right: 0;
+                            @media (max-width:1200px){
+                                margin: 0 auto;
+                            }
+                        }
+                        .item{
+                            width: 100%;
+                            border-bottom: 1px solid #9c9c9c;
+                            margin-top: 20px;
+                            overflow: hidden;
+                            &:first-child{ margin-top: 0;}
+                            &.noline{ border-bottom: 0; margin-top: 30px;}
+                            label{
+                                width: 120px;
+                                float: left;
+                                height: 80px;
+                                line-height: 80px;
+                                font-size: 18px;
+                                font-weight: 300;
+                                @media (max-width:600px){
+                                    font-size: 14px;
+                                }
+                                &.checktxt{
+                                    width: calc( 100% - 200px);
+                                }
+                            }
+                            input[type="text"]{
+                                width: calc(100% - 120px);
+                                height: 80px;
+                                line-height: 80px;
+                                float: right;
+                                background-color: transparent;
+                                font-size: 18px;
+                                @media (max-width:600px){
+                                    font-size: 14px;
+                                }
+                                &:focus{
+                                    outline: 0;
+                                }
+                            }
+                            input[type="checkbox"]{
+                                width: 24px;
+                                height: 24px;
+                                float: left;
+                                border: 1px solid #000;
+                                margin-top: 30px;
+                                margin-right: 10px;
+                                &:focus{
+                                    outline: 0;
+                                }
+                            }
+                            textarea{
+                                width: 100%;
+                                background-color: transparent;
+                                border: 0;
+                                font-size: 18px;
+                                height: 96px;
+                                resize: none;
+                                @media (max-width:600px){
+                                    font-size: 14px;
+                                }
+                                &:checked, &:focus{
+                                    outline: 0;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        width: 160px;
+                        float: left;
+                        height: 50px;
+                        border: 1px solid #006284;
+                        background: transparent;
+                        color: #006284;
+                        font-size: 20px;
+                        text-align: center;
+                        margin-top: 15px;
+                        transition: all .3s;
+                        @media (max-width:600px){
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+        .popup{
+            width: 100%;
+            min-height: 100%;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s;
+            .popup_content{
+                text-align: center;
+                background-color: #fff;
+                color: #000000;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                &.popup_img{
+                    width: 600px;
+                    height: 600px;
+                    padding: 50px;
+                    @media (max-width:600px){
+                        width: 100vw;
+                        height: 100vw;
+                        padding: 10vw;
+                    }
+                    .close{
+                        width: 40px;
+                        height: 40px;
+                        position: absolute;
+                        right: 6px;
+                        top: 6px;
+                        text-align: center;
+                        i{
+                            font-size: 32px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+                &.popup_message{
+                    width: 320px;
+                    height: 60px;
+                    line-height: 60px;
+                }
+            }
+            &.is_acted{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+}

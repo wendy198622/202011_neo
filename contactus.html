@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>新理想官網-線上個案</title>
+	<title>新理想官網-聯絡我們</title>
 	<meta name="author" content="" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/project.css" />
+	<link rel="stylesheet" type="text/css" href="css/contactus.css" />
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/imgLiquid-min.js"></script>
@@ -30,17 +30,17 @@
 
 <body>
 	<header class="header">
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon black"></span></label>
-        <a href="index.html" class="logo">
-            <img class="ori" src="img/logo_black.svg" alt="">
-            <img class="cover" src="img/logo_txt.svg" alt="">
-        </a>
-        <ul class="social social_black">
-            <li><a href="javascript:;"><img class="ori" src="img/nav_search_black.svg" alt=""><img class="cover" src="img/nav_search.svg" alt=""></a></li>
-            <li><a href="#" target="_blank"><img class="ori" src="img/nav_line_black.svg" alt=""><img class="cover" src="img/nav_line.svg" alt=""></a></li>
-            <li><a href="#" target="_blank"><img class="ori" src="img/nav_facebook_black.svg" alt=""><img class="cover" src="img/nav_facebook.svg" alt=""></a></li>
-        </ul>
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon black"></span></label>
+		<a href="index.html" class="logo">
+			<img class="ori" src="img/logo_black.svg" alt="">
+			<img class="cover" src="img/logo_txt.svg" alt="">
+		</a>
+		<ul class="social social_black">
+			<li><a href="javascript:;"><img class="ori" src="img/nav_search_black.svg" alt=""><img class="cover" src="img/nav_search.svg" alt=""></a></li>
+			<li><a href="#" target="_blank"><img class="ori" src="img/nav_line_black.svg" alt=""><img class="cover" src="img/nav_line.svg" alt=""></a></li>
+			<li><a href="#" target="_blank"><img class="ori" src="img/nav_facebook_black.svg" alt=""><img class="cover" src="img/nav_facebook.svg" alt=""></a></li>
+		</ul>
 		<div class="cover_menu">
 			<ul class="menu">
 				<div class="box">
@@ -66,98 +66,54 @@
 	</header>
 	<section>
 		<div class="theme">
-            <input class="tag-btn" type="checkbox" id="tag-btn" />
 			<div class="top_topic">
-                <div class="topicBox">
-                    <div class="title"><span>online project</span>線上個案</div>
-                </div>
-                <div class="category">
-                    <div class="title">Category</div>
-                    <ul>
-                        <li class="active">全區</li>
-                        <li>雙北</li>
-                        <li>桃園</li>
-                        <li>竹苗</li>
-                        <li>台中</li>
-                        <li>Tag <label class="tag-icon" for="tag-btn">
-                            <i class="material-icons more">expand_more</i>
-                            <i class="material-icons less">expand_less</i>
-                        </label></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="tagContent">
-                <ul>
-                    <li class="active">#公園宅</li>
-                    <li>#低總價</li>
-                    <li>#站前商圈</li>
-                    <li>#三房</li>
-                    <li>#兩房</li>
-                </ul>
-            </div>
-			<div class="projectBox">
+				<div class="topicBox">
+					<div class="title"><span>CONTACT US</span>聯絡我們</div>
+				</div>
+			</div>
+			<div class="contactBox">
 				<div class="container">
-					<ul>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>
-                                <div class="titleBox">海洋都心</div>
-                                <div class="tagBox">
-                                    <span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>
+					<div class="introduction">
+                            若您有任何客服意見留言、購屋及建案相關問題詢問，歡迎您填寫以下表單與我們聯絡。* 欄位表示必填<br>
+                            如有立即回覆之需求，請來電客服中心專線：(03)339-6726（客服服務時間：週一至週五 8:30-18:00）我們將有專人為您服務謝謝！
+					</div>
+					
+                    <div class="contactForm">
+                        <div class="formBox">
+                            <div class="group">
+                                <div class="item">
+                                    <label for="name">姓名*</label>
+                                    <input type="text" v-model="name" name="name" placeholder="" required />
                                 </div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg02.jpg" alt=""></div>
-                                <div class="titleBox">綠House</div>
-                                <div class="tagBox">
-                                    <span>#公園宅</span><span>#小坪數</span>
+                                <div class="item">
+                                    <label for="phone">連絡電話*</label>
+                                    <input type="text" v-model="phone" name="phone" placeholder="" required />
                                 </div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg03.jpg" alt=""></div>
-                                <div class="titleBox">富御捷境</div>
-                                <div class="tagBox">
-                                    <span>#二房</span><span>#低總價</span><span>#捷運宅</span>
+                                <div class="item">
+                                    <label for="email">電子信箱</label>
+                                    <input type="text" v-model="email" name="email" placeholder="" />
                                 </div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>
-                                <div class="titleBox">海洋都心</div>
-                                <div class="tagBox">
-                                    <span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>
+                            </div>
+                            <div class="group">
+                                <div class="item">
+                                    <label for="message">留言*</label>
+                                    <textarea id="message" v-model="message" name="message" required></textarea>
                                 </div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg02.jpg" alt=""></div>
-                                <div class="titleBox">綠House</div>
-                                <div class="tagBox">
-                                    <span>#公園宅</span><span>#小坪數</span>
+                                <div class="item noline">
+                                    <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" v-model="check">
+                                    <label for="checkbox" class="checktxt">我同意通過電話方式與我聯絡</label>
+                                    <button class="send">確認送出</button>
                                 </div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<div class="imgBox"><img src="img/project/projectImg03.jpg" alt=""></div>
-                                <div class="titleBox">富御捷境</div>
-                                <div class="tagBox">
-                                    <span>#二房</span><span>#低總價</span><span>#捷運宅</span>
-                                </div>
-							</a>
-						</li>
-					</ul>
-					<div class="btn"><a href="#">READ MORE<span></span></a></div>
+                            </div>
+                        </div>
+
+                    </div>
 
 				</div>
 			</div>
+		</div>
+		<div class="popup popup_send">
+			<div class="popup_content popup_message">您已送出資訊，我們將與您聯絡</div>
 		</div>
 		
 	</section>
@@ -210,34 +166,11 @@
 		$("html, body").animate({ scrollTop: 0 }, 500);
 	});
 
-	$('.kv_item').on('click', function () {
-		TweenMax.to($('#mouse_video'), .0, {
-			opacity: 0
-		})
-		$('.overlay_Video').addClass('is-acted');
-	});
-	
-	$('.bxslider li').on('click', function () {
-		$('.popup_event').addClass('is_acted');
-	});
-	$('.close').on('click', function () {
-		$('.popup_event').removeClass('is_acted');
-	});
-
-
-	$('.video_close').on('click', function () {
-		$('.overlay_Video').removeClass('is-acted');
-	});
-
 	$('button').on('click', function () {
 		$('.popup_send').addClass('is_acted');
 		setTimeout(() => {
 			$('.popup_send').removeClass('is_acted');			
 		},5000)
-	});
-
-	$('.close').on('click', function () {
-		$('.overlay_Video').removeClass('is-acted');
 	});
 
 	

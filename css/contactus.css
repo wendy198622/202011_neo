@@ -901,13 +901,24 @@ footer.simple .copyright p {
   }
 }
 
-body {
-  background: #f7f9fa;
+section .theme {
+  position: relative;
+}
+
+section .theme:after {
+  content: "";
+  width: 100%;
+  height: 180px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background: #161616;
+  z-index: -1;
 }
 
 section .theme .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -917,13 +928,9 @@ section .theme .container {
   }
 }
 
-section .theme .tag-btn {
-  display: none;
-}
-
 section .theme .top_topic {
   height: 350px;
-  background: url(../img/project/title_bg.svg) right 110% no-repeat #cbeeff;
+  background: url(../img/contact/title_bg.svg) right 110% no-repeat #cbeeff;
   background-size: auto 240px;
   padding: 160px 50px 0;
   margin-bottom: 120px;
@@ -949,156 +956,238 @@ section .theme .top_topic .topicBox .title span {
   text-transform: uppercase;
 }
 
-section .theme .top_topic .category {
-  width: 600px;
+section .theme .contactBox .introduction {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-top: -40px;
+  margin-bottom: 60px;
+}
+
+section .theme .contactBox .contactForm {
+  background: url(../img/contact/form_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 140px 200px;
+}
+
+section .theme .contactBox .contactForm.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 60px auto 0;
+  padding: 50px;
+}
+
+section .theme .contactBox .contactForm .formBox {
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+section .theme .contactBox .contactForm .formBox input, section .theme .contactBox .contactForm .formBox button, section .theme .contactBox .contactForm .formBox textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  padding: 10px;
+  position: relative;
+}
+
+section .theme .contactBox .contactForm .formBox .group {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+@media (max-width: 1200px) {
+  section .theme .contactBox .contactForm .formBox .group {
+    width: 100%;
+    float: unset;
+    margin: 0 auto;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox .group:nth-child(2) {
+  margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+  section .theme .contactBox .contactForm .formBox .group:nth-child(2) {
+    margin: 0 auto;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox .group .item {
+  width: 100%;
+  border-bottom: 1px solid #9c9c9c;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+section .theme .contactBox .contactForm .formBox .group .item:first-child {
+  margin-top: 0;
+}
+
+section .theme .contactBox .contactForm .formBox .group .item.noline {
+  border-bottom: 0;
+  margin-top: 30px;
+}
+
+section .theme .contactBox .contactForm .formBox .group .item label {
+  width: 120px;
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  section .theme .contactBox .contactForm .formBox .group .item label {
+    font-size: 14px;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox .group .item label.checktxt {
+  width: calc( 100% - 200px);
+}
+
+section .theme .contactBox .contactForm .formBox .group .item input[type="text"] {
+  width: calc(100% - 120px);
+  height: 80px;
+  line-height: 80px;
   float: right;
-  margin-top: 100px;
-  text-align: right;
+  background-color: transparent;
+  font-size: 18px;
 }
 
-section .theme .top_topic .category .title {
-  display: inline-block;
-  margin-right: 50px;
+@media (max-width: 600px) {
+  section .theme .contactBox .contactForm .formBox .group .item input[type="text"] {
+    font-size: 14px;
+  }
 }
 
-section .theme .top_topic .category ul {
-  display: inline-block;
+section .theme .contactBox .contactForm .formBox .group .item input[type="text"]:focus {
+  outline: 0;
 }
 
-section .theme .top_topic .category ul li {
-  display: inline-block;
-  margin-right: 20px;
+section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  float: left;
+  border: 1px solid #000;
+  margin-top: 30px;
+  margin-right: 10px;
 }
 
-section .theme .top_topic .category ul li.active {
+section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+section .theme .contactBox .contactForm .formBox .group .item textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+  height: 96px;
+  resize: none;
+}
+
+@media (max-width: 600px) {
+  section .theme .contactBox .contactForm .formBox .group .item textarea {
+    font-size: 14px;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox .group .item textarea:checked, section .theme .contactBox .contactForm .formBox .group .item textarea:focus {
+  outline: 0;
+}
+
+section .theme .contactBox .contactForm .formBox button {
+  width: 160px;
+  float: left;
+  height: 50px;
+  border: 1px solid #006284;
+  background: transparent;
   color: #006284;
-  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 15px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-section .theme .top_topic .category ul li:hover {
+@media (max-width: 600px) {
+  section .theme .contactBox .contactForm .formBox button {
+    font-size: 16px;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox button:hover {
   cursor: pointer;
 }
 
-section .theme .top_topic .category ul li:last-child {
-  border-left: 1px solid #c9c9c9;
-  padding-left: 20px;
-}
-
-section .theme .top_topic .category ul li:last-child .tag-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-section .theme .top_topic .category ul li:last-child i {
-  display: inline-block;
-  vertical-align: middle;
-  color: #006284;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-section .theme .top_topic .category ul li:last-child i.more {
-  display: block;
-}
-
-section .theme .top_topic .category ul li:last-child i.less {
-  display: none;
-}
-
-section .theme .tagContent {
+section .popup {
   width: 100%;
-  height: 80px;
-  margin-top: -120px;
-  padding-bottom: 160px;
-  display: none;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  min-height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
-section .theme .tagContent ul {
-  background: #fff;
+section .popup .popup_content {
+  text-align: center;
+  background-color: #fff;
+  color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+section .popup .popup_content.popup_img {
+  width: 600px;
+  height: 600px;
+  padding: 50px;
+}
+
+@media (max-width: 600px) {
+  section .popup .popup_content.popup_img {
+    width: 100vw;
+    height: 100vw;
+    padding: 10vw;
+  }
+}
+
+section .popup .popup_content.popup_img .close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
   text-align: center;
 }
 
-section .theme .tagContent ul li {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 18px;
-  line-height: 80px;
+section .popup .popup_content.popup_img .close i {
+  font-size: 32px;
+  line-height: 40px;
 }
 
-section .theme .tagContent ul li:hover {
-  cursor: pointer;
+section .popup .popup_content.popup_message {
+  width: 320px;
+  height: 60px;
+  line-height: 60px;
 }
 
-section .theme .tagContent ul li.active {
-  color: #006284;
+section .popup.is_acted {
+  opacity: 1;
+  visibility: visible;
 }
-
-section .theme .projectBox ul {
-  display: table;
-  margin-bottom: 86px;
-}
-
-section .theme .projectBox ul li {
-  width: calc(100% / 3);
-  float: left;
-  background: #fff;
-  padding: 50px;
-  border: 1px solid #c9c9c9;
-  border-top: 1px solid transparent;
-  border-right: 1px solid transparent;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-section .theme .projectBox ul li:nth-child(1), section .theme .projectBox ul li:nth-child(2), section .theme .projectBox ul li:nth-child(3) {
-  border-top: 1px solid #c9c9c9;
-}
-
-section .theme .projectBox ul li:nth-child(3n) {
-  border-right: 1px solid #c9c9c9;
-}
-
-section .theme .projectBox ul li .titleBox {
-  font-size: 30px;
-  margin-top: 20px;
-  color: #006284;
-}
-
-section .theme .projectBox ul li .tagBox {
-  font-size: 18px;
-  font-weight: 200;
-}
-
-section .theme .projectBox ul li .tagBox span {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-section .theme .projectBox ul li:hover {
-  z-index: 10;
-  -webkit-box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.3);
-  opacity: .6;
-  border: 0;
-}
-
-section .theme .projectBox .btn {
-  width: 520px;
-  margin: 0 auto 86px;
-  border: 1px solid #006284;
-}
-
-.tag-btn:checked ~ .top_topic .category ul li:last-child i.more {
-  display: none;
-}
-
-.tag-btn:checked ~ .top_topic .category ul li:last-child i.less {
-  display: block;
-}
-
-.tag-btn:checked ~ .tagContent {
-  display: block;
-}
-/*# sourceMappingURL=project.css.map */
+/*# sourceMappingURL=contactus.css.map */
