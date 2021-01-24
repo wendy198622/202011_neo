@@ -17,16 +17,30 @@
         position: relative;
         z-index: 5;
         @media (max-width:800px){
+            width: 300px;
+            height: auto;
             margin-top: calc(45/800*100%);
             margin-left: calc(40/800*100%);
+        }
+        @media (max-width:600px){
+            width: 240px;
+        }
+        @media (max-width:480px){
+            width: 160px;
         }
         .ori{
             width: 212px;
             display: block;
+            @media (max-width:800px){
+                width: 100%;
+            }
         }
         .cover{
             width: 156px;
             display: none;
+            @media (max-width:800px){
+                width: calc(156/212*100%);
+            }
         }
     }
     .menu-btn { display: none;}
@@ -40,8 +54,11 @@
         position: relative;
         z-index: 5;
         @media (max-width:800px){
-            margin-top: calc(45/800*100%);
+            margin-top: calc(52/800*100%);
             margin-right: calc(40/800*100%);
+        }
+        @media (max-width:480px){
+            padding: 20px 10px;
         }
         .navicon {
             width: 26px;
@@ -49,6 +66,16 @@
             height: 1px;
             position: relative;
             transition: background .2s ease-out;
+            @media (max-width:800px){
+                width: 40px;
+                height: 3px;
+            }
+            @media (max-width:600px){
+                width: 28px;
+            }
+            @media (max-width:480px){
+                width: 24px;
+            }
             &:before, &:after {
                 content: '';
                 background: #fff;
@@ -60,6 +87,18 @@
             }
             &:before { top: 4px;}
             &:after { top: -4px;}
+            @media (max-width:800px){
+                &:before { top: 12px;}
+                &:after { top: -8px;}
+            }
+            @media (max-width:600px){
+                &:before { top: 6px;}
+                &:after { top: -8px;}
+            }
+            @media (max-width:480px){
+                &:before { top: 2px;}
+                &:after { top: -8px;}
+            }
             &.black{
                 &:before, &:after {
                     background: #000;
@@ -86,6 +125,18 @@
                     height: 20px;
                     &.ori{ display: block;}
                     &.cover{ display: none;}
+                    @media (max-width:800px){
+                        width: 40px;
+                        height: 40px;
+                    }
+                    @media (max-width:600px){
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @media (max-width:480px){
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
             }
             @media (max-width:800px){
@@ -179,8 +230,11 @@
                 text-align: center;
                 li {
                     display: inline-block;
+                    margin-right: 20px;
+                    &:last-child{ margin-right: 0;}
                     a{
                         padding: 10px;
+                        img{ width: 55px; height: 52px;}
                     }
                 }
             }

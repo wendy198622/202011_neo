@@ -243,6 +243,7 @@ footer{
         }
         @media (max-width:800px){
             top: 40px;
+            right: 40px;
         }
     }
     &.simple{
@@ -250,7 +251,7 @@ footer{
         height: 50px;
         padding: 0;
         background: #000;
-        position: fixed;
+        position: absolute;
         z-index: 10;
         bottom: 0;
         @media (max-width:960px){

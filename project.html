@@ -74,11 +74,11 @@
                 <div class="category">
                     <div class="title">Category</div>
                     <ul>
-                        <li class="active">全區</li>
-                        <li>雙北</li>
-                        <li>桃園</li>
-                        <li>竹苗</li>
-                        <li>台中</li>
+                        <li class="filter active">全區</li>
+                        <li class="filter">雙北</li>
+                        <li class="filter">桃園</li>
+                        <li class="filter">竹苗</li>
+                        <li class="filter">台中</li>
                         <li>Tag <label class="tag-icon" for="tag-btn">
                             <i class="material-icons more">expand_more</i>
                             <i class="material-icons less">expand_less</i>
@@ -100,61 +100,61 @@
 				<div class="container">
 					<ul>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp">
 								<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>
                                 <div class="titleBox">海洋都心</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>
                                 </div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp" data-wow-delay="0.3s">
 								<div class="imgBox"><img src="img/project/projectImg02.jpg" alt=""></div>
                                 <div class="titleBox">綠House</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#公園宅</span><span>#小坪數</span>
                                 </div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp" data-wow-delay="0.6s">
 								<div class="imgBox"><img src="img/project/projectImg03.jpg" alt=""></div>
                                 <div class="titleBox">富御捷境</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#二房</span><span>#低總價</span><span>#捷運宅</span>
                                 </div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp" data-wow-delay="0.9s">
 								<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>
                                 <div class="titleBox">海洋都心</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>
                                 </div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp" data-wow-delay="1.2s">
 								<div class="imgBox"><img src="img/project/projectImg02.jpg" alt=""></div>
                                 <div class="titleBox">綠House</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#公園宅</span><span>#小坪數</span>
                                 </div>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="project_single.html" class="wow fadeInUp" data-wow-delay="1.5s">
 								<div class="imgBox"><img src="img/project/projectImg03.jpg" alt=""></div>
                                 <div class="titleBox">富御捷境</div>
-                                <div class="tagBox">
+                                <div class="tagBox js_height">
                                     <span>#二房</span><span>#低總價</span><span>#捷運宅</span>
                                 </div>
 							</a>
 						</li>
 					</ul>
-					<div class="btn"><a href="#">READ MORE<span></span></a></div>
+					<div class="btn wow fadeInUp"><a href="#">READ MORE<span></span></a></div>
 
 				</div>
 			</div>
@@ -216,10 +216,13 @@
 		})
 		$('.overlay_Video').addClass('is-acted');
 	});
-	
-	$('.bxslider li').on('click', function () {
-		$('.popup_event').addClass('is_acted');
+
+	$(".filter").click(function() {
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+		
 	});
+
 	$('.close').on('click', function () {
 		$('.popup_event').removeClass('is_acted');
 	});
@@ -395,6 +398,11 @@
 		speed: 100000
 	});
 
+
+    var max = 0;
+    $('.js_height').each(function (T) {
+      T = $(this).outerHeight(), T > max && (max = T);
+    }).outerHeight(max);
 </script>
 
 </html>

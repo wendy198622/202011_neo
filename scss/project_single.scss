@@ -5,7 +5,15 @@
 // *{ outline: 1px solid red;}
 #section1{
     background-image: url(../img/project/project_kv.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
     background-size: cover;
+    @media (orientation: portrait) and (max-width:960px){
+        background-image: url(../img/project/project_kv_mob.jpg);
+        background-color:  #fff000;
+        background-position: center top;
+        // background-size: contain;
+    }
 }
 .project_social{
     width: 283px;
@@ -15,10 +23,22 @@
     right: 0;
     top: 0;
     box-sizing: border-box;
+    @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+        width: 100%;
+        top: unset;
+        bottom: 40px;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+    }
+    @media (max-width:594px){
+        bottom: 60px;
+    }
     ul{
         width: 100%;
         height: 100%;
         overflow: hidden;
+        @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+            background-color: #ffffff;
+        }
         li{
             width: 70px;
             height: 100%;
@@ -31,10 +51,25 @@
             transition: all .3s;
             &:last-child{ margin-right: 0;}
             &:hover{ cursor: pointer; opacity: 0.6;}
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                width: 25%;
+                margin-right: 0;
+                border: 0;
+            }
             a{
                 font-size: 16px;
                 line-height: 20px; 
                 padding: 15px;
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    width: 100%;
+                    display: block;
+                    border-right: 1px solid #c7c7c7;
+                    padding: 0;
+                    margin-top: 15px;                    
+                }
+            }
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                &:last-child a{ border-right: 0;}
             }
         }
     }
@@ -107,14 +142,52 @@ section{
     }
     .project_view{
         height: 100%;
+        .title{
+            display: none;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                display: block;
+                padding: 50px 0;
+            }
+            .type{
+                &.small{
+                    font-size: 40px;
+                    text-transform:uppercase;
+                    font-family: 'Playfair Display', serif;
+                }
+                &.chinese{
+                    font-size: 26px;
+                }
+            }
+        }
         iframe{
             width: 100%;
-            height: calc(100% - 49px);
+            height: 100%;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                height: calc(100% - 300px);
+            }
             
         }
     }
     .project_inside{
         height: 100%;
+        .title{
+            display: none;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                display: block;
+                padding: 50px 0;
+            }
+            .type{
+                &.small{
+                    font-size: 40px;
+                    text-transform:uppercase;
+                    font-family: 'Noto Serif TC', serif;
+                    font-weight: 700;
+                }
+                &.chinese{
+                    font-size: 26px;
+                }
+            }
+        }
         iframe{
             width: 100%;
             height: 100%;
@@ -133,6 +206,10 @@ section{
             overflow: hidden;
             position: relative;
             z-index: 2;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                width: 90%;
+                margin: 0 auto;
+            }
             .type{
                 text-transform: uppercase;
                 text-align: left;
@@ -158,7 +235,8 @@ section{
                     margin-left: calc(50/1400*100%);
                     display: inline-block;
                     float: left;
-                    @media (max-width:800px){
+                    @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                        margin-left: 0;
                         font-size: 80px;
                         line-height: 60px;
                     }
@@ -184,6 +262,9 @@ section{
         .photo{
             width: calc( 1300/1400*100%);
             margin: -47px auto 0;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                width: 100%;
+            }
             @media (max-width:600px){
                 margin: -6vh auto 0;
 
@@ -198,6 +279,9 @@ section{
                 font-weight: 600;
                 color: #000;
                 margin-top: 40px;
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    text-align: left;
+                }
             }
             p{
                 font-size: 18px;
@@ -274,6 +358,9 @@ section{
     .project_intro{
         padding: 180px 0;
         background-color: #fff000;
+        @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+            padding: 50px 0;
+        }
         .title{
             .type{
                 text-transform: uppercase;         
@@ -299,8 +386,8 @@ section{
             margin: 120px auto;
             padding: 0 50px;
             overflow: hidden;
-            @media (max-width:800px){
-                margin: 120px auto 0;
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                margin: 60px auto 0;
                 padding: 0 2%;
             }
             .logo{ 
@@ -311,8 +398,8 @@ section{
                     float: unset;  
                     margin: 0 auto;            
                 }
-                @media (max-width:800px){
-                    width: 80%;
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    width: 40%;
                 }
             }
             ul{
@@ -323,8 +410,9 @@ section{
                     float: unset;      
                     margin: 100px auto;        
                 }
-                @media (max-width:800px){
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                     width: 90%;
+                    margin: 50px auto;
                 }
                 li{
                     overflow: hidden;
@@ -335,19 +423,26 @@ section{
                         line-height: 48px;
                         display: block;
                         float: left;
+                        @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                            line-height: 30px;
+                            min-height: 30px;
+                        }
                         &:nth-child(1){ 
                             width: 80px; 
                             font-weight: 400; 
                             margin-right: 50px;
                             @media (max-width:800px){
+                                width: auto;
                                 margin-right: 20px;
                             }
                         }
                         &:nth-child(2){ 
                             width: calc(100% - 130px); 
                             font-weight: 100;
-                            @media (max-width:800px){
-                                width: calc(100% - 100px); 
+                            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                                width: 100%;
+                                text-align: left;
+                                margin-bottom: 10px;
                             }
                         }
                     }
@@ -382,6 +477,9 @@ section{
             @media (max-width:960px){
                 width: 100%;
             }
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                display: none;
+            }
             iframe{
                 width: 100%;
                 height: 100vh;
@@ -399,6 +497,9 @@ section{
             @media (max-width:960px){
                 width: 100%;
             }
+            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                padding-top: 0;
+            }
             p{
                 font-size: 18px;
                 line-height: 30px;
@@ -415,6 +516,9 @@ section{
                 position: relative;
                 z-index: 5;
                 padding-bottom: 50px;
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    padding-bottom: 0;
+                }
                 .contactForm{
                     width: 640px;
                     margin: 0 auto;
@@ -659,4 +763,10 @@ section{
 }
 #fp-nav ul li .fp-tooltip{
     color: #000;
+}
+.fp-tableCell{
+    padding-bottom: 40px;
+    @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+        padding-bottom: 90px;
+    }
 }
