@@ -1489,6 +1489,9 @@ section .project_info .info h4 {
     text-align: left;
     font-size: 20px;
     line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    margin-top: 20px;
   }
 }
 
