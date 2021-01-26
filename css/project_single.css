@@ -1559,6 +1559,12 @@ section .project_info.project_info2 .info h4 {
   overflow: hidden;
 }
 
+@media (max-width: 960px) {
+  section .project_info.project_info2 .info h4 {
+    height: 24px;
+  }
+}
+
 section .project_info.project_info2 .info p {
   height: 72px;
   overflow: hidden;

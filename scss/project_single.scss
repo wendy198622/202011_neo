@@ -383,6 +383,9 @@ section{
                 h4{
                     height: 36px;
                     overflow: hidden;
+                    @media (max-width:960px){
+                        height: 24px;
+                    }
                 }
                 p{
                     height: 72px;
