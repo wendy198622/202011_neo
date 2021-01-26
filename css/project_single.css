@@ -1738,6 +1738,12 @@ section .project_intro .introBox ul li span:nth-child(2) {
   }
 }
 
+@media (max-width: 600px) {
+  section .project_intro .introBox ul li span:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
 section .project_map {
   overflow: hidden;
 }
@@ -1809,7 +1815,7 @@ section .project_map .booking {
   }
 }
 
-section .project_map .booking p {
+section .project_map .booking .desc {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
@@ -1818,14 +1824,14 @@ section .project_map .booking p {
 }
 
 @media (max-width: 600px) {
-  section .project_map .booking p {
+  section .project_map .booking .desc {
     font-size: 14px;
     line-height: 24px;
     margin-top: 20px;
   }
 }
 
-section .project_map .booking p span {
+section .project_map .booking .desc span {
   display: block;
   color: #676767;
 }
