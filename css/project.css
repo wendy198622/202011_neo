@@ -1004,8 +1004,8 @@ footer.simple .copyright p {
 
 @media (max-width: 960px) {
   footer.simple .copyright p {
-    line-height: 20px;
-    padding: 10px 0;
+    line-height: 16px;
+    padding: 5px 0;
   }
 }
 
