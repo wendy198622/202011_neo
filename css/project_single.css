@@ -1639,7 +1639,7 @@ section .project_intro .introBox {
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_intro .introBox {
-    margin: 60px auto 0;
+    margin: 20px auto 0;
     padding: 0 2%;
   }
 }
@@ -1703,6 +1703,12 @@ section .project_intro .introBox ul li span {
   section .project_intro .introBox ul li span {
     line-height: 30px;
     min-height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_intro .introBox ul li span {
+    font-size: 14px;
   }
 }
 

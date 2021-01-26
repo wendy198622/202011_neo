@@ -448,7 +448,7 @@ section{
             padding: 0 50px;
             overflow: hidden;
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
-                margin: 60px auto 0;
+                margin: 20px auto 0;
                 padding: 0 2%;
             }
             .logo{ 
@@ -487,6 +487,9 @@ section{
                         @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                             line-height: 30px;
                             min-height: 30px;
+                        }
+                        @media (max-width:600px){
+                            font-size: 14px;
                         }
                         &:nth-child(1){ 
                             width: 80px; 
