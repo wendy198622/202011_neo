@@ -1045,6 +1045,12 @@ footer.simple .copyright p {
   }
 }
 
+@media (max-width: 600px) {
+  .project_social {
+    height: 42px;
+  }
+}
+
 .project_social ul {
   width: 100%;
   height: 100%;
@@ -1094,6 +1100,14 @@ footer.simple .copyright p {
     border-right: 1px solid #c7c7c7;
     padding: 0;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project_social ul li a {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
