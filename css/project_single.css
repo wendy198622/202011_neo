@@ -1261,7 +1261,7 @@ section .project_view .title .type.large {
 
 @media (max-width: 600px) {
   section .project_view .title .type.large {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 30px;
   }
 }
