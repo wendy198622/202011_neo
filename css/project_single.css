@@ -1740,7 +1740,7 @@ section .project_intro .introBox ul li span:nth-child(2) {
 
 @media (max-width: 600px) {
   section .project_intro .introBox ul li span:nth-child(2) {
-    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
