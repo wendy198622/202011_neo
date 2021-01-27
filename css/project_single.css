@@ -1123,6 +1123,19 @@ footer.simple .copyright p {
   }
 }
 
+.messange {
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  bottom: 50px;
+}
+
+.messange img {
+  width: 100%;
+}
+
 section {
   padding-bottom: 50px;
 }
@@ -1509,6 +1522,20 @@ section .project_info .photo {
   }
 }
 
+section .project_info .photo .list, section .project_info .photo .list_small {
+  position: relative;
+}
+
+section .project_info .photo .list span, section .project_info .photo .list_small span {
+  position: absolute;
+  display: block;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 section .project_info .info {
   width: calc( 1300/1400*100%);
   margin: 0 auto;
@@ -1625,10 +1652,11 @@ section .project_info.project_info3 .photo .slider_photo3 {
   overflow: hidden;
 }
 
+section .project_info.project_info3 .photo .slider_photo3 .slick-slide {
+  margin-right: 16px;
+}
+
 section .project_info.project_info3 .photo .slider_photo3 .list {
-  width: calc((100% - 40px) / 3);
-  height: 0;
-  padding-bottom: calc( 635 / 1308 * 100%);
   float: left;
   margin-right: 20px;
 }
