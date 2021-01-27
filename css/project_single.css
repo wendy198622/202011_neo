@@ -970,6 +970,7 @@ footer.simple {
 @media (max-width: 960px) {
   footer.simple {
     height: auto;
+    bottom: 40px;
   }
 }
 
@@ -1023,6 +1024,10 @@ footer.simple .copyright p {
   overflow: hidden;
 }
 
+#section10 {
+  background: #fff000;
+}
+
 .project_social {
   width: 280px;
   height: 70px;
@@ -1037,8 +1042,9 @@ footer.simple .copyright p {
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   .project_social {
     width: 100%;
+    height: 40px;
     top: unset;
-    bottom: 40px;
+    bottom: 0;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -1098,7 +1104,7 @@ footer.simple .copyright p {
     display: block;
     border-right: 1px solid #c7c7c7;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
@@ -1513,6 +1519,7 @@ section .project_info .info h4 {
   font-weight: 600;
   color: #000;
   margin-top: 40px;
+  text-align: left;
 }
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
@@ -1588,6 +1595,7 @@ section .project_info.project_info2 .info {
 section .project_info.project_info2 .info h4 {
   height: 36px;
   overflow: hidden;
+  text-align: left;
 }
 
 @media (max-width: 600px) {
@@ -1747,6 +1755,7 @@ section .project_intro .introBox ul li span:nth-child(1) {
   width: 80px;
   font-weight: 400;
   margin-right: 50px;
+  text-align: left;
 }
 
 @media (max-width: 800px) {
@@ -1759,12 +1768,12 @@ section .project_intro .introBox ul li span:nth-child(1) {
 section .project_intro .introBox ul li span:nth-child(2) {
   width: calc(100% - 130px);
   font-weight: 100;
+  text-align: left;
 }
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_intro .introBox ul li span:nth-child(2) {
     width: 100%;
-    text-align: left;
     margin-bottom: 10px;
   }
 }
@@ -2199,13 +2208,9 @@ section .project_map .booking .notice:hover {
   color: #000;
 }
 
-.fp-tableCell {
-  padding-bottom: 40px;
-}
-
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   .fp-tableCell {
-    padding-bottom: 90px;
+    padding-bottom: 30px;
   }
 }
 /*# sourceMappingURL=project_single.css.map */

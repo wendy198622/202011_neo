@@ -970,6 +970,7 @@ footer.simple {
 @media (max-width: 960px) {
   footer.simple {
     height: auto;
+    bottom: 40px;
   }
 }
 
