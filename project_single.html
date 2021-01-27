@@ -37,7 +37,14 @@
 	<section id="fullpage">
 		<div class="section theme" id="section1">
 			<div class="project_kv">
-				<div class="item"></div>
+				<div class="item kv_slider">
+					<div class="img">
+						<img src="img/project/project_kv.jpg" alt="">
+					</div>
+					<div class="img">
+						<img src="img/project/project_kv.jpg" alt="">
+					</div>
+				</div>
 				<div class="scroll">
 					<p>SCROLL</p>
 					<div class="scroll_content"></div>
@@ -354,6 +361,12 @@
 		},5000)
 	});
 
+	$('.kv_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true
+	});
 	//photo輪播 類型
 	$('.slider_photo1').slick({
 		slidesToShow: 1,
