@@ -37,12 +37,32 @@
 	<section id="fullpage">
 		<div class="section theme" id="section1">
 			<div class="project_kv">
-				<div class="item kv_slider">
-					<div class="img">
-						<img src="img/project/project_kv.jpg" alt="">
+				<div class="item kv_slider pc">
+					<div>
+						<!-- 電腦版圖片1 -->
+						<div class="img imgLiquidFill">
+							<img src="img/project/project_kv.jpg" alt="">
+						</div>
 					</div>
-					<div class="img">
-						<img src="img/project/project_kv.jpg" alt="">
+					<div>
+						<!-- 電腦版圖片2 -->
+						<div class="img imgLiquidFill">
+							<img src="img/project/project_kv.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="item kv_slider mob">
+					<div>
+						<!-- 手機版圖片1 -->
+						<div class="img imgLiquidFill">
+							<img src="img/project/project_kv_mob.jpg" alt="">
+						</div>
+					</div>
+					<div>
+						<!-- 手機版圖片2 -->
+						<div class="img imgLiquidFill">
+							<img src="img/project/project_kv_mob.jpg" alt="">
+						</div>
 					</div>
 				</div>
 				<div class="scroll">
@@ -365,7 +385,7 @@
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		dots: true
+		dots: false,
 	});
 	//photo輪播 類型
 	$('.slider_photo1').slick({
