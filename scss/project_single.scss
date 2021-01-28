@@ -85,7 +85,6 @@
     background: #fff000;
 }
 #section11{
-    padding-bottom: 50px;
     position: relative;
 }
 .project_social{
@@ -727,7 +726,7 @@ section{
                 @media (max-width:600px){
                     font-size: 14px;
                     line-height: 24px;
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
                 span{
                     display: block;
@@ -760,7 +759,7 @@ section{
                         overflow: hidden;
                         padding: 30px;
                         @media (max-width:800px){
-                            padding: 20px 2%;
+                            padding: 10px 2%;
                         }
                         input, button, textarea{
                             appearance:none;   
@@ -786,7 +785,7 @@ section{
                                 margin-top: 10px;
                                 overflow: hidden;
                                 &:first-child{ margin-top: 0;}
-                                &.noline{ border-bottom: 0; margin-top: 20px;}
+                                &.noline{ border-bottom: 0; margin-top: 10px;}
                                 @media (max-width:600px){
                                     margin-top: 0;
                                 }
