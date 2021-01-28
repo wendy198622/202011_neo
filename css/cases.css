@@ -984,7 +984,7 @@ footer.simple {
 
 @media (orientation: portrait) and (max-width: 960px) and (max-width: 600px), (max-width: 800px) and (max-width: 600px) {
   footer.simple {
-    bottom: 0px;
+    bottom: 30px;
   }
 }
 
