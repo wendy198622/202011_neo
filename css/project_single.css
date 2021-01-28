@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
 @font-face {
   i.material-icons {
     font-family: 'Material Icons';
@@ -960,6 +961,7 @@ footer .goTop:hover {
 footer.simple {
   width: 100%;
   height: 50px;
+  line-height: 50px;
   padding: 0;
   background: #000;
   position: absolute;
@@ -968,6 +970,12 @@ footer.simple {
 }
 
 @media (max-width: 960px) {
+  footer.simple {
+    bottom: 0;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   footer.simple {
     height: auto;
     bottom: 40px;
@@ -1010,6 +1018,34 @@ footer.simple .copyright p {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #006284;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#section1 .item {
+  position: relative;
+}
+
 #section1 .item.pc {
   display: block;
 }
@@ -1025,6 +1061,41 @@ footer.simple .copyright p {
   #section1 .item.mob {
     display: block;
   }
+}
+
+#section1 .item.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+#section1 .item .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#section1 .item .slick-dots li {
+  width: 50px;
+  height: 10px;
+}
+
+#section1 .item .slick-dots li button {
+  width: 50px;
+  height: 10px;
+  padding: 0;
+}
+
+#section1 .item .slick-dots li button:before {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #000;
+  opacity: .5;
+}
+
+#section1 .item .slick-dots li.slick-active button:before {
+  opacity: 1;
 }
 
 #section1 .img {
@@ -1121,19 +1192,6 @@ footer.simple .copyright p {
   .project_social ul li:last-child a {
     border-right: 0;
   }
-}
-
-.messange {
-  width: 68px;
-  height: 68px;
-  position: absolute;
-  z-index: 10;
-  right: 20px;
-  bottom: 50px;
-}
-
-.messange img {
-  width: 100%;
 }
 
 section {
@@ -1305,6 +1363,14 @@ section .project_view .title .type.large {
   }
 }
 
+section .project_view .title .type.small {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 300;
+  text-align: center;
+}
+
 section .project_view .title .type.chinese {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px;
@@ -1322,13 +1388,13 @@ section .project_view .title .type.chinese {
 
 section .project_view iframe {
   width: calc(1300/1400*100%);
-  height: calc(860/1080*100%);
+  height: calc(920/1080*100%);
 }
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_view iframe {
     width: 100%;
-    height: calc(900/1135*100%);
+    height: calc(1000/1135*100%);
   }
 }
 
@@ -1377,9 +1443,17 @@ section .project_inside .title .type.large {
 
 @media (max-width: 600px) {
   section .project_inside .title .type.large {
-    font-size: 13vw;
+    font-size: 12vw;
     line-height: 10vw;
   }
+}
+
+section .project_inside .title .type.small {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
 }
 
 section .project_inside .title .type.chinese {
@@ -1399,13 +1473,13 @@ section .project_inside .title .type.chinese {
 
 section .project_inside iframe {
   width: calc(1300/1400*100%);
-  height: calc(860/1080*100%);
+  height: calc(920/1080*100%);
 }
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_inside iframe {
     width: 100%;
-    height: calc(900/1135*100%);
+    height: calc(1000/1135*100%);
   }
 }
 
@@ -1550,12 +1624,26 @@ section .project_info .info h4 {
   text-align: left;
 }
 
+@media (max-width: 1460px) {
+  section .project_info .info h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_info .info h4 {
     text-align: left;
     font-size: 20px;
     line-height: 24px;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_info .info h4 {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 
@@ -1569,10 +1657,23 @@ section .project_info .info p {
   letter-spacing: 1px;
 }
 
+@media (max-width: 1460px) {
+  section .project_info .info p {
+    margin-top: 4px;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_info .info p {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_info .info p {
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 
@@ -1608,6 +1709,12 @@ section .project_info.project_info2 .info {
   bottom: 54px;
 }
 
+@media (max-width: 1460px) {
+  section .project_info.project_info2 .info {
+    right: 30px;
+  }
+}
+
 @media (max-width: 960px) {
   section .project_info.project_info2 .info {
     width: calc( 1300/1400*100%);
@@ -1624,16 +1731,32 @@ section .project_info.project_info2 .info h4 {
   text-align: left;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1460px) {
+  section .project_info.project_info2 .info h4 {
+    height: 32px;
+  }
+}
+
+@media (max-width: 800px) {
   section .project_info.project_info2 .info h4 {
     height: 24px;
+    overflow: visible;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 
 section .project_info.project_info2 .info p {
-  height: 72px;
-  overflow: hidden;
+  height: 96px;
+  overflow-y: scroll;
   margin-bottom: 0;
+  padding-right: 30px;
+}
+
+@media (max-width: 1460px) {
+  section .project_info.project_info2 .info p {
+    height: 70px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1646,10 +1769,6 @@ section .project_info.project_info2 .info p {
   section .project_info.project_info2 .info p {
     height: auto;
   }
-}
-
-section .project_info.project_info3 .photo .slider_photo3 {
-  overflow: hidden;
 }
 
 section .project_info.project_info3 .photo .slider_photo3 .slick-slide {
@@ -1841,12 +1960,6 @@ section .project_map .map {
 
 @media (max-width: 960px) {
   section .project_map .map {
-    width: 100%;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
-  section .project_map .map {
     display: none;
   }
 }
@@ -1860,7 +1973,7 @@ section .project_map .map iframe {
 
 @media (max-width: 960px) {
   section .project_map .map iframe {
-    height: 600px;
+    height: 400px;
   }
 }
 
@@ -1873,6 +1986,7 @@ section .project_map .booking {
 @media (max-width: 960px) {
   section .project_map .booking {
     width: 100%;
+    padding-top: 0;
   }
 }
 
@@ -1888,6 +2002,18 @@ section .project_map .booking .desc {
   text-align: center;
   font-weight: 100;
   margin-top: 40px;
+}
+
+@media (max-width: 960px) {
+  section .project_map .booking .desc {
+    margin-top: 20px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  section .project_map .booking .desc {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1906,13 +2032,6 @@ section .project_map .booking .desc span {
 section .project_map .booking .project_contact {
   position: relative;
   z-index: 5;
-  padding-bottom: 50px;
-}
-
-@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
-  section .project_map .booking .project_contact {
-    padding-bottom: 0;
-  }
 }
 
 section .project_map .booking .project_contact .contactForm {
@@ -1984,7 +2103,7 @@ section .project_map .booking .project_contact .contactForm .formBox .group:nth-
 section .project_map .booking .project_contact .contactForm .formBox .group .item {
   width: 100%;
   border-bottom: 1px solid #9c9c9c;
-  margin-top: 20px;
+  margin-top: 10px;
   overflow: hidden;
 }
 
@@ -1994,15 +2113,21 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
 
 section .project_map .booking .project_contact .contactForm .formBox .group .item.noline {
   border-bottom: 0;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  section .project_map .booking .project_contact .contactForm .formBox .group .item {
+    margin-top: 0;
+  }
 }
 
 section .project_map .booking .project_contact .contactForm .formBox .group .item label {
   width: 120px;
   float: left;
-  height: 60px;
-  line-height: 60px;
-  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
   font-weight: 300;
   text-align: left;
 }
@@ -2039,8 +2164,8 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
 
 section .project_map .booking .project_contact .contactForm .formBox .group .item input[type="text"] {
   width: calc(100% - 120px);
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   float: right;
   background-color: transparent;
   font-size: 20px;
@@ -2086,6 +2211,12 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
   font-size: 18px;
   height: 96px;
   resize: none;
+}
+
+@media (max-width: 800px) {
+  section .project_map .booking .project_contact .contactForm .formBox .group .item textarea {
+    height: 60px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2138,6 +2269,12 @@ section .project_map .booking .notice {
   display: inline-block;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media (max-width: 600px) {
+  section .project_map .booking .notice {
+    margin-bottom: 50px;
+  }
 }
 
 section .project_map .booking .notice img {
@@ -2208,18 +2345,18 @@ section .project_map .booking .notice:hover {
   visibility: visible;
 }
 
-.project_info1 .slick-dots li {
+.project_info1 .slick-dots li, .project_info2 .slick-dots li, .project_info3 .slick-dots li {
   width: 50px;
   height: 10px;
 }
 
-.project_info1 .slick-dots li button {
+.project_info1 .slick-dots li button, .project_info2 .slick-dots li button, .project_info3 .slick-dots li button {
   width: 50px;
   height: 10px;
   padding: 0;
 }
 
-.project_info1 .slick-dots li button:before {
+.project_info1 .slick-dots li button:before, .project_info2 .slick-dots li button:before, .project_info3 .slick-dots li button:before {
   content: '';
   width: 50px;
   height: 3px;
@@ -2227,18 +2364,12 @@ section .project_map .booking .notice:hover {
   opacity: .5;
 }
 
-.project_info1 .slick-dots li.slick-active button:before {
+.project_info1 .slick-dots li.slick-active button:before, .project_info2 .slick-dots li.slick-active button:before, .project_info3 .slick-dots li.slick-active button:before {
   opacity: 1;
 }
 
 #fp-nav ul li .fp-tooltip {
   color: #000;
-}
-
-@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
-  .fp-tableCell {
-    padding-bottom: 30px;
-  }
 }
 
 .slick-slide > div > div {

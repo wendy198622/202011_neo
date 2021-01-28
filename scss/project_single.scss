@@ -1,15 +1,68 @@
 @import '_setting';
 @import '_header';
 @import '_footer';
+body{
+    overflow-x: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.3);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #006284;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 // *{ outline: 1px solid red;}
 #section1{
     .item{
+        position: relative;
         &.pc{ display: block;}
         &.mob{ display: none;}
         @media (orientation: portrait) and (max-width:960px){
             &.pc{ display: none;}
             &.mob{ display: block;}
+        }
+        &.slick-dotted.slick-slider{ margin-bottom: 0;}
+        .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            li{
+                width: 50px;
+                height: 10px;
+                button{
+                    width: 50px;
+                    height: 10px;
+                    padding: 0;
+                    &:before{
+                        content: '';
+                        width: 50px;
+                        height: 3px;
+                        background: #000;
+                        opacity: .5;
+                    }
+                }
+                &.slick-active{
+                    button{
+                        &:before{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
     }
     .img{
@@ -87,15 +140,6 @@
             }
         }
     }
-}
-.messange{
-    width: 68px;
-    height: 68px;
-    position: absolute;
-    z-index: 10;
-    right: 20px;
-    bottom: 50px;
-    img{ width: 100%;}
 }
 section{
     padding-bottom: 50px;
@@ -196,6 +240,13 @@ section{
                         line-height: 30px;
                     }
                 }
+                &.small{
+                    font-family: 'Playfair Display', serif;
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 300;
+                    text-align: center;
+                }
                 &.chinese{
                     font-family: 'Noto Sans TC', sans-serif;
                     font-size: 20px;
@@ -212,10 +263,10 @@ section{
         }
         iframe{
             width: calc(1300/1400*100%);
-            height: calc(860/1080*100%);
+            height: calc(920/1080*100%);
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 width: 100%;  
-                height: calc(900/1135*100%);
+                height: calc(1000/1135*100%);
             }
             
         }
@@ -250,9 +301,16 @@ section{
                         line-height: 60px;
                     }
                     @media (max-width:600px){
-                        font-size: 13vw;
+                        font-size: 12vw;
                         line-height: 10vw;
                     }
+                }
+                &.small{
+                    font-family: 'Bodoni Moda', serif;
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-weight: 400;
+                    text-align: center;
                 }
                 &.chinese{
                     font-family: 'Noto Sans TC', sans-serif;
@@ -270,10 +328,10 @@ section{
         }
         iframe{
             width: calc(1300/1400*100%);
-            height: calc(860/1080*100%);
+            height: calc(920/1080*100%);
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 width: 100%;  
-                height: calc(900/1135*100%);
+                height: calc(1000/1135*100%);
             }
             
         }
@@ -379,6 +437,10 @@ section{
                 color: #000;
                 margin-top: 40px;
                 text-align: left;
+                @media (max-width:1460px){
+                    font-size: 26px;
+                    line-height: 32px;
+                }
                 @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                     text-align: left;
                     font-size: 20px;
@@ -386,6 +448,10 @@ section{
                     // height: 24px;
                     // overflow: hidden;
                     margin-top: 20px;
+                }
+                @media (max-width:600px){
+                    font-size: 26px;
+                    line-height: 32px;
                 }
             }
             p{
@@ -396,9 +462,16 @@ section{
                 margin-top: 8px;
                 text-align: justify;
                 letter-spacing: 1px;
+                @media (max-width:1460px){
+                    margin-top: 4px;
+                }
                 @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                     font-size: 14px;
                     line-height: 20px;
+                }
+                @media (max-width:600px){
+                    font-size: 18px;
+                    line-height: 26px;
                 }
             }
         }
@@ -424,6 +497,9 @@ section{
                 position: absolute;
                 right: 50px;
                 bottom: 54px;
+                @media (max-width:1460px){
+                    right: 30px;
+                }
                 @media (max-width:960px){
                     width: calc( 1300/1400*100%);
                     margin: 0 auto;
@@ -435,14 +511,24 @@ section{
                     height: 36px;
                     overflow: hidden;
                     text-align: left;
-                    @media (max-width:600px){
+                    @media (max-width:1460px){
+                        height: 32px;
+                    }
+                    @media (max-width:800px){
                         height: 24px;
+                        overflow: visible;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
                     }
                 }
                 p{
-                    height: 72px;
-                    overflow: hidden;
+                    height: 96px;
+                    overflow-y: scroll;
                     margin-bottom: 0;
+                    padding-right: 30px;
+                    @media (max-width:1460px){
+                        height: 70px;
+                    }
                     @media (max-width:1200px){
                         height: 48px;
                     }
@@ -455,7 +541,7 @@ section{
         &.project_info3{
             .photo{
                 .slider_photo3{
-                    overflow: hidden;
+                    // overflow: hidden;
                     .slick-slide{ 
                         margin-right: 16px;
                     }
@@ -599,9 +685,6 @@ section{
             width: calc(880/1920*100%);
             float: left;
             @media (max-width:960px){
-                width: 100%;
-            }
-            @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 display: none;
             }
             iframe{
@@ -610,7 +693,7 @@ section{
                 display: block;
                 padding-bottom: 50px;
                 @media (max-width:960px){
-                    height: 600px;
+                    height: 400px;
                 }
             }
         }
@@ -620,6 +703,7 @@ section{
             padding-top: 100px;
             @media (max-width:960px){
                 width: 100%;
+                padding-top: 0;
             }
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 padding-top: 0;
@@ -630,6 +714,12 @@ section{
                 text-align: center;
                 font-weight: 100;
                 margin-top: 40px;
+                @media (max-width:960px){
+                    margin-top: 20px;
+                }
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    margin-top: 20px;
+                }
                 @media (max-width:600px){
                     font-size: 14px;
                     line-height: 24px;
@@ -644,10 +734,6 @@ section{
             .project_contact{
                 position: relative;
                 z-index: 5;
-                padding-bottom: 50px;
-                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
-                    padding-bottom: 0;
-                }
                 .contactForm{
                     width: 640px;
                     margin: 0 auto;
@@ -693,16 +779,19 @@ section{
                             .item{
                                 width: 100%;
                                 border-bottom: 1px solid #9c9c9c;
-                                margin-top: 20px;
+                                margin-top: 10px;
                                 overflow: hidden;
                                 &:first-child{ margin-top: 0;}
-                                &.noline{ border-bottom: 0; margin-top: 30px;}
+                                &.noline{ border-bottom: 0; margin-top: 20px;}
+                                @media (max-width:600px){
+                                    margin-top: 0;
+                                }
                                 label{
                                     width: 120px;
                                     float: left;
-                                    height: 60px;
-                                    line-height: 60px;
-                                    font-size: 20px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    font-size: 18px;
                                     font-weight: 300;
                                     text-align: left;
                                     @media (max-width:600px){
@@ -727,8 +816,8 @@ section{
                                 }
                                 input[type="text"]{
                                     width: calc(100% - 120px);
-                                    height: 60px;
-                                    line-height: 60px;
+                                    height: 50px;
+                                    line-height: 50px;
                                     float: right;
                                     background-color: transparent;
                                     font-size: 20px;
@@ -763,6 +852,9 @@ section{
                                     font-size: 18px;
                                     height: 96px;
                                     resize: none;
+                                    @media (max-width:800px){
+                                        height: 60px;
+                                    }
                                     @media (max-width:600px){
                                         font-size: 14px;
                                     }
@@ -807,6 +899,9 @@ section{
                 vertical-align: middle;
                 display: inline-block; 
                 transition: all .3s;
+                @media (max-width:600px){
+                    margin-bottom: 50px;
+                }
                 img{ 
                     width: 150px; 
                     display: inline-block; 
@@ -869,7 +964,7 @@ section{
         visibility: visible;
     }
 }
-.project_info1{
+.project_info1, .project_info2, .project_info3{
     .slick-dots {
         li{
             width: 50px;
@@ -902,7 +997,7 @@ section{
 .fp-tableCell{
     // padding-bottom: 40px;
     @media (orientation: portrait) and (max-width:960px), (max-width:800px){
-        padding-bottom: 30px;
+        // padding-bottom: 30px;
     }
 }
 .slick-slide > div >div{
