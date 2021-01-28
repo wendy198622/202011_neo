@@ -1014,7 +1014,7 @@ footer.simple .copyright p {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 0;
 }
 
 /* Track */
@@ -1104,6 +1104,25 @@ footer.simple .copyright p {
 
 #section11 {
   position: relative;
+}
+
+.scrollBar {
+  width: 1px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.scrollBar .topBar {
+  width: 1px;
+  height: calc(400px / 11);
+  position: absolute;
+  top: 0;
+  background: #006284;
 }
 
 .project_social {
