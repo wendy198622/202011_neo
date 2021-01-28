@@ -2227,6 +2227,7 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
 
 @media (max-width: 600px) {
   section .project_map .booking .project_contact .contactForm .formBox .group .item textarea {
+    height: 40px;
     font-size: 14px;
   }
 }
