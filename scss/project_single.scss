@@ -2,6 +2,7 @@
 @import '_header';
 @import '_footer';
 body{
+    width: 100%;
     overflow-x: hidden;
 }
 /* width */
@@ -450,7 +451,7 @@ section{
                     margin-top: 20px;
                 }
                 @media (max-width:600px){
-                    font-size: 26px;
+                    font-size: 24px;
                     line-height: 32px;
                 }
             }
@@ -466,11 +467,11 @@ section{
                     margin-top: 4px;
                 }
                 @media (orientation: portrait) and (max-width:960px), (max-width:800px){
-                    font-size: 14px;
+                    font-size: 18px;
                     line-height: 20px;
                 }
                 @media (max-width:600px){
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 26px;
                 }
             }

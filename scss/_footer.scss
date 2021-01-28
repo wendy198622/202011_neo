@@ -261,6 +261,9 @@ footer{
         @media (orientation: portrait) and (max-width:960px), (max-width:800px){
             height: auto;
             bottom: 40px;
+            @media (max-width:600px){
+                bottom: 0px;
+            }
         }
         .copyright{
             width: 100%;
