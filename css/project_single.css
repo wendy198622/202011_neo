@@ -1015,6 +1015,7 @@ footer.simple .copyright p {
 /* width */
 ::-webkit-scrollbar {
   width: 0;
+  display: none;
 }
 
 /* Track */
@@ -1121,7 +1122,7 @@ footer.simple .copyright p {
   width: 1px;
   height: calc(400px / 11);
   position: absolute;
-  top: 0;
+  top: 0px;
   background: #006284;
 }
 
@@ -2420,5 +2421,66 @@ section .project_map .booking .notice:hover {
 
 .slick-slide > div > div {
   margin-bottom: -5px !important;
+}
+
+#fp-nav.fp-right {
+  right: 30px;
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  #fp-nav.fp-right {
+    right: 5px;
+  }
+}
+
+#fp-nav.fp-right ul li {
+  display: block;
+  width: 1px;
+  height: 30px;
+  margin: 0;
+  position: relative;
+}
+
+#fp-nav.fp-right ul li a span {
+  border-radius: unset;
+  position: absolute;
+  z-index: 1;
+  height: 30px;
+  width: 1px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.3);
+  left: 50%;
+  top: 50%;
+  margin: 0px 0 0 -2px;
+  display: block;
+}
+
+#fp-nav.fp-right ul li a span.fp-sr-only {
+  display: none;
+}
+
+#fp-nav.fp-right ul li a.active span {
+  background: #006284;
+}
+
+#fp-nav.fp-right ul li:hover a span {
+  border-radius: unset;
+  position: absolute;
+  z-index: 1;
+  height: 30px;
+  width: 1px;
+  border: 0;
+  left: 50%;
+  top: 50%;
+  margin: 0px 0 0 -2px;
+  display: block;
+}
+
+#fp-nav.fp-right ul li:hover a span.fp-sr-only {
+  display: none;
+}
+
+#fp-nav.fp-right ul li:hover .fp-tooltip {
+  display: none;
 }
 /*# sourceMappingURL=project_single.css.map */
