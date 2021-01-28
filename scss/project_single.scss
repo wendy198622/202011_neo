@@ -815,10 +815,18 @@ section{
                                         @media (max-width:960px){
                                             line-height: 20px;
                                         }
+                                        @media (max-width:600px){
+                                            font-size: 12px;
+                                            height: 40px;
+                                            line-height: 40px;
+                                        }
                                         span{ 
                                             font-size: 14px; 
                                             color: #424242;
                                             margin-left: 5px;
+                                            @media (max-width:600px){
+                                                font-size: 12px;
+                                            }
                                         }
                                     }
                                 }
@@ -892,6 +900,9 @@ section{
                             }
                             @media (max-width:960px){
                                 margin-top: 20px;
+                            }
+                            @media (max-width:600px){
+                                margin-top: 0px;
                             }
                             &:hover{
                                 cursor: pointer;

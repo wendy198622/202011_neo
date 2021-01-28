@@ -2162,10 +2162,24 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
   }
 }
 
+@media (max-width: 600px) {
+  section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt span {
   font-size: 14px;
   color: #424242;
   margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt span {
+    font-size: 12px;
+  }
 }
 
 section .project_map .booking .project_contact .contactForm .formBox .group .item input[type="text"] {
@@ -2262,6 +2276,12 @@ section .project_map .booking .project_contact .contactForm .formBox button {
 @media (max-width: 960px) {
   section .project_map .booking .project_contact .contactForm .formBox button {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_map .booking .project_contact .contactForm .formBox button {
+    margin-top: 0px;
   }
 }
 
