@@ -1550,7 +1550,7 @@ section .project_info .title .type.large {
 
 @media (max-width: 600px) {
   section .project_info .title .type.large {
-    font-size: 13vw;
+    font-size: 12vw;
     line-height: 10vw;
   }
 }
@@ -1639,6 +1639,13 @@ section .project_info .info h4 {
   }
 }
 
+@media (max-width: 600px) {
+  section .project_info .info h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
 section .project_info .info p {
   font-size: 18px;
   line-height: 24px;
@@ -1666,6 +1673,13 @@ section .project_info .info p {
   section .project_info .info p {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_info .info p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
