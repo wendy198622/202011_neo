@@ -990,7 +990,7 @@ footer.simple {
 
 @media (max-width: 600px) {
   footer.simple {
-    bottom: 50px;
+    bottom: 80px;
   }
 }
 
