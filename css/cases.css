@@ -976,12 +976,6 @@ footer.simple {
   }
 }
 
-@media (max-width: 600px) {
-  footer.simple {
-    bottom: 90px;
-  }
-}
-
 footer.simple .copyright {
   width: 100%;
   height: 50px;
