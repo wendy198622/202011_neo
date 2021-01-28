@@ -31,7 +31,6 @@
 	<script>
 	  window.fbAsyncInit = function() {
 		FB.init({
-		  appId            : 1155323971167759,
 		  xfbml            : true,
 		  version          : 'v9.0'
 		});
@@ -41,19 +40,15 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+	  js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<!-- Your Chat Plugin code -->
-	<div class="fb-customerchat" attribution=setup_tool page_id="1155323971167759"></div>
-	<!-- <div class="fb-customerchat"
-	attribution=setup_tool
-	page_id="1155323971167759"
-	greeting_dialog_display="fade"
-	greeting_dialog_delay="10"
-	theme_color="#ff7e29">
-  </div> -->
+	<div class="fb-customerchat"
+	  attribution="setup_tool"
+	  page_id="1155323971167759">
+	</div>
 
 	<nav class="project_social">
 		<ul>
