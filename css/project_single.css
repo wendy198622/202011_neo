@@ -984,7 +984,7 @@ footer.simple {
 
 @media (orientation: portrait) and (max-width: 960px) and (max-width: 600px), (max-width: 800px) and (max-width: 600px) {
   footer.simple {
-    bottom: 30px;
+    bottom: 42px;
   }
 }
 
@@ -1024,11 +1024,6 @@ footer.simple .copyright p {
   }
 }
 
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
@@ -1047,6 +1042,10 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+#fullpage {
+  overflow-x: hidden;
 }
 
 #section1 .item {
