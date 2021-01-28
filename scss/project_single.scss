@@ -84,6 +84,10 @@
 #section10{
     background: #fff000;
 }
+#section11{
+    padding-bottom: 50px;
+    position: relative;
+}
 .project_social{
     width: 280px;
     height: 70px;
@@ -411,7 +415,7 @@ section{
                 width: 100%;
             }
             @media (max-width:600px){
-                margin: -6vh auto 0;
+                margin: -8vh auto 0;
             }
             .list, .list_small{
                 position: relative;
