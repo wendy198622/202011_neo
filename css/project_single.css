@@ -1014,7 +1014,7 @@ footer.simple .copyright p {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0;
+  width: 2px;
   display: none;
 }
 
@@ -1337,6 +1337,12 @@ section .project_view.container {
 
 @media (max-width: 1460px) {
   section .project_view.container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section .project_view.container {
     max-width: 900px;
   }
 }
@@ -1422,6 +1428,12 @@ section .project_inside.container {
 
 @media (max-width: 1460px) {
   section .project_inside.container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section .project_inside.container {
     max-width: 900px;
   }
 }
@@ -1506,6 +1518,12 @@ section .project_info.container {
 }
 
 @media (max-width: 1460px) {
+  section .project_info.container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
   section .project_info.container {
     max-width: 900px;
   }
@@ -1628,8 +1646,8 @@ section .project_info .info {
 }
 
 section .project_info .info h4 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 28px;
+  line-height: 32px;
   font-weight: 600;
   color: #000;
   margin-top: 40px;
@@ -1667,11 +1685,11 @@ section .project_info .info h4 {
 }
 
 section .project_info .info p {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 22px;
   font-weight: 300;
   color: #000;
-  margin-top: 8px;
+  margin-top: 3px;
   text-align: justify;
   letter-spacing: 1px;
 }
@@ -1737,7 +1755,8 @@ section .project_info.project_info2 .info {
 
 @media (max-width: 1460px) {
   section .project_info.project_info2 .info {
-    right: 30px;
+    width: calc( 480/1400*100%);
+    right: 50px;
   }
 }
 
@@ -1773,21 +1792,14 @@ section .project_info.project_info2 .info h4 {
 }
 
 section .project_info.project_info2 .info p {
-  height: 96px;
+  height: 110px;
   overflow-y: scroll;
   margin-bottom: 0;
-  padding-right: 30px;
-}
-
-@media (max-width: 1460px) {
-  section .project_info.project_info2 .info p {
-    height: 70px;
-  }
 }
 
 @media (max-width: 1200px) {
   section .project_info.project_info2 .info p {
-    height: 48px;
+    height: 66px;
   }
 }
 
@@ -1821,6 +1833,18 @@ section .project_intro {
   }
 }
 
+@media (max-width: 600px) {
+  section .project_intro {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  section .project_intro {
+    padding: 0;
+  }
+}
+
 section .project_intro .title .type {
   text-transform: uppercase;
 }
@@ -1843,7 +1867,7 @@ section .project_intro .title .type.chinese {
 section .project_intro .introBox {
   width: 100%;
   max-width: 1400px;
-  margin: 120px auto;
+  margin: 80px auto;
   padding: 0 50px;
   overflow: hidden;
 }
@@ -1855,6 +1879,12 @@ section .project_intro .introBox {
   }
 }
 
+@media (max-width: 600px) {
+  section .project_intro .introBox {
+    margin: 10px auto 0;
+  }
+}
+
 section .project_intro .introBox .logo {
   width: calc(519/1300*100%);
   float: left;
@@ -1862,7 +1892,7 @@ section .project_intro .introBox .logo {
 
 @media (max-width: 960px) {
   section .project_intro .introBox .logo {
-    width: 519px;
+    width: 400px;
     float: unset;
     margin: 0 auto;
   }
@@ -1894,6 +1924,12 @@ section .project_intro .introBox ul {
   }
 }
 
+@media (max-width: 600px) {
+  section .project_intro .introBox ul {
+    margin: 20px auto;
+  }
+}
+
 section .project_intro .introBox ul li {
   overflow: hidden;
   border-bottom: 1px solid #000;
@@ -1920,6 +1956,13 @@ section .project_intro .introBox ul li span {
 @media (max-width: 600px) {
   section .project_intro .introBox ul li span {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  section .project_intro .introBox ul li span {
+    line-height: 26px;
+    min-height: auto;
   }
 }
 
@@ -2167,6 +2210,7 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
 section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt {
   width: calc( 100% - 180px);
   font-size: 18px;
+  margin-top: 5px;
 }
 
 @media (max-width: 1200px) {
@@ -2179,6 +2223,8 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
 @media (max-width: 960px) {
   section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt {
     line-height: 20px;
+    margin-top: 2px;
+    height: 40px;
   }
 }
 
@@ -2186,7 +2232,7 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
   section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt {
     font-size: 12px;
     height: 40px;
-    line-height: 40px;
+    line-height: 20px;
   }
 }
 
