@@ -7,7 +7,7 @@ section{
     .theme{
         .container{
             width: 100%;
-            max-width: 1300px;
+            max-width: 1600px;
             margin: 0 auto;
             @media (max-width:1600px){
                 width: 90%;
@@ -15,11 +15,14 @@ section{
         }
         .top_topic{
             height: 350px;
-            background: url(../img/news/title_bg.svg) right 110% no-repeat #cbeeff;
-            background-size: auto 240px;
-            padding: 160px 50px 0;
-            margin-bottom: 120px;
-            overflow: hidden;
+            // background: url(../img/news/title_bg.svg) right 110% no-repeat #cbeeff;
+            background: -webkit-linear-gradient(left bottom,#e7f9ff,#d8f5ff);
+            background: -o-linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            background: -moz-linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            background: linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            padding: 160px 0 0;
+            // margin-bottom: 120px;
+            // overflow: hidden;
             @media (max-width:1600px){
                 background-position: center 100%;
                 // background-size: auto 200px;
@@ -57,7 +60,11 @@ section{
                 background-size: auto 90px;
             }
             .topicBox{
-                float: left;
+                width: 100%;
+                height: 200px;
+                // float: left;
+                background: url(../img/news/title_bg.svg) right 110% no-repeat;
+                background-size: contain;
                 @media (max-width:800px){
                     float: unset;
                     position: relative;
@@ -65,7 +72,7 @@ section{
                 }
                 .title{
                     font-size: 18px;
-                    color: #006284;
+                    color: #dbced4;
                     @media (max-width:800px){
                         position: relative;
                         font-size: 3.6vw;
@@ -111,68 +118,64 @@ section{
                     float: unset;
                     .title{
                         text-align: center;
+                        color: #006284;
                         span{ 
                             display: block;
-                            left: 50%;
-                            transform: translateX(-50%);
+                            color: #000;
+                            // left: 50%;
+                            // transform: translateX(-50%);
                         }
 
 
                     }
                 }
             }
-            .category{
-                width: 400px;
-                float: right;
-                margin-top: 100px;
-                text-align: right;
-                @media (max-width:1600px){
-                    width: 100%;
-                    margin-top: 0;
-                }
-                @media (max-width:1120px){
-                    margin-top: 20px;
-                }
+        }
+        .category{
+            margin-top: 50px;
+            @media (max-width:1120px){
+                margin-top: 20px;
+            }
+            @media (max-width:800px){
+                width: 100%;
+                margin-top: 90px;
+                position: relative;
+                z-index: 2;
+            }
+            @media (max-width:520px){
+                margin-top: 70px;
+            }
+            .title{
+                display: inline-block;
+                margin-right: 30px;
                 @media (max-width:800px){
-                    width: 100%;
-                    margin-top: 90px;
-                    position: relative;
-                    z-index: 2;
+                    font-size: 2.4vw;
                 }
-                @media (max-width:520px){
-                    margin-top: 70px;
-                }
-                .title{
+            }
+            ul{
+                display: inline-block;
+                li{ 
                     display: inline-block;
-                    margin-right: 50px;
-                    margin-right: 30px;
+                    margin-right: 20px;
+                    color: #000;
                     @media (max-width:800px){
-                        font-size: 2.4vw;
+                        font-size: 3.2vw;
                     }
-                }
-                ul{
-                    display: inline-block;
-                    li{ 
-                        display: inline-block;
-                        margin-right: 20px;
-                        @media (max-width:800px){
-                            font-size: 3.2vw;
-                        }
-                        @media (max-width:520px){
-                            margin-right: 12px;
-                        }
-                        &.active{
-                            color: #006284;
-                            text-decoration: underline;
-                        }
-                        &:hover{
-                            cursor: pointer;
-                        }
+                    @media (max-width:520px){
+                        margin-right: 12px;
+                    }
+                    &.active{
+                        color: #006284;
+                        text-decoration: underline;
+                    }
+                    &:hover{
+                        cursor: pointer;
                     }
                 }
             }
         }
         .newsBox{
+            margin-top: 50px;
             ul{
                 overflow: hidden;
                 li{
@@ -201,6 +204,19 @@ section{
                         margin-top: 5px;
                         color: #006284;
                     }
+                    .imgBox{
+                        overflow: hidden;
+                        img{ transition: all .3s;}
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        .imgBox{
+                            img{
+                                transform: scale(1.1);
+                            }
+
+                        }
+                    }
                 }
             }
             .btn{ 
@@ -213,6 +229,8 @@ section{
             }
         }
         .newsContent{
+            max-width: 1300px;
+            margin: 50px auto 0;
             .topBox{
                 margin-bottom: 40px;
                 overflow: hidden;
@@ -236,6 +254,8 @@ section{
                     font-size: 18px;
                     float: right;
                     text-align: right;
+                    color: #006284;
+                    text-decoration: underline;
                     @media (max-width: 600px){
                         width: 100%;
                     }
@@ -248,13 +268,25 @@ section{
             .contentBox{
                 .imgBox{
                     margin-bottom: 90px;
-                    overflow: hidden;
-                    img.photo{
-                        width: 50%;
-                        float: left;
-                        margin-bottom: 20px;
-                        @media (max-width: 800px){
-                            width: 100%;
+                    ul{
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        li{
+                            margin-bottom: 20px;
+                            display: flex;
+                            flex: 1;
+                            flex-direction: column;
+                            padding: 10px;
+                            
+                            img, span{
+                                display: flex;
+                                flex: 1;
+                                margin-top: 10px;
+                            }
+
                         }
                     }
                 }

@@ -3,23 +3,33 @@
     top: 0;
     width: 100%;
     height: 100px;
-    z-index: 3; 
+    z-index: 99; 
+    @media (max-width:800px){
+        height: 90px;
+    }
+    @media (max-width:480px){
+        height: auto;
+    }
     &.open{
         height: 100%;
         min-height: 100%;
+    }
+    &.black{
+        position: fixed;
+        background-color: #303439;
     }
     .logo {
         height: 47px;
         display: block;
         float: left;
-        margin-top: calc(45/1920*100%);
-        margin-left: calc(40/1920*100%);
+        margin-top: 30px;
+        margin-left: 40px;
         position: relative;
         z-index: 5;
         @media (max-width:800px){
             width: 300px;
             height: auto;
-            margin-top: calc(45/800*100%);
+            margin-top: 20px;
             margin-left: calc(40/800*100%);
         }
         @media (max-width:600px){
@@ -27,6 +37,8 @@
         }
         @media (max-width:480px){
             width: 160px;
+            margin-top: 0;
+            padding: 5% 0;
         }
         .ori{
             width: 212px;
@@ -49,16 +61,16 @@
         display: inline-block;
         float: right;
         padding: 20px;
-        margin-top: calc(45/1920*100%);
-        margin-right: calc(40/1920*100%);
+        margin-top: 30px;
+        margin-right: 40px;
         position: relative;
         z-index: 5;
         @media (max-width:800px){
-            margin-top: calc(52/800*100%);
+            margin-top: 25px;
             margin-right: calc(40/800*100%);
         }
         @media (max-width:480px){
-            padding: 20px 10px;
+            padding:4% 10px;
         }
         .navicon {
             width: 26px;
@@ -108,13 +120,17 @@
     }
     .social{
         float: right;
-        margin-top: calc(45/1920*100%);
-        margin-right: calc(40/1920*100%);
+        margin-top: 30px;
+        margin-right: 40px;
         position: relative;
         z-index: 5;
         @media (max-width:800px){
-            margin-top: calc(45/800*100%);
+            margin-top: 20px;
             margin-right: 0;
+        }
+        @media (max-width:480px){
+            margin-top: 0;
+            padding: 4% 0;
         }
         li {
             float: left;
@@ -202,8 +218,8 @@
                         font-weight: 100;
                         letter-spacing: 3px;
                         @media (max-width:800px){
-                            font-size: 3vw;
-                            padding: 0 0 40px;
+                            font-size: 16px;
+                            padding: 0 0 20px;
                         }
                         span{
                             color: #fff;
@@ -213,7 +229,7 @@
                             text-transform:uppercase;
                             font-family: 'Playfair Display', serif;
                             @media (max-width:800px){
-                                font-size: 5vw;
+                                font-size: 24px;
                             }
                         }
                         &:hover {
@@ -234,7 +250,14 @@
                     &:last-child{ margin-right: 0;}
                     a{
                         padding: 10px;
-                        img{ width: 55px; height: 52px;}
+                        img{ width: 38px; height: 40px;}
+                    }
+                }
+            }
+            @media (max-width:560px){
+                li {
+                    a{
+                        img{ width: 30px; height: 30px;}
                     }
                 }
             }
@@ -251,7 +274,7 @@
                 bottom: unset;
                 margin: 0 auto;
                 text-align: center;
-                padding-bottom: 50px;
+                padding: 20px 0;
             }
             &::before{
                 content: "";
@@ -276,8 +299,8 @@
                 position: relative;
                 @media (max-width:800px){
                     float: unset;
-                    font-size: 1.8vw;
-                    line-height: 10vw;    
+                    font-size: 12px;
+                    line-height: 16px;    
                 }
             }
         }

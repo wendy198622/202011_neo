@@ -1,18 +1,9 @@
-<svg id="goTop.svg" xmlns="http://www.w3.org/2000/svg" width="58.5" height="58.54" viewBox="0 0 58.5 58.54">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 0.5px;
-      }
-
-      .cls-2 {
-        fill: #fff;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <rect id="矩形_10" data-name="矩形 10" class="cls-1" x="0.25" y="0.25" width="58" height="58.04"/>
-  <path id="多邊形_1" data-name="多邊形 1" class="cls-2" d="M1805.43,7624.92l7.65,13.25h-15.3Z" transform="translate(-1775.75 -7601.87)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="goTop.svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 58.5 58.5" style="enable-background:new 0 0 58.5 58.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<path id="多邊形_1" class="st0" d="M29.7,23l7.7,13.2H22L29.7,23z"/>
 </svg>

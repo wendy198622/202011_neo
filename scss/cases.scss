@@ -15,11 +15,14 @@ section{
         }
         .top_topic{
             height: 350px;
-            background: url(../img/cases/title_bg.svg) right 110% no-repeat #cbeeff;
-            background-size: auto 240px;
-            padding: 160px 50px 0;
-            margin-bottom: 120px;
-            overflow: hidden;
+            // background: url(../img/news/title_bg.svg) right 110% no-repeat #cbeeff;
+            background: -webkit-linear-gradient(left bottom,#e7f9ff,#d8f5ff);
+            background: -o-linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            background: -moz-linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            background: linear-gradient(to right top,#e7f9ff,#d8f5ff);
+            padding: 160px 0 0;
+            // margin-bottom: 120px;
+            // overflow: hidden;
             @media (max-width:1600px){
                 background-position: center 100%;
                 // background-size: auto 200px;
@@ -33,7 +36,7 @@ section{
                 background-position: left 120px;
                 background-size: auto 120px;
                 padding: 160px 5% 0;
-                margin-bottom: 0;
+                margin-bottom: 40px;
                 &:after{
                     content: "";
                     width: 100%;
@@ -57,7 +60,11 @@ section{
                 background-size: auto 90px;
             }
             .topicBox{
-                float: left;
+                width: 100%;
+                height: 200px;
+                // float: left;
+                background: url(../img/cases/title_bg.svg) right 110% no-repeat;
+                background-size: contain;
                 @media (max-width:800px){
                     float: unset;
                     position: relative;
@@ -120,6 +127,7 @@ section{
             }
         }
         .casesBox{
+            margin-top: 50px;
             .listBox{
                 .list{    
                     ul{

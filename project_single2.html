@@ -245,26 +245,26 @@
 							<img src="img/project/project_public01.jpg" alt="">
 						</div>
 						<div class="list">
-							<span>美麗新影城</span>
-							<img src="img/project/project_location01.jpg" alt="">
+							<span>藝術籃球場</span>
+							<img src="img/project/project_location02.jpg" alt="">
 						</div>
 						<div class="list">
-							<span>美麗新影城</span>
-							<img src="img/project/project_location01.jpg" alt="">
+							<span>購物商場</span>
+							<img src="img/project/project_location03.jpg" alt="">
 						</div>
 					</div>
 					<div class="slider_nav2">
 						<div class="list_small">
 							<span>五星級飯店</span>
-							<img src="img/project/project_public02.jpg" alt="">
+							<img src="img/project/project_location01.jpg" alt="">
 						</div>
 						<div class="list_small">
 							<span>藝術籃球場</span>
-							<img src="img/project/project_public03.jpg" alt="">
+							<img src="img/project/project_location02.jpg" alt="">
 						</div>
 						<div class="list_small">
 							<span>購物商場</span>
-							<img src="img/project/project_public04.jpg" alt="">
+							<img src="img/project/project_location03.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -476,7 +476,16 @@
 		slidesToScroll: 1,
 		asNavFor: '.slider_photo2',
 		dots: true,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+			breakpoint: 1461,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+		]
 	});
 	$('.slider_photo3').slick({
 		slidesToShow: 3,

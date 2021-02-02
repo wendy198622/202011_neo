@@ -232,9 +232,19 @@ footer{
     }
     .goTop{
         width: 66px;
+        height: 66px;
         float: right;
+        border: 1px solid #fff;
+        overflow: hidden;
         &:hover{
             cursor: pointer;
+            img{
+                animation: gotop .3s linear;
+                @keyframes gotop {
+                    from{ transform: translateY(0%);}
+                    to{ transform: translateY(-100%);}
+                }
+            }
         }
         @media (max-width:960px){
             position: absolute;
@@ -274,6 +284,10 @@ footer{
                 @media (max-width:960px){
                     display: none;
                 }
+            }
+            a{ 
+                color: #fff;
+                display: inline-block;
             }
             p{
                 line-height: 50px;
