@@ -10,7 +10,9 @@
 	<meta name="Resource-type" content="" />
 	<!-- font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
 	<!-- css -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -27,7 +29,7 @@
 	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
-	<!-- <script type="text/javascript" src="js/vue.js"></script> -->
+	<script type="text/javascript" src="js/vue.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
@@ -41,10 +43,13 @@
 		</a>
 		<ul class="social social_black">
 			<li><a href="javascript:;" class="search"><img src="img/nav_search_black.svg" alt=""></a></li>
-			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="ori" src="img/nav_line_black.svg" alt=""><img class="cover" src="img/nav_line.svg" alt=""></a></li>
-			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="ori" src="img/nav_facebook_black.svg" alt=""><img class="cover" src="img/nav_facebook.svg" alt=""></a></li>
+			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="ori" src="img/nav_line_black.svg"
+						alt=""><img class="cover" src="img/nav_line.svg" alt=""></a></li>
+			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="ori"
+						src="img/nav_facebook_black.svg" alt=""><img class="cover" src="img/nav_facebook.svg"
+						alt=""></a></li>
 		</ul>
-		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar"/>
+		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar" />
 		<div class="cover_menu">
 			<ul class="menu">
 				<div class="box">
@@ -61,7 +66,8 @@
 			</ul>
 			<ul class="social_mob">
 				<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
-				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
+				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg"
+							alt=""></a></li>
 			</ul>
 			<div class="copyright">
 				<p>新理想廣告股份有限公司 Copyright © By Neo-Vision Advertisement Co., Ltd. All Rights Reserved.</p>
@@ -69,7 +75,7 @@
 		</div>
 	</header>
 	<section>
-		<div class="theme">
+		<div class="theme" id="app">
 			<div class="top_topic">
 				<div class="container">
 					<div class="topicBox">
@@ -81,15 +87,15 @@
 				<div class="container">
 					<div class="title">Category</div>
 					<ul>
-						<li class="filter active">ALL</li>
-						<li class="filter">房市新聞</li>
-						<li class="filter">建案活動</li>
+						<li class="filter" :class="{active: selectTag == 0}" v-on:click="onClickTag(0)">ALL</li>
+						<li class="filter" :class="{active: selectTag == 1}" v-on:click="onClickTag(1)">房市新聞</li>
+						<li class="filter" :class="{active: selectTag == 2}" v-on:click="onClickTag(2)">建案活動</li>
 					</ul>
 				</div>
 			</div>
 			<div class="newsBox">
 				<div class="container">
-					<ul>
+					<ul id="content">
 						<li>
 							<a href="news_single.html" class="wow fadeInUp">
 								<div class="imgBox"><img src="img/news/newsImg01.jpg" alt=""></div>
@@ -168,12 +174,12 @@
 							</a>
 						</li>
 					</ul>
-					<div class="btn wow fadeInUp"><a href="#">MORE DETAILS<span></span></a></div>
+					<div class="btn wow fadeInUp" id="moreBtn">MORE DETAILS<span></span></div>
 
 				</div>
 			</div>
 		</div>
-		
+
 	</section>
 	<footer>
 		<div class="contentBox">
@@ -196,7 +202,8 @@
 				</ul>
 			</div>
 			<div class="companyInfo">
-				<div class="add"><a href="https://goo.gl/maps/8y7g99qWPYEXvdpX7" target="_blank">33048<br>桃園市桃園區鎮一街111號1樓</a></div>
+				<div class="add"><a href="https://goo.gl/maps/8y7g99qWPYEXvdpX7"
+						target="_blank">33048<br>桃園市桃園區鎮一街111號1樓</a></div>
 				<div class="tel">Tel - <a href="tel:033396726">03-3396726</a><br>Mail - <a
 						href="mailto:service@neo-vision.com">service@neo-vision.com</a></div>
 				<div class="time">Service time<br>周一至周五 9:00-18:00</div>
@@ -205,9 +212,11 @@
 		<div class="socialBox">
 			<p>追蹤我們獲得更多優惠內容和最新消息</p>
 			<ul class="social">
-				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt="">facebook</a></li>
+				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg"
+							alt="">facebook</a></li>
 				<li><a class="gotoline" href="javascript:;"><img src="img/nav_line.svg" alt="">line</a></li>
-				<li><a href="https://www.instagram.com/neovision.ad/" target="_blank"><img src="img/nav_instagram.svg" alt="">instagram</a></li>
+				<li><a href="https://www.instagram.com/neovision.ad/" target="_blank"><img src="img/nav_instagram.svg"
+							alt="">instagram</a></li>
 			</ul>
 		</div>
 		<div class="copyright">
@@ -221,19 +230,19 @@
 		$('.searchbar').addClass('is_acted');
 
 		if ($(window).width() < 480) {
-			$('.menu').css('margin-top','130px');		
-		}else if ($(window).width() < 800) {
-			$('.menu').css('margin-top','160px');	
-		}else {
-			$('.menu').css('margin-top','auto');	
+			$('.menu').css('margin-top', '130px');
+		} else if ($(window).width() < 800) {
+			$('.menu').css('margin-top', '160px');
+		} else {
+			$('.menu').css('margin-top', 'auto');
 		}
 	});
-	
-	$(window).scroll(function() {    
-		var scroll = $(window).scrollTop();    
+
+	$(window).scroll(function () {
+		var scroll = $(window).scrollTop();
 		if (scroll >= 100) {
 			$(".header").addClass("bgopen_black");
-		}else{
+		} else {
 			$(".header").removeClass("bgopen_black");
 		}
 	})
@@ -253,12 +262,12 @@
 		$('.overlay_Video').addClass('is-acted');
 	});
 
-	$(".filter").click(function() {
-		$(this).addClass("active");
-		$(this).siblings().removeClass("active");
-		
-	});
-	
+	// $(".filter").click(function() {
+	// 	$(this).addClass("active");
+	// 	$(this).siblings().removeClass("active");
+
+	// });
+
 	$('.close').on('click', function () {
 		$('.popup_event').removeClass('is_acted');
 	});
@@ -280,18 +289,51 @@
 	$('button').on('click', function () {
 		$('.popup_send').addClass('is_acted');
 		setTimeout(() => {
-			$('.popup_send').removeClass('is_acted');			
-		},5000)
+			$('.popup_send').removeClass('is_acted');
+		}, 5000)
 	});
 
 	$('.close').on('click', function () {
 		$('.overlay_Video').removeClass('is-acted');
 	});
 
-	
+
+
+
 	$(document).ready(function () {
 		new WOW().init();
 		$(".imgLiquidFill").imgLiquid();
+		$('#moreBtn').click(function (e) {
+			console.log()
+			$('#content').append('<li>' +
+				'<a href="news_single.html">' +
+				'<div class="imgBox"><img src="img/news/newsImg01.jpg" alt=""></div>' +
+				'<div class="titleBox js_height">1.31％ 房貸利率殺到「地板價」</div>' +
+				'<div class="dateBox">2020-11-16</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="news_single.html">' +
+				'<div class="imgBox"><img src="img/news/newsImg01.jpg" alt=""></div>' +
+				'<div class="titleBox js_height">1.31％ 房貸利率殺到「地板價」</div>' +
+				'<div class="dateBox">2020-11-16</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="news_single.html">' +
+				'<div class="imgBox"><img src="img/news/newsImg01.jpg" alt=""></div>' +
+				'<div class="titleBox js_height">1.31％ 房貸利率殺到「地板價」</div>' +
+				'<div class="dateBox">2020-11-16</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="news_single.html">' +
+				'<div class="imgBox"><img src="img/news/newsImg01.jpg" alt=""></div>' +
+				'<div class="titleBox js_height">1.31％ 房貸利率殺到「地板價」</div>' +
+				'<div class="dateBox">2020-11-16</div>' +
+				'</a>' +
+				'</li>');
+		});
 	});
 	//首頁CURRENT PROJECT輪播
 	$('.slider-txt').slick({
@@ -338,8 +380,8 @@
 		dots: false,
 		arrows: true,
 		fade: true,
-        cssEase: 'ease-in-out',
-        touchThreshold: 100
+		cssEase: 'ease-in-out',
+		touchThreshold: 100
 	});
 
 	//首頁charity輪播
@@ -393,11 +435,10 @@
 		}
 	}
 
-	$('#mouse_video').css("pointer-events","none")
+	$('#mouse_video').css("pointer-events", "none")
 	$('.home_kv').on('mousemove', onMouseMove1)
 	$('.home_kv').on('mouseenter', onMouseHover1)
 	$('.home_kv').on('mouseleave', onMouseHoverOut1)
-
 
 	function onMouseMove1(e) {
 		TweenMax.to($('#mouse_video'), .4, {
@@ -420,13 +461,12 @@
 		})
 	}
 
-
 	// $(document).ready(function(){
 	// 	$('.bxslider').bxSlider();
 	// });
 
 	var maxSlides,
-    width = $(window).width();
+		width = $(window).width();
 
 	if (width < 800) {
 		maxSlides = 3;
@@ -439,14 +479,38 @@
 		slideWidth: 450,
 		slideMargin: 30,
 		ticker: true,
-		tickerHover:true,
+		tickerHover: true,
 		speed: 100000
 	});
 
-    var max = 0;
-    $('.js_height').each(function (T) {
-      T = $(this).outerHeight(), T > max && (max = T);
-    }).outerHeight(max);
+	var max = 0;
+	$('.js_height').each(function (T) {
+		T = $(this).outerHeight(), T > max && (max = T);
+	}).outerHeight(max);
+
 </script>
+<script>
+	new Vue({
+		el: '#app',
+		data: {
+			selectTag: 0,
+			popupIndex: 0
+		},
+		methods: {
+			onClickTag: function (tag) {
+				this.selectTag = tag
+				//置換list資料
+				// this.list_data = [
+				// 	{
+				// 		date: '2019-11-02',
+				// 		title: '小資族首購族看過來-' + tag,
+				// 		desc: '逸偉建設股份有限公司於桃園市龜山區推出全新建案「逸偉華漾」，是預售大店住樓的建案，歡迎...'
+				// 	}
+				// ]
+			},
+		}
+	})
+</script>
+
 
 </html>
