@@ -3,20 +3,29 @@
     top: 0;
     width: 100%;
     height: 100px;
-    z-index: 99; 
+    background-color: transparent;
+    z-index: 9; 
+    transition: all .3s;
     @media (max-width:800px){
-        height: 90px;
+        height: auto;
+        padding-bottom: 20px;
     }
     @media (max-width:480px){
-        height: auto;
+        padding-bottom: 0;
     }
     &.open{
         height: 100%;
         min-height: 100%;
     }
-    &.black{
-        position: fixed;
-        background-color: #303439;
+    &.bgopen_black{
+        background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
+        background: linear-gradient(to right top, #e7f9ff, #d8f5ff);
+    }
+    &.bgopen_white{
+        background-color: rgba(255,255,255,.5);
+    }
+    &.bgopen{
+        background: rgba(0,98,132,1);
     }
     .logo {
         height: 47px;
@@ -135,29 +144,6 @@
             float: left;
             margin-left: 15px;
             position: relative;
-            input.searchbar{
-                width: 0px;
-                height: 40px;
-                border-radius: 20px;
-                background: rgba(255,255,255,.2);
-                border: 0;
-                color: #fff;
-                position: absolute;
-                z-index: 1;
-                right: 0;
-                top: 0;
-                padding-right: 40px;
-                padding: 0;
-                transition: all .3s;
-                &:focus, &:checked{
-                    outline: 0;
-                }
-                &.is_acted{
-                    width: 250px;
-                    padding: 10px 40px 10px 20px;
-                    border: 1px solid #fff;
-                }
-            }
             a{
                 padding: 10px;
                 position: relative;
@@ -186,6 +172,42 @@
                 &:first-child{
                     display: block;
                 }
+            }
+        }
+    }
+    input.searchbar{
+        width: 0px;
+        height: 40px;
+        border-radius: 20px;
+        background: rgba(255,255,255,.2);
+        border: 0;
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+        right: 210px;
+        top: 30px;
+        padding-right: 40px;
+        padding: 0;
+        transition: all .3s;
+        @media (max-width:800px){
+            position: relative;
+            right: unset;
+            top: unset;
+        }
+        &:focus, &:checked{
+            outline: 0;
+        }
+        &.is_acted{
+            width: 250px;
+            padding: 10px 40px 10px 20px;
+            border: 1px solid #fff;
+            @media (max-width:800px){
+                width: 90vw;
+                margin: 100px auto 0;
+                display: block;
+            }
+            @media (max-width:480px){
+                margin: 60px auto 20px;
             }
         }
     }
@@ -221,7 +243,7 @@
                 right: unset;
                 bottom: unset;
                 left: unset;
-                margin-top: 20%;
+                margin-top: 80px;
             }
             .box{
                 width: 500px;
@@ -244,7 +266,7 @@
                         font-weight: 100;
                         letter-spacing: 3px;
                         @media (max-width:800px){
-                            font-size: 16px;
+                            font-size: 14px;
                             padding: 0 0 20px;
                         }
                         span{
@@ -255,7 +277,7 @@
                             text-transform:uppercase;
                             font-family: 'Playfair Display', serif;
                             @media (max-width:800px){
-                                font-size: 24px;
+                                font-size: 22px;
                             }
                         }
                         &:hover {
@@ -283,7 +305,7 @@
             @media (max-width:560px){
                 li {
                     a{
-                        img{ width: 30px; height: 30px;}
+                        img{ width: 26px; height: 26px;}
                     }
                 }
             }

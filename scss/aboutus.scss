@@ -60,7 +60,7 @@ section{
             z-index: 1;
             margin-top: 80px;
             @media (max-width:1200px){
-                margin-top: 30px;
+                margin-top: 36px;
             }
             > div{
                 font-family: 'Noto Serif TC', serif;
@@ -114,12 +114,14 @@ section{
             padding: 160px 0 0;
             // margin-bottom: 120px;
             // overflow: hidden;
+            position: relative;
             @media (max-width:800px){
+                padding-top: 60px;
                 &:after{
                     content: "";
                     width: 100%;
                     height: 110px;
-                    background-color: #f7f9fa;
+                    background-color: #fff;
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -150,13 +152,17 @@ section{
                 background: url(../img/about/title_bg.svg) right 110% no-repeat;
                 background-size: contain;
                 @media (max-width:800px){
+                    width: 90%;
+                    margin: 0 auto;
                     float: unset;
                     position: relative;
                     z-index: 2;
+                    background-position: right 50%;
+                    padding-top: 100px;
                 }
                 .title{
                     font-size: 18px;
-                    color: #006284;
+                    color: #dbced4;
                     @media (max-width:800px){
                         position: relative;
                         font-size: 3.6vw;
@@ -253,6 +259,7 @@ section{
                 overflow: hidden;
                 @media (max-width:960px){
                     background-color: #fff;
+                    margin-bottom: 100px;
                 }
                 .awards{ 
                     width: 153px;
@@ -374,6 +381,7 @@ section{
                 }
                 @media (max-width:960px){
                     width: 100%;
+                    padding-bottom: 100%;
                     float: none;
                     margin: 50px auto 0;
                 }
@@ -425,12 +433,18 @@ section{
                         .title{
                             color: #006284;
                             font-size: 22px;
+                            @media (max-width:480px){
+                                font-size: 16px;
+                            }
                             span{
                                 font-size: 30px;
                                 color: #000;
                                 text-transform: uppercase;
                                 font-family: 'Playfair Display', serif;
                                 margin-right: 5px;
+                                @media (max-width:480px){
+                                    font-size: 26px;
+                                }
 
                             }
                         }
@@ -439,6 +453,9 @@ section{
                             font-weight: 300;
                             color: #707070;
                             margin-bottom: 16px;
+                            @media (max-width:480px){
+                                font-size: 16px;
+                            }
                         }
 
                     }
@@ -566,6 +583,13 @@ section{
                             @media (max-width:960px){
                                 font-size: 32px;
                             }
+                            @media (max-width:800px){
+                                font-size: 24px
+                            }
+                            @media (max-width:480px){
+                                font-size: 15px;
+                                padding: 0 5px;
+                            }
                             &:before, &:after{
                                 content: "";
                                 width: 6px;
@@ -576,7 +600,9 @@ section{
                                 top: 50%;
                                 margin-top: -3px;
                                 background-color: #5e6165;
-    
+                                @media (max-width:480px){
+                                    display: none;
+                                }
                             }
                             &:before{
                                 left: 0;
@@ -622,6 +648,12 @@ section{
                                 font-size: 80px;
                                 @media (max-width:960px){
                                     font-size: 60px
+                                }
+                                @media (max-width:800px){
+                                    font-size: 40px
+                                }
+                                @media (max-width:480px){
+                                    font-size: 26px
                                 }
                             }
                         }
@@ -669,6 +701,9 @@ section{
                                     text-align: center;
                                     @media (max-width:600px){
                                         font-size: 14px;
+                                    }
+                                    @media (max-width:480px){
+                                        font-size: 12px;
                                     }
                                 }
     
@@ -774,7 +809,7 @@ section{
         left: unset;
         right: calc(50% + 90px);
         &:hover{
-            right: calc(50% + 100px);
+            transform: translate(-10px,-50%);
         }
         @media (max-width:1200px){
             right: 100px;
@@ -787,7 +822,7 @@ section{
     .slick-next{ 
         right: calc(50% + 50px);
         &:hover{
-            right: calc(50% + 40px);
+            transform: translate(10px,-50%);
         }
         @media (max-width:1200px){
             right: 40px;
@@ -820,7 +855,7 @@ section{
     .slick-prev{ 
         left: 0;
         &:hover{
-            left: -10px;
+            transform: translate(-10px,-50%);
         }
         &:before {
             font-family: 'Material Icons';
@@ -830,7 +865,7 @@ section{
     .slick-next{ 
         right: 0;
         &:hover{
-            right: -10px;
+            transform: translate(10px,-50%);
         }
         &:before {
             font-family: 'Material Icons';
