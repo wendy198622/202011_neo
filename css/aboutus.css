@@ -1254,26 +1254,7 @@ section .theme .top_topic {
   padding: 160px 0 0;
 }
 
-@media (max-width: 1600px) {
-  section .theme .top_topic {
-    background-position: center 100%;
-  }
-}
-
-@media (max-width: 1120px) {
-  section .theme .top_topic {
-    background-position: left 100%;
-    background-size: auto 240px;
-  }
-}
-
 @media (max-width: 800px) {
-  section .theme .top_topic {
-    position: relative;
-    background-position: left 120px;
-    background-size: auto 120px;
-    padding: 160px 5% 0;
-  }
   section .theme .top_topic:after {
     content: "";
     width: 100%;
@@ -1301,8 +1282,6 @@ section .theme .top_topic {
 @media (max-width: 520px) {
   section .theme .top_topic {
     height: 300px;
-    background-position: left 130px;
-    background-size: auto 90px;
   }
 }
 

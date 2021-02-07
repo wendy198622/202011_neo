@@ -25,25 +25,12 @@ section{
             padding: 160px 0 0;
             // margin-bottom: 120px;
             // overflow: hidden;
-            @media (max-width:1600px){
-                background-position: center 100%;
-                // background-size: auto 200px;
-            }
-            @media (max-width:1120px){
-                background-position: left 100%;
-                background-size: auto 240px;
-            }
             @media (max-width:800px){
-                position: relative;
-                background-position: left 120px;
-                background-size: auto 120px;
-                padding: 160px 5% 0;
-                margin-bottom: 40px;
                 &:after{
                     content: "";
                     width: 100%;
                     height: 110px;
-                    background-color: #fff;
+                    background-color: #f7f9fa;
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -58,8 +45,6 @@ section{
             }
             @media (max-width:520px){
                 height: 300px;
-                background-position: left 130px;
-                background-size: auto 90px;
             }
             .topicBox{
                 width: 100%;
