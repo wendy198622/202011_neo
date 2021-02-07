@@ -8,6 +8,9 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="Resource-type" content="" />
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<!-- css -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -37,7 +40,10 @@
 			<img class="cover" src="img/logo_txt.svg" alt="">
 		</a>
 		<ul class="social">
-			<li><a href="javascript:;"><img src="img/nav_search.svg" alt=""></a></li>
+			<li>
+				<input type="text" v-model="name" name="name" placeholder="" required class="searchbar"/>
+				<a href="javascript:;" class="search"><img src="img/nav_search.svg" alt=""></a>
+			</li>
 			<li><a href="#" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
 			<li><a href="#" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
 		</ul>
@@ -56,8 +62,8 @@
 				</div>
 			</ul>
 			<ul class="social_mob">
-				<li><a href="#" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
-				<li><a href="#" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
+				<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
+				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
 			</ul>
 			<div class="copyright">
 				<p>新理想廣告股份有限公司 Copyright © By Neo-Vision Advertisement Co., Ltd. All Rights Reserved.</p>
@@ -68,7 +74,7 @@
 		<div class="theme">
 			<div class="home_kv">
 				<div class="item mob111">
-					<video width="100%" height="100%" preload autoplay>
+					<video width="100%" height="100%" preload autoplay muted loop>
 						<source src="img/video/index_cf.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -300,8 +306,7 @@
 							<div class="caseItem slider-singlecase">
 								<div>
 									<div class="txtBox">
-										<div class="case_overlay" data-wow-delay="0.5s"></div>
-										<div class="txtItem">
+										<div class="txtItem" data-wow-delay="0.5s">
 											<h4 class="wow fadeInUp">2018人間有愛 愛心傳承</h4>
 											<p class="wow fadeInUp" data-wow-delay=".3s">新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
 												固定每年捐助桃園家扶中心及少年之家，<br>
@@ -310,15 +315,14 @@
 												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 										</div>
 									</div>
-									<div class="imgBox wow fadeInUp">
+									<div class="imgBox">
 										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<img src="img/index/home_case01.jpg" alt="">
 									</div>
 								</div>
 								<div>
 									<div class="txtBox">
-										<div class="case_overlay" data-wow-delay="0.5s"></div>
-										<div class="txtItem">
+										<div class="txtItem" data-wow-delay="0.5s">
 											<h4 class="wow fadeInUp">2018人間有愛 愛心傳承</h4>
 											<p class="wow fadeInUp" data-wow-delay=".3s">新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
 												固定每年捐助桃園家扶中心及少年之家，<br>
@@ -327,7 +331,7 @@
 												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 										</div>
 									</div>
-									<div class="imgBox wow fadeInUp">
+									<div class="imgBox">
 										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<img src="img/index/home_case01.jpg" alt="">
 									</div>
@@ -337,7 +341,6 @@
 							<div class="caseItem">
 								<div>
 									<div class="txtBox">
-										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<div class="txtItem">
 											<h4 class="wow fadeInUp">2019人間有愛 愛心傳承</h4>
 											<p class="wow fadeInUp" data-wow-delay=".3s">新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
@@ -347,7 +350,7 @@
 												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
 										</div>
 									</div>
-									<div class="imgBox wow fadeInUp">
+									<div class="imgBox">
 										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<img src="img/index/home_case01.jpg" alt="">
 									</div>
@@ -357,7 +360,6 @@
 							<div class="caseItem">
 								<div>
 									<div class="txtBox">
-										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<div class="txtItem">
 											<h4 class="wow fadeInUp">2020新理想30而立 愛在桃園公益園遊會</h4>
 											<p class="wow fadeInUp" data-wow-delay=".3s">在桃園房產市場深耕30年的新理想行銷團隊，<br>
@@ -369,7 +371,7 @@
 												園遊會所得將全數捐做公益。</p>
 										</div>
 									</div>
-									<div class="imgBox wow fadeInUp">
+									<div class="imgBox">
 										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<img src="img/index/home_case01.jpg" alt="">
 									</div>
@@ -379,7 +381,6 @@
 							<div class="caseItem">
 								<div>
 									<div class="txtBox">
-										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<div class="txtItem">
 											<h4 class="wow fadeInUp">2021新理想30而立 愛在桃園公益園遊會</h4>
 											<p class="wow fadeInUp" data-wow-delay=".3s">在桃園房產市場深耕30年的新理想行銷團隊，<br>
@@ -391,7 +392,7 @@
 												園遊會所得將全數捐做公益。</p>
 										</div>
 									</div>
-									<div class="imgBox wow fadeInUp">
+									<div class="imgBox">
 										<div class="case_overlay" data-wow-delay="0.5s"></div>
 										<img src="img/index/home_case01.jpg" alt="">
 									</div>
@@ -459,15 +460,25 @@
 					<img src="img/index/home_event04_large.jpg" alt="">
 				</div>
 			</div>
-			
+		</div>
+		<div class="popup popup_video">
+			<div class="popup_content popup_mov">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<div class="content">
+					<video width="100%" height="100%" preload autoplay muted loop>
+						<source src="img/video/index_cf.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
 		</div>
 		<div class="popup popup_send">
 			<div class="popup_content popup_message">您已送出資訊，我們將與您聯絡</div>
 		</div>
 		<div class="popup popup_line">
-			<div class="popup_content popup_img">QR code
-					<div class="close"><i class="material-icons">clear</i></div>
-				</div>
+			<div class="popup_content popup_code">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<img src="img/gotoline.svg" alt="">
+			</div>
 		</div>
 	</section>
 	<footer>
@@ -530,6 +541,9 @@
 	// $('.bxslider li').on('click', function () {
 	// 	$('.popup_event').addClass('is_acted');
 	// });
+	$('.home_kv').on('click', function () {
+		$('.popup_video').addClass('is_acted');
+	});
 
 	$('.gotoline').on('click', function () {
 		$('.popup_line').addClass('is_acted');
@@ -538,6 +552,7 @@
 	$('.close').on('click', function () {
 		$('.popup_event').removeClass('is_acted');
 		$('.popup_line').removeClass('is_acted');
+		$('.popup_video').removeClass('is_acted');
 	});
 
 	$('button').on('click', function () {
@@ -545,6 +560,10 @@
 		setTimeout(() => {
 			$('.popup_send').removeClass('is_acted');			
 		},5000)
+	});
+
+	$('.search').on('click', function () {
+		$('.searchbar').addClass('is_acted');
 	});
 
 	
@@ -597,7 +616,7 @@
 		dots: false,
 		arrows: true,
 		fade: true,
-        cssEase: 'ease-in-out',
+        cssEase: 'ease-in',
         touchThreshold: 100
 	});
 

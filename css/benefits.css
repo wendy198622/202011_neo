@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
 @font-face {
   i.material-icons {
     font-family: 'Material Icons';
@@ -41,42 +37,6 @@ img {
   content: "";
   clear: both;
   display: block;
-}
-
-.font100 {
-  font-weight: 100;
-}
-
-.font300 {
-  font-weight: 300;
-}
-
-.font400 {
-  font-weight: 400;
-}
-
-.font500 {
-  font-weight: 500;
-}
-
-.font700 {
-  font-weight: 700;
-}
-
-.font900 {
-  font-weight: 900;
-}
-
-.align__center {
-  text-align: center;
-}
-
-.align__left {
-  text-align: left;
-}
-
-.align__right {
-  text-align: right;
 }
 
 .btn {
@@ -170,8 +130,18 @@ img {
   color: #fff;
 }
 
+input, button, textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
@@ -364,7 +334,6 @@ img {
 .header .social {
   float: right;
   margin-top: 30px;
-  margin-right: 40px;
   position: relative;
   z-index: 5;
 }
@@ -385,10 +354,41 @@ img {
 
 .header .social li {
   float: left;
+  margin-left: 15px;
+  position: relative;
+}
+
+.header .social li input.searchbar {
+  width: 0px;
+  height: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding-right: 40px;
+  padding: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header .social li input.searchbar:focus, .header .social li input.searchbar:checked {
+  outline: 0;
+}
+
+.header .social li input.searchbar.is_acted {
+  width: 250px;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #fff;
 }
 
 .header .social li a {
   padding: 10px;
+  position: relative;
+  z-index: 5;
 }
 
 .header .social li a img {
@@ -1127,11 +1127,9 @@ section .theme .container {
 
 section .theme .top_topic {
   height: 350px;
-  background: url(../img/benefits/title_bg.svg) right 110% no-repeat #cbeeff;
-  background-size: auto 240px;
-  padding: 160px 50px 0;
-  margin-bottom: 120px;
-  overflow: hidden;
+  background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
+  background: linear-gradient(to right top, #e7f9ff, #d8f5ff);
+  padding: 160px 0 0;
 }
 
 @media (max-width: 1600px) {
@@ -1153,6 +1151,7 @@ section .theme .top_topic {
     background-position: left 120px;
     background-size: auto 120px;
     padding: 160px 5% 0;
+    margin-bottom: 40px;
   }
   section .theme .top_topic:after {
     content: "";
@@ -1187,7 +1186,10 @@ section .theme .top_topic {
 }
 
 section .theme .top_topic .topicBox {
-  float: left;
+  width: 100%;
+  height: 200px;
+  background: url(../img/benefits/title_bg.svg) right 110% no-repeat;
+  background-size: contain;
 }
 
 @media (max-width: 800px) {
@@ -1195,6 +1197,18 @@ section .theme .top_topic .topicBox {
     float: unset;
     position: relative;
     z-index: 2;
+  }
+}
+
+section .theme .top_topic .topicBox .container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1600px) {
+  section .theme .top_topic .topicBox .container {
+    width: 90%;
   }
 }
 
@@ -1275,12 +1289,16 @@ section .theme .top_topic.single .topicBox .title span {
   display: block;
 }
 
+section .theme .benefitsBox {
+  margin-top: 50px;
+}
+
 section .theme .benefitsBox .introduction {
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 800px) {

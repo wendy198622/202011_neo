@@ -129,6 +129,7 @@ section{
         .casesBox{
             margin-top: 50px;
             .listBox{
+                margin-top: 50px;
                 .list{    
                     ul{
                         overflow: hidden;
@@ -184,7 +185,6 @@ section{
                 }
             }
             .yearBox{
-                margin-bottom: 80px;
                 .year{
                     height: 80px;
                     text-align: center;
@@ -213,7 +213,7 @@ section{
                         font-family: 'Cardo', serif;
                         font-size: 48px;
                         line-height: 80px;
-                        color: #d5d4d4;
+                        color: #ececec;
                         font-weight: 400;
                         font-style: italic;
                         transition: all .3s;
@@ -245,7 +245,6 @@ section{
                         }
                     }
                 }
-                .slick-slide{ float: left;}
                 .slick-slide:first-child{
                     .year{
                         &:before{
@@ -278,7 +277,7 @@ section{
                         height: 80px;
                         span{
                             line-height: 80px;
-                            color: #000000;
+                            color: #5e6165;
                             font-size: 80px;
                             @media (max-width:960px){
                                 font-size: 60px
@@ -287,6 +286,110 @@ section{
                     }
                 }
             }
+            // .yearBox{
+            //     margin-bottom: 80px;
+            //     .year{
+            //         height: 80px;
+            //         text-align: center;
+            //         position: relative;
+            //         &:before, &:after{
+            //             content: "...................................................................................................................................................";
+            //             width: 50%;
+            //             height: 12px;
+            //             line-height: 12px;
+            //             font-size: 12px;
+            //             display: block;
+            //             position: absolute;
+            //             z-index: 1;
+            //             top: 50%;
+            //             margin-top: -10px;
+            //             overflow: hidden;
+            //             letter-spacing: 2px;
+            //         }
+            //         &:before{
+            //             left: 0;
+            //         }
+            //         &:after{
+            //             right: 0;
+            //         }
+            //         span{
+            //             font-family: 'Cardo', serif;
+            //             font-size: 48px;
+            //             line-height: 80px;
+            //             color: #d5d4d4;
+            //             font-weight: 400;
+            //             font-style: italic;
+            //             transition: all .3s;
+            //             padding: 0 20px;
+            //             display: inline-block;
+            //             position: relative;
+            //             z-index: 2;
+            //             background-color: #fff;
+            //             @media (max-width:960px){
+            //                 font-size: 32px;
+            //             }
+            //             &:before, &:after{
+            //                 content: "";
+            //                 width: 6px;
+            //                 height: 6px;
+            //                 border-radius: 50%;
+            //                 display: block;
+            //                 position: absolute;
+            //                 top: 50%;
+            //                 margin-top: -3px;
+            //                 background-color: #5e6165;
+
+            //             }
+            //             &:before{
+            //                 left: 0;
+            //             }
+            //             &:after{
+            //                 right: 0;
+            //             }
+            //         }
+            //     }
+            //     .slick-slide{ float: left;}
+            //     .slick-slide:first-child{
+            //         .year{
+            //             &:before{
+            //                 display: none;
+            //             }
+            //             span{
+            //                 &:before{
+            //                     display: none;
+            //                 }
+            //             }
+            //         }
+
+            //     }
+            //     .slick-slide:last-child{
+            //         .year{
+            //             &:after{
+            //                 display: none;
+            //             }
+            //             span{
+            //                 &:after{
+            //                     display: none;
+            //                 }
+            //             }
+            //         }
+
+            //     }
+
+            //     .slick-current{
+            //         .year{
+            //             height: 80px;
+            //             span{
+            //                 line-height: 80px;
+            //                 color: #000000;
+            //                 font-size: 80px;
+            //                 @media (max-width:960px){
+            //                     font-size: 60px
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
         }
         .newsContent{
             .topBox{
@@ -339,7 +442,7 @@ section{
     }
 }
 
-.slider_year{
+.slider-year{
     .slick-prev, .slick-next{
         width: 36px;
         height: 36px;

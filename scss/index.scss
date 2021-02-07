@@ -267,6 +267,7 @@ section{
     }
     .home_kv{
         width: 100%;
+        height: 100vh;
         position: relative;
         overflow: hidden;
         .item{
@@ -665,7 +666,7 @@ section{
                     position: absolute;
                     z-index: 1;
                     top: 30px;
-                    left: 0;
+                    left: 10px;
                     @media (max-width:800px){
                         left: 50%;
                         transform: translateX(-50%);
@@ -882,6 +883,7 @@ section{
 
                     .slick-slide{
                         position: relative;
+                        margin-bottom: -4px !important;
                         .case_overlay{
                             // width: 0;
                             height: 200%;
@@ -892,7 +894,7 @@ section{
                         }
                         &.slick-active{
                             .case_overlay{
-                                animation: overlay 1s .2s both;
+                                animation: overlay .6s .2s both;
                                 @keyframes overlay {
                                     0%{
                                         width: 100%;
@@ -962,15 +964,6 @@ section{
             .formBox{
                 overflow: hidden;
                 padding-bottom: 30px;
-                input, button, textarea{
-                    appearance:none;   
-                    -moz-appearance:none;   
-                    -webkit-appearance:none; 
-                    -ms-appearance:none; 
-                    border: 0;
-                    padding: 10px;
-                    position: relative;
-                }
                 .group{
                     width: 48%;
                     float: left;
@@ -1030,6 +1023,21 @@ section{
                             margin-right: 10px;
                             &:focus{
                                 outline: 0;
+                            }
+                            &:checked{
+                                outline: 0;
+                                bottom: 0;
+                                &:after{
+                                    width: 20px;
+                                    height: 20px;
+                                    content: "";
+                                    background: url(../img/check.svg) 0 0 no-repeat;
+                                    position: absolute;
+                                    z-index: 3;
+                                    top: 0;
+                                    left: 0;
+                
+                                }
                             }
                         }
                         textarea{
@@ -1148,26 +1156,43 @@ section{
                     height: 100vw;
                     padding: 10vw;
                 }
-                .close{
-                    width: 40px;
-                    height: 40px;
-                    position: absolute;
-                    right: 6px;
-                    top: 6px;
-                    text-align: center;
-                    i{
-                        font-size: 32px;
-                        line-height: 40px;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                    }
+            }
+            &.popup_mov{
+                width: 1080px;
+                height: 650px;
+                padding: 50px;
+                overflow: hidden;
+            }
+            &.popup_code{
+                width: 500px;
+                height: 500px;
+                padding: 20px;
+                @media (max-width:600px){
+                    width: 100vw;
+                    height: 100vw;
+                    padding: 10vw;
                 }
             }
             &.popup_message{
                 width: 320px;
                 height: 60px;
                 line-height: 60px;
+            }
+            .close{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                z-index: 10;
+                right: 6px;
+                top: 6px;
+                text-align: center;
+                i{
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
         &.is_acted{

@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
 @font-face {
   i.material-icons {
     font-family: 'Material Icons';
@@ -41,42 +37,6 @@ img {
   content: "";
   clear: both;
   display: block;
-}
-
-.font100 {
-  font-weight: 100;
-}
-
-.font300 {
-  font-weight: 300;
-}
-
-.font400 {
-  font-weight: 400;
-}
-
-.font500 {
-  font-weight: 500;
-}
-
-.font700 {
-  font-weight: 700;
-}
-
-.font900 {
-  font-weight: 900;
-}
-
-.align__center {
-  text-align: center;
-}
-
-.align__left {
-  text-align: left;
-}
-
-.align__right {
-  text-align: right;
 }
 
 .btn {
@@ -170,8 +130,18 @@ img {
   color: #fff;
 }
 
+input, button, textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
@@ -364,7 +334,6 @@ img {
 .header .social {
   float: right;
   margin-top: 30px;
-  margin-right: 40px;
   position: relative;
   z-index: 5;
 }
@@ -385,10 +354,41 @@ img {
 
 .header .social li {
   float: left;
+  margin-left: 15px;
+  position: relative;
+}
+
+.header .social li input.searchbar {
+  width: 0px;
+  height: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding-right: 40px;
+  padding: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header .social li input.searchbar:focus, .header .social li input.searchbar:checked {
+  outline: 0;
+}
+
+.header .social li input.searchbar.is_acted {
+  width: 250px;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #fff;
 }
 
 .header .social li a {
   padding: 10px;
+  position: relative;
+  z-index: 5;
 }
 
 .header .social li a img {
@@ -1142,11 +1142,9 @@ section .theme .container {
 
 section .theme .top_topic {
   height: 350px;
-  background: url(../img/contact/title_bg.svg) right 110% no-repeat #cbeeff;
-  background-size: auto 240px;
-  padding: 160px 50px 0;
-  margin-bottom: 120px;
-  overflow: hidden;
+  background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
+  background: linear-gradient(to right top, #e7f9ff, #d8f5ff);
+  padding: 160px 0 0;
 }
 
 @media (max-width: 1600px) {
@@ -1168,6 +1166,7 @@ section .theme .top_topic {
     background-position: left 120px;
     background-size: auto 120px;
     padding: 160px 5% 0;
+    margin-bottom: 40px;
   }
   section .theme .top_topic:after {
     content: "";
@@ -1202,7 +1201,10 @@ section .theme .top_topic {
 }
 
 section .theme .top_topic .topicBox {
-  float: left;
+  width: 100%;
+  height: 200px;
+  background: url(../img/contact/title_bg.svg) right 110% no-repeat;
+  background-size: contain;
 }
 
 @media (max-width: 800px) {
@@ -1272,6 +1274,10 @@ section .theme .top_topic .topicBox .title span {
     height: 66px;
     line-height: 66px;
   }
+}
+
+section .theme .contactBox {
+  margin-top: 100px;
 }
 
 section .theme .contactBox .introduction {
@@ -1439,6 +1445,22 @@ section .theme .contactBox .contactForm .formBox .group .item input[type="checkb
   outline: 0;
 }
 
+section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked {
+  outline: 0;
+  bottom: 0;
+}
+
+section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked:after {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(../img/check.svg) 0 0 no-repeat;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
 section .theme .contactBox .contactForm .formBox .group .item textarea {
   width: 100%;
   background-color: transparent;
@@ -1458,28 +1480,87 @@ section .theme .contactBox .contactForm .formBox button {
   height: 50px;
   border: 1px solid #006284;
   background: transparent;
-  color: #006284;
+  color: #424242;
   font-size: 20px;
   text-align: center;
   margin-top: 15px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  position: relative;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   section .theme .contactBox .contactForm .formBox button {
-    float: unset;
-    margin: 15px auto 0;
-    display: block;
-    font-size: 24px;
-    height: 60px;
-    line-height: 60px;
-    padding: 0;
+    font-size: 16px;
   }
+}
+
+section .theme .contactBox .contactForm .formBox button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #006284;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+section .theme .contactBox .contactForm .formBox button span {
+  width: 20px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  overflow: hidden;
+  display: none;
+}
+
+section .theme .contactBox .contactForm .formBox button a {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-transform: uppercase;
+  color: #006284;
+  position: relative;
+  z-index: 5;
 }
 
 section .theme .contactBox .contactForm .formBox button:hover {
   cursor: pointer;
+}
+
+section .theme .contactBox .contactForm .formBox button:hover::after {
+  width: 100%;
+}
+
+section .theme .contactBox .contactForm .formBox button:hover span {
+  height: auto;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  -webkit-animation: arrow 1s both;
+          animation: arrow 1s both;
+  display: block;
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0;
+    right: 50px;
+  }
+  to {
+    opacity: 1;
+    right: 5px;
+  }
+}
+
+section .theme .contactBox .contactForm .formBox button:hover a {
+  color: #fff;
 }
 
 section .popup {

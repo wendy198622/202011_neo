@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
   i.material-icons {
@@ -42,42 +38,6 @@ img {
   content: "";
   clear: both;
   display: block;
-}
-
-.font100 {
-  font-weight: 100;
-}
-
-.font300 {
-  font-weight: 300;
-}
-
-.font400 {
-  font-weight: 400;
-}
-
-.font500 {
-  font-weight: 500;
-}
-
-.font700 {
-  font-weight: 700;
-}
-
-.font900 {
-  font-weight: 900;
-}
-
-.align__center {
-  text-align: center;
-}
-
-.align__left {
-  text-align: left;
-}
-
-.align__right {
-  text-align: right;
 }
 
 .btn {
@@ -171,8 +131,18 @@ img {
   color: #fff;
 }
 
+input, button, textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100px;
@@ -365,7 +335,6 @@ img {
 .header .social {
   float: right;
   margin-top: 30px;
-  margin-right: 40px;
   position: relative;
   z-index: 5;
 }
@@ -386,10 +355,41 @@ img {
 
 .header .social li {
   float: left;
+  margin-left: 15px;
+  position: relative;
+}
+
+.header .social li input.searchbar {
+  width: 0px;
+  height: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  padding-right: 40px;
+  padding: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header .social li input.searchbar:focus, .header .social li input.searchbar:checked {
+  outline: 0;
+}
+
+.header .social li input.searchbar.is_acted {
+  width: 250px;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #fff;
 }
 
 .header .social li a {
   padding: 10px;
+  position: relative;
+  z-index: 5;
 }
 
 .header .social li a img {
@@ -1457,6 +1457,7 @@ section .home_currentpj .txtBox p {
 
 section .home_kv {
   width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -2038,7 +2039,7 @@ section .home_charity.container .txtBox .number {
   position: absolute;
   z-index: 1;
   top: 30px;
-  left: 0;
+  left: 10px;
 }
 
 @media (max-width: 800px) {
@@ -2298,6 +2299,7 @@ section .home_charitymemory.container .caseBox .caseItem .imgBox {
 
 section .home_charitymemory.container .caseBox .caseItem .slick-slide {
   position: relative;
+  margin-bottom: -4px !important;
 }
 
 section .home_charitymemory.container .caseBox .caseItem .slick-slide .case_overlay {
@@ -2309,8 +2311,8 @@ section .home_charitymemory.container .caseBox .caseItem .slick-slide .case_over
 }
 
 section .home_charitymemory.container .caseBox .caseItem .slick-slide.slick-active .case_overlay {
-  -webkit-animation: overlay 1s .2s both;
-          animation: overlay 1s .2s both;
+  -webkit-animation: overlay .6s .2s both;
+          animation: overlay .6s .2s both;
 }
 
 @-webkit-keyframes overlay {
@@ -2398,16 +2400,6 @@ section .home_contact .contactForm.container {
 section .home_contact .contactForm .formBox {
   overflow: hidden;
   padding-bottom: 30px;
-}
-
-section .home_contact .contactForm .formBox input, section .home_contact .contactForm .formBox button, section .home_contact .contactForm .formBox textarea {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  border: 0;
-  padding: 10px;
-  position: relative;
 }
 
 section .home_contact .contactForm .formBox .group {
@@ -2499,6 +2491,22 @@ section .home_contact .contactForm .formBox .group .item input[type="checkbox"] 
 
 section .home_contact .contactForm .formBox .group .item input[type="checkbox"]:focus {
   outline: 0;
+}
+
+section .home_contact .contactForm .formBox .group .item input[type="checkbox"]:checked {
+  outline: 0;
+  bottom: 0;
+}
+
+section .home_contact .contactForm .formBox .group .item input[type="checkbox"]:checked:after {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(../img/check.svg) 0 0 no-repeat;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
 
 section .home_contact .contactForm .formBox .group .item textarea {
@@ -2649,28 +2657,50 @@ section .popup .popup_content.popup_img {
   }
 }
 
-section .popup .popup_content.popup_img .close {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  text-align: center;
+section .popup .popup_content.popup_mov {
+  width: 1080px;
+  height: 650px;
+  padding: 50px;
+  overflow: hidden;
 }
 
-section .popup .popup_content.popup_img .close i {
-  font-size: 32px;
-  line-height: 40px;
+section .popup .popup_content.popup_code {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
 }
 
-section .popup .popup_content.popup_img .close:hover {
-  cursor: pointer;
+@media (max-width: 600px) {
+  section .popup .popup_content.popup_code {
+    width: 100vw;
+    height: 100vw;
+    padding: 10vw;
+  }
 }
 
 section .popup .popup_content.popup_message {
   width: 320px;
   height: 60px;
   line-height: 60px;
+}
+
+section .popup .popup_content .close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 10;
+  right: 6px;
+  top: 6px;
+  text-align: center;
+}
+
+section .popup .popup_content .close i {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+section .popup .popup_content .close:hover {
+  cursor: pointer;
 }
 
 section .popup.is_acted {
