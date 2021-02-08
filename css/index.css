@@ -85,20 +85,7 @@ img {
   transition: all .3s;
 }
 
-.btn span {
-  width: 20px;
-  height: 2px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  overflow: hidden;
-  background: #000;
-}
-
-.btn a {
+.btn a, .btn span:nth-child(1) {
   -webkit-transition: all .3s;
   transition: all .3s;
   text-transform: uppercase;
@@ -106,6 +93,21 @@ img {
   color: #000;
   position: relative;
   z-index: 5;
+  display: block;
+}
+
+.btn span.material-icons {
+  width: 20px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  overflow: hidden;
+  background: #000;
 }
 
 .btn:hover {
@@ -116,7 +118,11 @@ img {
   width: 100%;
 }
 
-.btn:hover span {
+.btn:hover a, .btn:hover span:nth-child(1) {
+  color: #fff;
+}
+
+.btn:hover span.material-icons {
   height: auto;
   background: transparent;
   color: #fff;
@@ -145,10 +151,6 @@ img {
     opacity: 1;
     right: 20px;
   }
-}
-
-.btn:hover a {
-  color: #fff;
 }
 
 input, button, textarea {

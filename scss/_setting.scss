@@ -61,31 +61,34 @@ img{ width: 100%; display: block;}
     top: 0;
     transition: all .3s;
   }
-  span{
-      width: 20px;
-      height: 2px;
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      overflow: hidden;
-      background: #000;
-  }
-  a{
+  a, span:nth-child(1){
       transition: all .3s;
       text-transform: uppercase;
       font-family: 'Playfair Display', serif;
       color: #000;
       position: relative;
       z-index: 5;
+      display: block;
+  }
+  span.material-icons{
+      width: 20px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      z-index: 4;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      overflow: hidden;
+      background: #000;
   }
   &:hover{
     cursor: pointer;
     &::after{
       width: 100%;
     }
-    span{
+    a,span:nth-child(1){ color: #fff;}
+    span.material-icons{
       height: auto;
       background: transparent;
       color: #fff;
@@ -97,7 +100,6 @@ img{ width: 100%; display: block;}
       }
 
     }
-    a{ color: #fff;}
   }
 }
 

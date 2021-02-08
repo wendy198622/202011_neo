@@ -80,9 +80,12 @@
 			<div class="benefitsBox">
 				<div class="container">
 					<div class="introduction wow fadeInUp">
-						買房並非遙不可及！成家其實離我們很近，新理想不定期推出會員好康，降息房貸利率超低時代來臨，無論是青年首購族、還是換屋族，<br>搭配新理想專屬好康，皆能減輕您的購屋壓力，助您用更輕鬆的方式獲得高品質的生活！
+							買房並非遙不可及！成家其實離我們很近，<br>
+							新理想不定期推出會員好康，降息房貸利率超低時代來臨，<br>
+							無論是青年首購族、還是換屋族，搭配新理想專屬好康，<br>
+							皆能減輕您的購屋壓力，助您用更輕鬆的方式獲得高品質的生活！
 					</div>
-					<ul>
+					<ul id="content">
 						<li>
 							<a href="https://lin.ee/9UtHShi" class="wow fadeInUp">
 								<div class="imgBox">
@@ -147,7 +150,7 @@
 							</a>
 						</li>
 					</ul>
-					<div class="btn wow fadeInUp"><a href="#">READ MORE<span></span></a></div>
+					<div class="btn wow fadeInUp" id="moreBtn"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
 
 				</div>
 			</div>
@@ -263,6 +266,34 @@
 	});
 
 	
+	$(document).ready(function () {
+		new WOW().init();
+		$(".imgLiquidFill").imgLiquid();
+		$('#moreBtn').click(function (e) {
+			console.log()
+			$('#content').append('<li>' +
+				'<a href="https://lin.ee/9UtHShi" class="wow fadeInUp">' +
+				'<div class="imgBox">' +
+				'<img src="img/benefits/benefitsImg01.jpg" alt="">' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="https://lin.ee/9UtHShi" class="wow fadeInUp">' +
+				'<div class="imgBox">' +
+				'<img src="img/benefits/benefitsImg02.jpg" alt="">' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="https://lin.ee/9UtHShi" class="wow fadeInUp">' +
+				'<div class="imgBox">' +
+				'<img src="img/benefits/benefitsImg03.jpg" alt="">' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+		});
+	});
 	$(document).ready(function () {
 		new WOW().init();
 		$(".imgLiquidFill").imgLiquid();

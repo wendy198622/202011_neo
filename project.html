@@ -143,7 +143,7 @@
             </div>
 			<div class="projectBox">
 				<div class="container">
-					<ul>
+					<ul id="content">
 						<li>
 							<a href="project_single.html" class="wow fadeInUp">
 								<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>
@@ -199,7 +199,7 @@
 							</a>
 						</li>
 					</ul>
-					<div class="btn wow fadeInUp"><a href="#">READ MORE<span></span></a></div>
+					<div class="btn wow fadeInUp" id="moreBtn"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
 
 				</div>
 			</div>
@@ -318,7 +318,40 @@
 		$('.overlay_Video').removeClass('is-acted');
 	});
 
-	
+	$(document).ready(function () {
+		new WOW().init();
+		$(".imgLiquidFill").imgLiquid();
+		$('#moreBtn').click(function (e) {
+			console.log()
+			$('#content').append('<li>' +
+				'<a href="project_single.html">' +
+				'<div class="imgBox"><img src="img/project/projectImg01.jpg" alt=""></div>' +
+				'<div class="titleBox">海洋都心</div>' +
+				'<div class="tagBox js_height">' +
+				'<span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="project_single.html">' +
+				'<div class="imgBox"><img src="img/project/projectImg02.jpg" alt=""></div>' +
+				'<div class="titleBox">海洋都心</div>' +
+				'<div class="tagBox js_height">' +
+				'<span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<a href="project_single.html">' +
+				'<div class="imgBox"><img src="img/project/projectImg03.jpg" alt=""></div>' +
+				'<div class="titleBox">海洋都心</div>' +
+				'<div class="tagBox js_height">' +
+				'<span>#低首付</span><span>#三房</span><span>#二房</span><span>#興富發</span>' +
+				'</div>' +
+				'</a>' +
+				'</li>');
+		});
+	});
 	$(document).ready(function () {
 		new WOW().init();
 		$(".imgLiquidFill").imgLiquid();

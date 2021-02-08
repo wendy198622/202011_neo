@@ -101,7 +101,7 @@
                     <div class="listBox slider-list">
                         <!-- 2016 -->
                         <div class="list">
-                            <ul>
+                            <ul id="content">
                                 <li class="wow fadeInUp">
                                     <div class="imgBox"><img src="img/cases/casesImg01.jpg" alt=""></div>
                                     <div class="titleBox" data-wow-delay="0.5s">小春日和</div>
@@ -223,7 +223,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="btn wow fadeInUp" data-wow-delay="0.5s"><a href="#">READ MORE<span></span></a></div>
+                            <div class="btn wow fadeInUp moreBtn" id="moreBtn"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
                         </div>
                         <!-- 2017 -->
                         <div class="list">
@@ -349,7 +349,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="btn wow fadeInUp" data-wow-delay="0.5s"><a href="#">READ MORE<span></span></a></div>
+                            <div class="btn wow fadeInUp moreBtn" id="moreBtn2"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
                         </div>
                         <!-- 2018 -->
                         <div class="list">
@@ -475,7 +475,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="btn wow fadeInUp" data-wow-delay="0.5s"><a href="#">READ MORE<span></span></a></div>
+                            <div class="btn wow fadeInUp moreBtn" id="moreBtn3"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
                         </div>
                         <!-- 2019 -->
                         <div class="list">
@@ -601,7 +601,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="btn wow fadeInUp" data-wow-delay="0.5s"><a href="#">READ MORE<span></span></a></div>
+                            <div class="btn wow fadeInUp moreBtn" id="moreBtn4"><span>READ MORE</span><span class="material-icons">arrow_forward</span></div>
                         </div>
                     </div>
                 </div>
@@ -690,7 +690,63 @@
 	$('.close').on('click', function () {
 		$('.popup_line').removeClass('is_acted');
 	});
-	
+    $(document).ready(function () {
+		new WOW().init();
+		$(".imgLiquidFill").imgLiquid();
+		$('#moreBtn').click(function (e) {
+			console.log()
+			$('#content').append('<li>' +
+				'<div class="imgBox"><img src="img/cases/casesImg01.jpg" alt=""></div>' +
+				'<div class="titleBox">小春日和</div>' +
+				'<ul class="introBox">' +
+				'<li><span>建設</span><span>和築建設</span></li>' +
+				'<li><span>地點</span><span>台中市北屯區</span></li>' +
+                '<li><span>戶數</span><span>147戶</span></li>' +
+                '<li><span>銷售率</span><span>100%</span></li>' +
+                '</ul>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<div class="imgBox"><img src="img/cases/casesImg02.jpg" alt=""></div>' +
+				'<div class="titleBox">小春日和</div>' +
+				'<ul class="introBox">' +
+				'<li><span>建設</span><span>和築建設</span></li>' +
+				'<li><span>地點</span><span>台中市北屯區</span></li>' +
+                '<li><span>戶數</span><span>147戶</span></li>' +
+                '<li><span>銷售率</span><span>100%</span></li>' +
+                '</ul>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<div class="imgBox"><img src="img/cases/casesImg03.jpg" alt=""></div>' +
+				'<div class="titleBox">小春日和</div>' +
+				'<ul class="introBox">' +
+				'<li><span>建設</span><span>和築建設</span></li>' +
+				'<li><span>地點</span><span>台中市北屯區</span></li>' +
+                '<li><span>戶數</span><span>147戶</span></li>' +
+                '<li><span>銷售率</span><span>100%</span></li>' +
+                '</ul>' +
+				'</li>');
+			$('#content').append('<li>' +
+				'<div class="imgBox"><img src="img/cases/casesImg04.jpg" alt=""></div>' +
+				'<div class="titleBox">小春日和</div>' +
+				'<ul class="introBox">' +
+				'<li><span>建設</span><span>和築建設</span></li>' +
+				'<li><span>地點</span><span>台中市北屯區</span></li>' +
+                '<li><span>戶數</span><span>147戶</span></li>' +
+                '<li><span>銷售率</span><span>100%</span></li>' +
+                '</ul>' +
+				'</li>');
+		});
+                                
+                                    
+                                    
+                                    
+                                        
+                                        
+                                        
+                                        
+                                    
+                                
+	});
     //年度案例
 	// $('.slider-list').slick({
 	// 	slidesToShow: 1,
