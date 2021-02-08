@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 // @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 
-i.material-icons{
+.material-icons{
   @font-face {
       font-family: 'Material Icons';
       font-style: normal;
@@ -70,7 +70,7 @@ img{ width: 100%; display: block;}
       z-index: 5;
       display: block;
   }
-  span.material-icons{
+  span.material-icons, i.material-icons{
       font-family: 'Material Icons' !important;
       width: 20px;
       height: 2px;
@@ -89,7 +89,7 @@ img{ width: 100%; display: block;}
       width: 100%;
     }
     a,span:nth-child(1){ color: #fff;}
-    span.material-icons{
+    span.material-icons, i.material-icons{
       height: auto;
       background: transparent;
       color: #fff;

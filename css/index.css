@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
-  i.material-icons {
+  .material-icons {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
@@ -96,7 +96,7 @@ img {
   display: block;
 }
 
-.btn span.material-icons {
+.btn span.material-icons, .btn i.material-icons {
   font-family: 'Material Icons' !important;
   width: 20px;
   height: 2px;
@@ -123,7 +123,7 @@ img {
   color: #fff;
 }
 
-.btn:hover span.material-icons {
+.btn:hover span.material-icons, .btn:hover i.material-icons {
   height: auto;
   background: transparent;
   color: #fff;
@@ -2791,7 +2791,7 @@ section .home_contact .contactForm .formBox button::after {
   transition: all .3s;
 }
 
-section .home_contact .contactForm .formBox button span {
+section .home_contact .contactForm .formBox button i {
   width: 20px;
   height: 2px;
   display: block;
@@ -2821,7 +2821,7 @@ section .home_contact .contactForm .formBox button:hover::after {
   width: 100%;
 }
 
-section .home_contact .contactForm .formBox button:hover span {
+section .home_contact .contactForm .formBox button:hover i {
   height: auto;
   background: transparent;
   color: #fff;
@@ -2838,7 +2838,7 @@ section .home_contact .contactForm .formBox button:hover span {
   }
   to {
     opacity: 1;
-    right: 5px;
+    right: -10px;
   }
 }
 

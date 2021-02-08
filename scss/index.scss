@@ -1115,7 +1115,7 @@ section{
                       top: 0;
                       transition: all .3s;
                     }
-                    span{
+                    i{
                         width: 20px;
                         height: 2px;
                         display: block;
@@ -1139,7 +1139,7 @@ section{
                         &::after{
                           width: 100%;
                         }
-                        span{
+                        i{
                           height: auto;
                           background: transparent;
                           color: #fff;
@@ -1148,7 +1148,7 @@ section{
                           display: block;
                           @keyframes arrow {
                             from{ opacity: 0; right: 50px;}
-                            to{ opacity: 1; right: 5px;}
+                            to{ opacity: 1; right: -10px;}
                           }
                     
                         }
