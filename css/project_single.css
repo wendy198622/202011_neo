@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
   i.material-icons {
     font-family: 'Material Icons';
@@ -96,6 +97,7 @@ img {
 }
 
 .btn span.material-icons {
+  font-family: 'Material Icons' !important;
   width: 20px;
   height: 2px;
   display: block;
@@ -128,6 +130,7 @@ img {
   font-size: 15px;
   -webkit-animation: arrow 1s both;
           animation: arrow 1s both;
+  font-family: 'Material Icons' !important;
 }
 
 @-webkit-keyframes arrow {

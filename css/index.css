@@ -97,6 +97,7 @@ img {
 }
 
 .btn span.material-icons {
+  font-family: 'Material Icons' !important;
   width: 20px;
   height: 2px;
   display: block;
@@ -129,6 +130,7 @@ img {
   font-size: 15px;
   -webkit-animation: arrow 1s both;
           animation: arrow 1s both;
+  font-family: 'Material Icons' !important;
 }
 
 @-webkit-keyframes arrow {
@@ -2685,7 +2687,7 @@ section .home_contact .contactForm .formBox .group .item label {
 }
 
 section .home_contact .contactForm .formBox .group .item label.checktxt {
-  width: calc( 100% - 200px);
+  width: calc( 100% - 220px);
 }
 
 section .home_contact .contactForm .formBox .group .item input[type="text"] {

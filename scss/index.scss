@@ -1,7 +1,7 @@
 @import '_setting';
 @import '_header';
 @import '_footer';
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+// @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // *{ outline: 1px solid red;}
 section{
@@ -1030,7 +1030,7 @@ section{
                                 font-size: 14px;
                             }
                             &.checktxt{
-                                width: calc( 100% - 200px);
+                                width: calc( 100% - 220px);
                             }
                         }
                         input[type="text"]{
