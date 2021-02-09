@@ -63,6 +63,7 @@
                 width: calc(156/212*100%);
             }
         }
+        .black{ display: none;}
     }
     .menu-btn { display: none;}
     .menu-icon {
@@ -153,6 +154,7 @@
                     height: 20px;
                     &.ori{ display: block;}
                     &.cover{ display: none;}
+                    &.black{ display: none;}
                     @media (max-width:800px){
                         width: 40px;
                         height: 40px;
@@ -326,7 +328,7 @@
             }
             &::before{
                 content: "";
-                width: calc(100% - 700px);
+                width: calc(100% - 380px);
                 height: 1px;
                 display: block;
                 position: absolute;

@@ -83,7 +83,7 @@ section{
                 }
                 .title{
                     font-size: 18px;
-                    color: #dbced4;
+                    color: #006284;
                     @media (max-width:800px){
                         position: relative;
                         font-size: 16px;
@@ -157,6 +157,8 @@ section{
                     color: #000;
                     font-size: 18px;
                     padding: 3px 10px;
+                    border-radius: 20px;
+                    transition: all .3s;
                     @media (max-width:800px){
                         font-size: 16px;
                     }
@@ -166,12 +168,22 @@ section{
                     &.active{
                         color: #fff;
                         background: #006284;
-                        border-radius: 20px;
                         // text-decoration: underline;
                     }
                     &:hover{
                         cursor: pointer;
                     }
+                }
+            }
+        }
+        .category{
+            ul{
+                li{
+                    &:hover{
+                        color: #fff;
+                        background: #006284;
+                    }
+
                 }
             }
         }
@@ -244,7 +256,6 @@ section{
             .btn{ 
                 width: 520px;
                 margin: 0 auto 86px;
-                border: 1px solid #006284;
                 @media (max-width: 800px){
                     width: calc(520/800*100%);
                 }

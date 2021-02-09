@@ -26,6 +26,15 @@ section{
             // margin-bottom: 120px;
             // overflow: hidden;
             position: relative;
+            .container{
+                width: 100%;
+                max-width: 1600px;
+                margin: 0 auto;
+                @media (max-width:1600px){
+                    width: 90%;
+                }
+
+            }
             @media (max-width:800px){
                 padding-top: 60px;
                 &:after{
@@ -73,7 +82,7 @@ section{
                 }
                 .title{
                     font-size: 18px;
-                    color: #dbced4;
+                    color: #006284;
                     @media (max-width:800px){
                         position: relative;
                         font-size: 3.6vw;
@@ -163,7 +172,6 @@ section{
             .btn{ 
                 width: 520px;
                 margin: 0 auto 86px;
-                border: 1px solid #006284;
                 @media (max-width: 800px){
                     width: calc(520/800*100%);
                 }
