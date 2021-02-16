@@ -610,6 +610,12 @@
                 </div>
 			</div>
 		</div>
+		<div class="popup popup_line">
+			<div class="popup_content popup_code">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<img src="img/gotoline.svg" alt="">
+			</div>
+		</div>
 		
 	</section>
 	<footer>
@@ -654,50 +660,52 @@
 	</footer>
 </body>
 <script>
-        $('.search').on('click', function () {
-            $('.searchbar').addClass('is_acted');
-    
-            if ($(window).width() < 480) {
-                $('.menu').css('margin-top','130px');		
-            }else if ($(window).width() < 800) {
-                $('.menu').css('margin-top','160px');	
-            }else {
-                $('.menu').css('margin-top','auto');	
-            }
-        });
-	
-        $(window).scroll(function() {    
-            var scroll = $(window).scrollTop();    
-            if (scroll >= 100) {
-                $(".header").addClass("bgopen_black");
-            }else{
-                $(".header").removeClass("bgopen_black");
-            }
-        })
+
+    new WOW().init();
+    $(".imgLiquidFill").imgLiquid();
+
+// ---------- header ----------
+
+    //search bar
+    $('.search').on('click', function () {
+        $('.searchbar').addClass('is_acted');
+
+        if ($(window).width() < 480) {
+            $('.menu').css('margin-top','130px');		
+        }else if ($(window).width() < 800) {
+            $('.menu').css('margin-top','160px');	
+        }else {
+            $('.menu').css('margin-top','auto');	
+        }
+    });
+
+    //menu open
+    $(".menu-icon").click(function () {
+        $(".header").toggleClass("open");
+    });
+
+
+// ---------- footer ----------
+
+    //back top
+    $(".goTop").on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+
+    //line popup
+    $('.gotoline').on('click', function () {
+        $('.popup_line').addClass('is_acted');
+    });
+    $('.close').on('click', function () {
+        $('.popup_line').removeClass('is_acted');
+    });
+
+
+// ---------- content ----------
+
+	//more button
     $(document).ready(function () {
-		new WOW().init();
-		$(".imgLiquidFill").imgLiquid();
-	});
-	$(".menu-icon").click(function () {
-		$(".header").toggleClass("open");
-	});
-
-	$(".goTop").on("click", function () {
-		$("html, body").animate({ scrollTop: 0 }, 500);
-	});
-
-	$('.gotoline').on('click', function () {
-		$('.popup_line').addClass('is_acted');
-	});
-
-	$('.close').on('click', function () {
-		$('.popup_line').removeClass('is_acted');
-	});
-    $(document).ready(function () {
-		new WOW().init();
-		$(".imgLiquidFill").imgLiquid();
 		$('#moreBtn').click(function (e) {
-			console.log()
 			$('#content').append('<li>' +
 				'<div class="imgBox"><img src="img/cases/casesImg01.jpg" alt=""></div>' +
 				'<div class="titleBox">小春日和</div>' +
@@ -738,44 +746,10 @@
                 '<li><span>銷售率</span><span>100%</span></li>' +
                 '</ul>' +
 				'</li>');
-		});
-                                
-                                    
-                                    
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                
+		});                                               
 	});
-    //年度案例
-	// $('.slider-list').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	asNavFor: '.slider-year'
-	// });
-	// $('.slider-year').slick({
-	// 	slidesToShow: 3,
-	// 	slidesToScroll: 1,
-		// centerMode: true,
-	// 	asNavFor: '.slider-list',
-	// 	arrows: true,
-	// 	dots: false,
-	// 	infinite: false,
-	// 	focusOnSelect: true
-	// });
 
-	// $('a[data-slide]').click(function (e) {
-	// 	e.preventDefault();
-	// 	var slideno = $(this).data('slide');
-	// 	$('.slider-year').slick('slickGoTo', slideno - 1);
-	// });
-
-
+    //year cases
 	$('.slider-list').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -793,7 +767,6 @@
 		infinite: false,
 		focusOnSelect: true
 	});
-
 	$('a[data-slide]').click(function (e) {
 		e.preventDefault();
 		var slideno = $(this).data('slide');

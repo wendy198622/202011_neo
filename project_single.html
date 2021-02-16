@@ -61,7 +61,7 @@
 			<li><a href="#">粉絲專頁</a></li>
 		</ul>
 	</nav>
-	<!-- <div class="messange"><img src="img/project/messange.svg" alt=""></div> -->
+
 	<section id="fullpage">
 		<div class="section theme" id="section1">
 			<div class="project_kv">
@@ -445,12 +445,10 @@
 </body>
 <script>
 
-	
-	$(document).ready(function () {
-		new WOW().init();
-		$(".imgLiquidFill").imgLiquid();
-	});
+	new WOW().init();
+	$(".imgLiquidFill").imgLiquid();
 
+	//fullpage
 	new fullpage('#fullpage', {
 		//options here
 		// anchors:['TOP_VISUAL', 'PROJECT_VIEW', 'CASE_EXTERIOR', 'LOCATION_ADVANTAGE', 'LIFE_FUNCTION', 'CONSTRUCTION_TEAM', 'PUBLIC_PLANNING', 'TRAFFIC_FUNCTION', 'PROJECT_INSIDE', 'INFORMATION', 'BOOKING'],
@@ -461,7 +459,8 @@
 		scrollBar:true,
 		scrollHorizontally: true
 	});
-
+	
+	//send form	
 	$('button').on('click', function () {
 		$('.popup_send').addClass('is_acted');
 		setTimeout(() => {
@@ -469,6 +468,7 @@
 		},5000)
 	});
 
+	//kv輪播
 	$('.kv_slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -477,7 +477,8 @@
 		autoplay: true,
 		autoplaySpeed: 2000,
 	});
-	//photo輪播 類型
+
+	//介紹photo輪播
 	$('.slider_photo1').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

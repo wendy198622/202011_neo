@@ -887,8 +887,8 @@ section{
                                 label{
                                     width: 120px;
                                     float: left;
-                                    height: 40px;
-                                    line-height: 40px;
+                                    height: 50px;
+                                    line-height: 50px;
                                     font-size: 18px;
                                     font-weight: 300;
                                     text-align: left;
@@ -898,13 +898,13 @@ section{
                                     &.checktxt{
                                         width: calc( 100% - 180px);
                                         font-size: 18px;
-                                        margin-top: 5px;
+                                        margin-top: 10px;
                                         @media (max-width:1200px){
                                             width: calc( 100% - 40px);
                                             font-size: 16px;
                                         }
                                         @media (max-width:960px){
-                                            line-height: 20px;
+                                            line-height: 40px;
                                             margin-top: 2px;
                                             height: 40px;
                                         }
@@ -942,9 +942,12 @@ section{
                                     height: 24px;
                                     float: left;
                                     border: 1px solid #000;
-                                    margin-top: 20px;
+                                    margin-top: 25px;
                                     margin-right: 10px;
                                     @media (max-width:960px){
+                                        margin-top: 10px;
+                                    }
+                                    @media (max-width:600px){
                                         margin-top: 0;
                                     }
                                     &:focus{

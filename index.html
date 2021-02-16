@@ -450,7 +450,7 @@
 							<div class="item noline wow fadeInUp" data-wow-delay="1.2s">
 								<input type="checkbox" id="checkbox" name="checkbox" value="checkbox" v-model="check">
 								<label for="checkbox" class="checktxt">我同意通過電話方式與我聯絡</label>
-								<button class="send"><a href="#">確認送出<i class="material-icons">arrow_forward</i></a></button>
+								<button class="send"><a href="javascript:;">確認送出<i class="material-icons">arrow_forward</i></a></button>
 							</div>
 						</div>
 					</div>
@@ -528,58 +528,67 @@
 	</footer>
 </body>
 <script>
-		$('.search').on('click', function () {
-			$('.searchbar').addClass('is_acted');
-	
-			if ($(window).width() < 480) {
-				$('.menu').css('margin-top','130px');		
-			}else if ($(window).width() < 800) {
-				$('.menu').css('margin-top','160px');	
-			}else {
-				$('.menu').css('margin-top','auto');	
-			}
-		});
 
-	// $(window).scroll(function() {    
-	// 	var scroll = $(window).scrollTop();    
-	// 	if (scroll >= 100) {
-	// 		$(".header").addClass("bgopen");
-	// 	}else{
-	// 		$(".header").removeClass("bgopen");
-	// 	}
-	// })
+	new WOW().init();
+	$(".imgLiquidFill").imgLiquid();
 
+// ---------- header ----------
+
+	//search bar
+	$('.search').on('click', function () {
+		$('.searchbar').addClass('is_acted');
+
+		if ($(window).width() < 480) {
+			$('.menu').css('margin-top','130px');		
+		}else if ($(window).width() < 800) {
+			$('.menu').css('margin-top','160px');	
+		}else {
+			$('.menu').css('margin-top','auto');	
+		}
+	});
+
+	//menu open
 	$(".menu-icon").click(function () {
 		$(".header").toggleClass("open");
 	});
 
+
+// ---------- footer ----------
+
+	//back top
 	$(".goTop").on("click", function () {
 		$("html, body").animate({ scrollTop: 0 }, 500);
 	});
 
+	//line popup
+	$('.gotoline').on('click', function () {
+		$('.popup_line').addClass('is_acted');
+	});
+	$('.close').on('click', function () {
+		$('.popup_line').removeClass('is_acted');
+	});
+
+
+// ---------- content ----------
+
+	//kv play icon
 	$('.kv_item').on('click', function () {
 		TweenMax.to($('#mouse_video'), .0, {
 			opacity: 0
 		})
 	});
 	
-	
+	// kv video popup
 	if ($(window).width() > 800) {
 		$('.home_kv').on('click', function () {
 			$('.popup_video').addClass('is_acted');
 		});			
 	}
-
-	$('.gotoline').on('click', function () {
-		$('.popup_line').addClass('is_acted');
-	});
-
 	$('.close').on('click', function () {
-		$('.popup_event').removeClass('is_acted');
-		$('.popup_line').removeClass('is_acted');
 		$('.popup_video').removeClass('is_acted');
 	});
 
+	//send form	
 	$('button').on('click', function () {
 		$('.popup_send').addClass('is_acted');
 		setTimeout(() => {
@@ -587,12 +596,7 @@
 		},5000)
 	});
 
-
-	$(document).ready(function () {
-		new WOW().init();
-		$(".imgLiquidFill").imgLiquid();
-	});
-	//首頁CURRENT PROJECT輪播
+	//CURRENT PROJECT輪播
 	$('.slider-txt').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -641,7 +645,7 @@
         touchThreshold: 100
 	});
 
-	//首頁charity輪播
+	//charity輪播
 	$('.slider-case').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -667,7 +671,6 @@
 	});
 
 	function setProgressBar(bar, current, next) {
-		//console.log(current,next)
 		if (current >= next) {
 			let id = setInterval(() => {
 				if (next >= current) {
@@ -718,11 +721,6 @@
 			opacity: 0
 		})
 	}
-
-
-	// $(document).ready(function(){
-	// 	$('.bxslider').bxSlider();
-	// });
 
 	var maxSlides,
     width = $(window).width();

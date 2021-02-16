@@ -110,9 +110,15 @@
 							</ul>
 						</div>
 					</div>					
-					<div class="btn wow fadeInUp"><a href="news.html">Back to LIST<span></span></a></div>
+					<div class="btn wow fadeInUp"><a href="news.html">Back to LIST</a></div>
 
 				</div>
+			</div>
+		</div>
+		<div class="popup popup_line">
+			<div class="popup_content popup_code">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<img src="img/gotoline.svg" alt="">
 			</div>
 		</div>
 	</section>
@@ -158,217 +164,44 @@
 	</footer>
 </body>
 <script>
-		$('.search').on('click', function () {
-			$('.searchbar').addClass('is_acted');
-	
-			if ($(window).width() < 480) {
-				$('.menu').css('margin-top','130px');		
-			}else if ($(window).width() < 800) {
-				$('.menu').css('margin-top','160px');	
-			}else {
-				$('.menu').css('margin-top','auto');	
-			}
-		});
 
+	new WOW().init();
+	$(".imgLiquidFill").imgLiquid();
+
+// ---------- header ----------
+
+	//search bar
+	$('.search').on('click', function () {
+		$('.searchbar').addClass('is_acted');
+
+		if ($(window).width() < 480) {
+			$('.menu').css('margin-top','130px');		
+		}else if ($(window).width() < 800) {
+			$('.menu').css('margin-top','160px');	
+		}else {
+			$('.menu').css('margin-top','auto');	
+		}
+	});
+
+	//menu open
 	$(".menu-icon").click(function () {
 		$(".header").toggleClass("open");
 	});
 
+
+// ---------- footer ----------
+
+	//back top
 	$(".goTop").on("click", function () {
 		$("html, body").animate({ scrollTop: 0 }, 500);
 	});
 
-	$('.kv_item').on('click', function () {
-		TweenMax.to($('#mouse_video'), .0, {
-			opacity: 0
-		})
-		$('.overlay_Video').addClass('is-acted');
-	});
-	
-	$('.bxslider li').on('click', function () {
-		$('.popup_event').addClass('is_acted');
-	});
-	$('.close').on('click', function () {
-		$('.popup_event').removeClass('is_acted');
-	});
-
-
-	$('.video_close').on('click', function () {
-		$('.overlay_Video').removeClass('is-acted');
-	});
-
+	//line popup
 	$('.gotoline').on('click', function () {
 		$('.popup_line').addClass('is_acted');
 	});
-
 	$('.close').on('click', function () {
 		$('.popup_line').removeClass('is_acted');
-	});
-
-	$('button').on('click', function () {
-		$('.popup_send').addClass('is_acted');
-		setTimeout(() => {
-			$('.popup_send').removeClass('is_acted');			
-		},5000)
-	});
-
-	$('.close').on('click', function () {
-		$('.overlay_Video').removeClass('is-acted');
-	});
-
-	
-	$(document).ready(function () {
-		new WOW().init();
-		$(".imgLiquidFill").imgLiquid();
-	});
-	//首頁CURRENT PROJECT輪播
-	$('.slider-txt').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-img'
-	});
-
-	$('.slider-img').on('init', function (event, slick) {
-		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
-		setProgressBar($("#coverline"), 0, nextIndex)
-	});
-
-	$('.slider-img').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: '100px',
-		asNavFor: '.slider-txt',
-		dots: false,
-		arrows: true,
-		focusOnSelect: true
-	});
-
-	$('.slider-img').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-
-		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
-		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
-		setProgressBar($("#coverline"), currentIndex, nextIndex)
-	});
-
-	$('a[data-slide]').click(function (e) {
-		e.preventDefault();
-		var slideno = $(this).data('slide');
-		$('.slider-img').slick('slickGoTo', slideno - 1);
-	});
-
-	//單一年度單一個案輪播
-	$('.slider-singlecase').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		fade: true,
-        cssEase: 'ease-in-out',
-        touchThreshold: 100
-	});
-
-	//首頁charity輪播
-	$('.slider-case').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-time'
-	});
-	$('.slider-time').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		centerMode: true,
-		asNavFor: '.slider-case',
-		arrows: true,
-		dots: false,
-		infinite: false,
-		focusOnSelect: true
-	});
-
-	$('a[data-slide]').click(function (e) {
-		e.preventDefault();
-		var slideno = $(this).data('slide');
-		$('.slider-time').slick('slickGoTo', slideno - 1);
-	});
-
-	function setProgressBar(bar, current, next) {
-		//console.log(current,next)
-		if (current >= next) {
-			let id = setInterval(() => {
-				if (next >= current) {
-					clearInterval(id);
-				} else {
-					current--;
-					bar.css("width", current + '%');
-				}
-			}, 10)
-		} else {
-			if (current >= 100) {
-				current = 0
-			}
-			let id = setInterval(() => {
-				if (current >= next) {
-					clearInterval(id);
-				} else {
-					current++;
-					bar.css("width", current + '%');
-				}
-			}, 10)
-		}
-	}
-
-	$('#mouse_video').css("pointer-events","none")
-	$('.home_kv').on('mousemove', onMouseMove1)
-	$('.home_kv').on('mouseenter', onMouseHover1)
-	$('.home_kv').on('mouseleave', onMouseHoverOut1)
-
-
-	function onMouseMove1(e) {
-		TweenMax.to($('#mouse_video'), .4, {
-			x: e.pageX - 49,
-			y: e.pageY - 49,
-			opacity: 1
-		})
-	}
-
-	function onMouseHover1() {
-		console.log("onMouseHover1")
-		TweenMax.to($('#mouse_video'), .15, {
-			opacity: 0
-		})
-	}
-	function onMouseHoverOut1() {
-		console.log("onMouseHoverOut1")
-		TweenMax.to($('#mouse_video'), .15, {
-			opacity: 0
-		})
-	}
-
-
-	// $(document).ready(function(){
-	// 	$('.bxslider').bxSlider();
-	// });
-
-	var maxSlides,
-    width = $(window).width();
-
-	if (width < 800) {
-		maxSlides = 3;
-	} else {
-		maxSlides = 6;
-	}
-	$('.bxslider').bxSlider({
-		minSlides: maxSlides,
-		maxSlides: maxSlides,
-		slideWidth: 450,
-		slideMargin: 30,
-		ticker: true,
-		tickerHover:true,
-		speed: 100000
 	});
 
 </script>
