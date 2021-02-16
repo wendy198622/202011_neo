@@ -185,25 +185,50 @@ input, button, textarea {
 
 .popup .popup_content.popup_mov {
   width: 1080px;
-  height: 650px;
-  padding: 50px;
+  height: 608px;
+  outline: 10px solid #fff;
   overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .popup .popup_content.popup_mov {
     width: 800px;
-    height: 480px;
-    padding: 40px;
+    height: 450px;
   }
 }
 
 @media (max-width: 1000px) {
   .popup .popup_content.popup_mov {
     width: 640px;
-    height: 384px;
-    padding: 30px;
+    height: 362px;
   }
+}
+
+@media (max-width: 800px) {
+  .popup .popup_content.popup_mov {
+    width: 400px;
+    height: 855px;
+  }
+}
+
+@media (max-width: 540px) {
+  .popup .popup_content.popup_mov {
+    width: 300px;
+    height: 655px;
+  }
+}
+
+@media (max-width: 400px) {
+  .popup .popup_content.popup_mov {
+    width: 260px;
+    height: 570px;
+  }
+}
+
+.popup .popup_content.popup_mov .content {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .popup .popup_content.popup_code {
@@ -832,6 +857,12 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  footer {
+    padding: 20px;
+  }
+}
+
 footer .contentBox {
   overflow: hidden;
 }
@@ -901,7 +932,13 @@ footer .contentBox .navItem ul li a {
 
 @media (max-width: 600px) {
   footer .contentBox .navItem ul li a {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .contentBox .navItem ul li a {
+    font-size: 12px;
   }
 }
 
@@ -944,6 +981,20 @@ footer .contentBox .companyInfo {
   }
 }
 
+@media (max-width: 600px) {
+  footer .contentBox .companyInfo {
+    width: calc(570/960*100%);
+    margin-top: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .contentBox .companyInfo {
+    width: calc(570/960*100%);
+    margin-top: 90%;
+  }
+}
+
 footer .contentBox .companyInfo > div {
   float: left;
   color: #fff;
@@ -972,13 +1023,13 @@ footer .contentBox .companyInfo > div a {
 
 @media (max-width: 960px) {
   footer .contentBox .companyInfo > div {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
   footer .contentBox .companyInfo > div {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -1134,7 +1185,7 @@ footer .copyright::before {
   }
 }
 
-footer .copyright p {
+footer .copyright p, footer .copyright a {
   float: right;
   font-size: 14px;
   font-weight: 300;
@@ -1145,7 +1196,7 @@ footer .copyright p {
 }
 
 @media (max-width: 960px) {
-  footer .copyright p {
+  footer .copyright p, footer .copyright a {
     float: none;
     font-size: 12px;
     line-height: 16px;
@@ -1266,7 +1317,6 @@ footer.simple .copyright p {
 }
 
 section .theme {
-  min-height: 500px;
   position: relative;
 }
 
@@ -1440,10 +1490,18 @@ section .theme .pagingInfo {
   }
 }
 
+@media (max-width: 800px) {
+  section .theme .pagingInfo {
+    width: calc(100% - 150px);
+    margin-top: 30px;
+  }
+}
+
 section .theme .pagingInfo > div {
   font-family: 'Noto Serif TC', serif;
   display: inline-block;
   margin-left: 5px;
+  vertical-align: middle;
 }
 
 section .theme .pagingInfo .progressBar {
@@ -1498,6 +1556,12 @@ section .home_currentpj .imgBox .innerBox {
   width: calc(100% + 120px);
 }
 
+@media (max-width: 800px) {
+  section .home_currentpj .imgBox .innerBox {
+    width: calc(100% + 80px);
+  }
+}
+
 section .home_currentpj .imgBox .innerBox .photo {
   padding: 0 20px;
 }
@@ -1532,6 +1596,13 @@ section .home_currentpj .txtBox {
     bottom: -200px;
     left: 0;
     background: #eee;
+  }
+}
+
+@media (max-width: 600px) {
+  section .home_currentpj .txtBox:after {
+    height: 100px;
+    bottom: -100px;
   }
 }
 
@@ -1640,7 +1711,6 @@ section .home_currentpj .txtBox p {
 
 section .home_kv {
   width: auto;
-  min-width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -1775,9 +1845,21 @@ section .home_kv .scroll .scroll_content:before {
 
 section .mouse_video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -9999px;
+  left: -9999px;
   z-index: 10;
+}
+
+section .mouse_video.mob {
+  width: 120px;
+  height: 120px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
 }
 
 section .overlay_Video {
@@ -1925,6 +2007,12 @@ section .home_benefits {
   overflow: hidden;
 }
 
+@media (max-width: 800px) {
+  section .home_benefits {
+    padding-bottom: 50px;
+  }
+}
+
 section .home_benefits .txtBox .number {
   -webkit-text-stroke: 1px #eee;
 }
@@ -2028,6 +2116,13 @@ section .home_about .topBox .awards {
   }
 }
 
+@media (max-width: 600px) {
+  section .home_about .topBox .awards {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
 section .home_about .topBox h3 {
   width: calc(530/1300*100%);
   float: left;
@@ -2055,6 +2150,13 @@ section .home_about .topBox h3 {
   }
 }
 
+@media (max-width: 600px) {
+  section .home_about .topBox h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
 section .home_about .topBox p {
   float: left;
   font-size: 18px;
@@ -2079,6 +2181,13 @@ section .home_about .topBox p {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  section .home_about .topBox p {
+    font-size: 15px;
+    line-height: 26px;
   }
 }
 
@@ -2429,6 +2538,12 @@ section .home_charitymemory.container .caseBox {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  section .home_charitymemory.container .caseBox {
+    margin-top: 0;
+  }
+}
+
 section .home_charitymemory.container .caseBox .caseItem {
   background: url(../img/index/charity_bg.png) 10% center no-repeat #ececec;
   overflow: hidden;
@@ -2454,6 +2569,12 @@ section .home_charitymemory.container .caseBox .caseItem .txtBox {
   }
 }
 
+@media (max-width: 800px) {
+  section .home_charitymemory.container .caseBox .caseItem .txtBox {
+    padding: 20px;
+  }
+}
+
 section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem {
   height: 240px;
   position: absolute;
@@ -2474,6 +2595,13 @@ section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem h4 {
   margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+  section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
 section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem p {
   font-size: 18px;
   line-height: 36px;
@@ -2482,13 +2610,8 @@ section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem p {
 
 @media (max-width: 600px) {
   section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem p {
     font-size: 12px;
+    line-height: 22px;
   }
 }
 
@@ -2575,6 +2698,14 @@ section .home_charitymemory.container .caseBox .pagingInfo {
   }
 }
 
+@media (max-width: 800px) {
+  section .home_charitymemory.container .caseBox .pagingInfo {
+    width: calc(100% - 80px);
+    top: 406px;
+    left: 20px;
+  }
+}
+
 @media (max-width: 1200px) {
   section .home_charitymemory.container .caseBox .pagingInfo .progressBar {
     width: calc( 100% - 100px);
@@ -2598,6 +2729,22 @@ section .home_contact:after {
   z-index: -1;
   bottom: 0;
   left: 0;
+}
+
+@media (max-width: 800px) {
+  section .home_contact .txtBox .number {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -50px;
+  }
+}
+
+@media (max-width: 800px) {
+  section .home_contact .txtBox .title {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 section .home_contact .contactForm {
@@ -2656,6 +2803,13 @@ section .home_contact .contactForm .formBox .group .item.noline {
   margin-top: 30px;
 }
 
+@media (max-width: 640px) {
+  section .home_contact .contactForm .formBox .group .item.noline {
+    width: 220px;
+    margin: 0 auto;
+  }
+}
+
 section .home_contact .contactForm .formBox .group .item label {
   width: 120px;
   float: left;
@@ -2665,14 +2819,16 @@ section .home_contact .contactForm .formBox .group .item label {
   font-weight: 300;
 }
 
-@media (max-width: 600px) {
-  section .home_contact .contactForm .formBox .group .item label {
-    font-size: 14px;
-  }
-}
-
 section .home_contact .contactForm .formBox .group .item label.checktxt {
   width: calc( 100% - 220px);
+}
+
+@media (max-width: 640px) {
+  section .home_contact .contactForm .formBox .group .item label.checktxt {
+    font-size: 14px;
+    width: 100%;
+    float: unset;
+  }
 }
 
 section .home_contact .contactForm .formBox .group .item input[type="text"] {
@@ -2745,7 +2901,7 @@ section .home_contact .contactForm .formBox .group .item textarea:checked, secti
 
 section .home_contact .contactForm .formBox button {
   width: 160px;
-  float: left;
+  float: right;
   height: 50px;
   border: 1px solid #000;
   background: transparent;
@@ -2759,9 +2915,12 @@ section .home_contact .contactForm .formBox button {
   padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   section .home_contact .contactForm .formBox button {
     font-size: 16px;
+    float: unset;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -2888,6 +3047,12 @@ section .home_contact .contactForm .formBox button:hover a {
   }
 }
 
+@media (max-width: 800px) {
+  .slider-img .slick-prev {
+    right: 110px;
+  }
+}
+
 .slider-img .slick-prev:before {
   font-family: 'Material Icons';
   content: '\e5cb';
@@ -2905,6 +3070,12 @@ section .home_contact .contactForm .formBox button:hover a {
 @media (max-width: 1200px) {
   .slider-img .slick-next {
     right: 120px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider-img .slick-next {
+    right: 70px;
   }
 }
 
@@ -2958,6 +3129,12 @@ section .home_contact .contactForm .formBox button:hover a {
   }
 }
 
+@media (max-width: 800px) {
+  .slider-singlecase .slick-prev {
+    right: 60px;
+  }
+}
+
 .slider-singlecase .slick-prev:before {
   font-family: 'Material Icons';
   content: '\e5cb';
@@ -2975,6 +3152,12 @@ section .home_contact .contactForm .formBox button:hover a {
 @media (max-width: 1200px) {
   .slider-singlecase .slick-next {
     right: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider-singlecase .slick-next {
+    right: 20px;
   }
 }
 

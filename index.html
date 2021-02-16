@@ -32,40 +32,42 @@
 </head>
 
 <body>
-	<header class="header" id="header">
+	<header class="header">
 		<input class="menu-btn" type="checkbox" id="menu-btn" />
-		<label class="menu-icon" for="menu-btn"><span id="navicon" class="navicon"></span></label>
-		<a href="index.html" class="logo" id="logo">
-			<img class="ori white" src="img/logo.svg" alt="">
-			<img class="ori black" src="img/logo_black.svg" alt="">
+		<label class="menu-icon" for="menu-btn"><span class="navicon black"></span></label>
+		<a href="index.html" class="logo">
+			<img class="ori" src="img/logo_black.svg" alt="">
 			<img class="cover" src="img/logo_txt.svg" alt="">
 		</a>
-		<ul class="social">
-			<li><a href="javascript:;" class="search" id="icon1"><img class="white" src="img/nav_search.svg" alt=""><img class="black" src="img/nav_search_black.svg" alt=""></a></li>
-			<li><a href="https://lin.ee/9UtHShi" target="_blank" id="icon2"><img class="white" src="img/nav_line.svg" alt=""><img class="black" src="img/nav_line_black.svg" alt=""></a></li>
-			<li><a href="https://www.facebook.com/Neo.vision" id="icon3" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""><img class="black" src="img/nav_facebook_black.svg" alt=""></a></li>
+		<ul class="social social_black">
+			<li><a href="javascript:;" class="search"><img class="ori" src="img/nav_search_black.svg" alt=""><img class="cover" src="img/nav_search.svg" alt=""></a></li>
+			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="ori" src="img/nav_line_black.svg"
+						alt=""><img class="cover" src="img/nav_line.svg" alt=""></a></li>
+			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="ori"
+						src="img/nav_facebook_black.svg" alt=""><img class="cover" src="img/nav_facebook.svg"
+						alt=""></a></li>
 		</ul>
 		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar"/>
 		<div class="cover_menu">
 			<ul class="menu">
-				<div class="box">
-					<li class="wow fadeInUp"><a href="news.html"><span>news</span>最新消息</a></li>
-					<li class="wow fadeInUp" data-wow-delay=".1s"><a href="aboutus.html"><span>about us</span>關於我們</a></li>
-					<li class="wow fadeInUp" data-wow-delay=".2s"><a href="project.html"><span>online project</span>線上個案</a></li>
-					<li class="wow fadeInUp" data-wow-delay=".3s"><a href="cases.html"><span>HISTORY cases</span>歷年個案</a></li>
-				</div>
-				<div class="box">
-					<li class="wow fadeInUp" data-wow-delay=".4s"><a href="contactus.html"><span>contact us</span>聯絡我們</a></li>
-					<li class="wow fadeInUp" data-wow-delay=".5s"><a href="benefits.html"><span>VIP BENEFITS</span>專屬好康</a></li>
-					<li class="wow fadeInUp" data-wow-delay=".6s"><a href="#"><span>Staff only</span>員工園地</a></li>
-				</div>
+					<div class="box">
+						<li class="wow fadeInUp"><a href="news.html"><span>news</span>最新消息</a></li>
+						<li class="wow fadeInUp" data-wow-delay=".1s"><a href="aboutus.html"><span>about us</span>關於我們</a></li>
+						<li class="wow fadeInUp" data-wow-delay=".2s"><a href="project.html"><span>online project</span>線上個案</a></li>
+						<li class="wow fadeInUp" data-wow-delay=".3s"><a href="cases.html"><span>HISTORY cases</span>歷年個案</a></li>
+					</div>
+					<div class="box">
+						<li class="wow fadeInUp" data-wow-delay=".4s"><a href="contactus.html"><span>contact us</span>聯絡我們</a></li>
+						<li class="wow fadeInUp" data-wow-delay=".5s"><a href="benefits.html"><span>VIP BENEFITS</span>專屬好康</a></li>
+						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="#"><span>Staff only</span>員工園地</a></li>
+					</div>
 			</ul>
 			<ul class="social_mob">
 				<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
 				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
 			</ul>
 			<div class="copyright">
-				<p>新理想廣告股份有限公司 Copyright © By Neo-Vision Advertisement Co., Ltd. All Rights Reserved.</p>
+				<p>Copyright © 2021 新理想廣告股份有限公司 版權所有</p>
 			</div>
 		</div>
 	</header>
@@ -85,7 +87,8 @@
 					<div class="scroll_content"></div>
 				</div>
 			</div>
-			<div class="mouse_video" id="mouse_video" style="opacity: 0;"><img src="img/index/videoplay.svg"></div>
+			<div class="mouse_video pc" id="mouse_video" style="opacity: 0;"><img src="img/index/videoplay.svg"></div>
+			<div class="mouse_video mob"><img src="img/index/videoplay.svg"></div>
 		</div>
 		<div class="theme online_project" id="block2">
 			<div class="blockItem white">current project</div>
@@ -216,10 +219,22 @@
 					<div class="btn wow fadeInUp" data-wow-delay=".5s"><a href="benefits.html">VIEW ALL</a></div>
 
 				</div>
-				<div class="eventBox">
+				<div class="eventBox pc">
 					<ul class="bxslider">
 						<li class="wow fadeInUp"><a href="project_single.html" target="_blank"><img src="img/index/home_event01.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay=".3s"><a href="project_single.html" target="_blank"><img src="img/index/home_event02.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img src="img/index/home_event03.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img src="img/index/home_event04.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay="1.2s"><a href="project_single.html" target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="eventBox mob">
+					<ul class="bxslider">
+						<li class="wow fadeInUp"><a href="project_single.html" target="_blank"><img src="img/index/home_event01.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".3s"><a href="project_single.html" target="_blank"><img src="img/index/home_event02.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img src="img/index/home_event03.jpg" alt=""></a></li>
+					</ul>
+					<ul class="bxslider">
 						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img src="img/index/home_event03.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img src="img/index/home_event04.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay="1.2s"><a href="project_single.html" target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li>
@@ -469,9 +484,14 @@
 		<div class="popup popup_video">
 			<div class="popup_content popup_mov">
 				<div class="close"><i class="material-icons">clear</i></div>
-				<div class="content">
+				<div class="content pc">
 					<video width="100%" height="100%" preload autoplay muted controls>
 						<source src="img/video/index_cf.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="content mob">
+					<video width="100%" height="100%" preload autoplay muted controls>
+						<source src="img/video/index_cf_m.mp4" type="video/mp4">
 					</video>
 				</div>
 			</div>
@@ -522,7 +542,7 @@
 			</ul>
 		</div>
 		<div class="copyright">
-			<p>新理想廣告股份有限公司 Copyright © By Neo-Vision Advertisement Co., Ltd. All Rights Reserved.</p>
+			<p>Copyright © 2021  <a href="index.html">新理想廣告股份有限公司</a> 版權所有</p>
 		</div>
 		<div class="goTop"><img src="img/goTop.svg" alt=""></div>
 	</footer>
@@ -579,11 +599,11 @@
 	});
 	
 	// kv video popup
-	if ($(window).width() > 800) {
+	// if ($(window).width() > 800) {
 		$('.home_kv').on('click', function () {
 			$('.popup_video').addClass('is_acted');
 		});			
-	}
+	// }
 	$('.close').on('click', function () {
 		$('.popup_video').removeClass('is_acted');
 	});
@@ -618,7 +638,15 @@
 		asNavFor: '.slider-txt',
 		dots: false,
 		arrows: true,
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+			breakpoint: 800,
+			settings: {
+				centerPadding: '60px',
+			}
+			}
+		]
 	});
 
 	$('.slider-img').on('beforeChange', function (event, slick, currentSlide, nextSlide) {

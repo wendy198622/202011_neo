@@ -185,25 +185,50 @@ input, button, textarea {
 
 .popup .popup_content.popup_mov {
   width: 1080px;
-  height: 650px;
-  padding: 50px;
+  height: 608px;
+  outline: 10px solid #fff;
   overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .popup .popup_content.popup_mov {
     width: 800px;
-    height: 480px;
-    padding: 40px;
+    height: 450px;
   }
 }
 
 @media (max-width: 1000px) {
   .popup .popup_content.popup_mov {
     width: 640px;
-    height: 384px;
-    padding: 30px;
+    height: 362px;
   }
+}
+
+@media (max-width: 800px) {
+  .popup .popup_content.popup_mov {
+    width: 400px;
+    height: 855px;
+  }
+}
+
+@media (max-width: 540px) {
+  .popup .popup_content.popup_mov {
+    width: 300px;
+    height: 655px;
+  }
+}
+
+@media (max-width: 400px) {
+  .popup .popup_content.popup_mov {
+    width: 260px;
+    height: 570px;
+  }
+}
+
+.popup .popup_content.popup_mov .content {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .popup .popup_content.popup_code {
@@ -832,6 +857,12 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  footer {
+    padding: 20px;
+  }
+}
+
 footer .contentBox {
   overflow: hidden;
 }
@@ -901,7 +932,13 @@ footer .contentBox .navItem ul li a {
 
 @media (max-width: 600px) {
   footer .contentBox .navItem ul li a {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .contentBox .navItem ul li a {
+    font-size: 12px;
   }
 }
 
@@ -944,6 +981,20 @@ footer .contentBox .companyInfo {
   }
 }
 
+@media (max-width: 600px) {
+  footer .contentBox .companyInfo {
+    width: calc(570/960*100%);
+    margin-top: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .contentBox .companyInfo {
+    width: calc(570/960*100%);
+    margin-top: 90%;
+  }
+}
+
 footer .contentBox .companyInfo > div {
   float: left;
   color: #fff;
@@ -972,13 +1023,13 @@ footer .contentBox .companyInfo > div a {
 
 @media (max-width: 960px) {
   footer .contentBox .companyInfo > div {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
   footer .contentBox .companyInfo > div {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -1134,7 +1185,7 @@ footer .copyright::before {
   }
 }
 
-footer .copyright p {
+footer .copyright p, footer .copyright a {
   float: right;
   font-size: 14px;
   font-weight: 300;
@@ -1145,7 +1196,7 @@ footer .copyright p {
 }
 
 @media (max-width: 960px) {
-  footer .copyright p {
+  footer .copyright p, footer .copyright a {
     float: none;
     font-size: 12px;
     line-height: 16px;

@@ -10,6 +10,9 @@ footer{
     @media (max-width:800px){
         padding: 50px;
     }
+    @media (max-width:600px){
+        padding: 20px;
+    }
     .contentBox{
         overflow: hidden;
         .logo{
@@ -51,7 +54,10 @@ footer{
                         font-size: 20px;
                         font-weight: 100;
                         @media (max-width:600px){
-                            font-size: 16px;
+                            font-size: 14px;
+                        }
+                        @media (max-width:480px){
+                            font-size: 12px;
                         }
                         span{
                             color: #fff;
@@ -83,6 +89,14 @@ footer{
                 width: calc(420/960*100%);
                 margin-top: 45px;
             }
+            @media (max-width:600px){
+                width: calc(570/960*100%);
+                margin-top: 70%;
+            }
+            @media (max-width:480px){
+                width: calc(570/960*100%);
+                margin-top: 90%;
+            }
             > div{ 
                 float: left;
                 color: #fff;
@@ -97,10 +111,10 @@ footer{
                     width: 100%;
                 }
                 @media (max-width:960px){
-                    font-size: 20px;
+                    font-size: 16px;
                 }
                 @media (max-width:600px){
-                    font-size: 16px;
+                    font-size: 12px;
                 }
             }
             .tel{
@@ -215,7 +229,7 @@ footer{
                 display: none;
             }
         }
-        p{
+        p, a{
             float: right;
             font-size: 14px;
             font-weight: 300;
