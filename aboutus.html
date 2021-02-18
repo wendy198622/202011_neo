@@ -439,6 +439,11 @@
 	});
 
 	//單一年度單一個案輪播
+	$('.slider-singlecase').on('init', function (event, slick) {
+		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+		setProgressBar($("#coverline_charity"), 0, nextIndex)
+	});
+
 	$('.slider-singlecase').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -447,6 +452,12 @@
 		fade: true,
         cssEase: 'ease-in-out',
         touchThreshold: 100
+	});
+
+	$('.slider-singlecase').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+		setProgressBar($("#coverline_charity"), currentIndex, nextIndex)
 	});
 
 	//首頁charity輪播
