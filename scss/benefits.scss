@@ -36,27 +36,31 @@ section{
 
             }
             @media (max-width:800px){
-                padding-top: 60px;
+                height: 245px;
+                padding-top: 90px;
                 &:after{
                     content: "";
                     width: 100%;
-                    height: 110px;
+                    // height: 110px;
                     background-color: #fff;
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     z-index: 0;
-                    @media (max-width:600px){
-                        height: 120px;
-                    }
-                    @media (max-width:520px){
-                        height: 80px;
-                    }
+                    // @media (max-width:600px){
+                    //     height: 120px;
+                    // }
+                    // @media (max-width:520px){
+                    //     height: 80px;
+                    // }
                 }
             }
-            @media (max-width:520px){
-                height: 300px;
+            @media (max-width:660px){
+                height: 200px;
             }
+            // @media (max-width:520px){
+            //     height: 300px;
+            // }
             .topicBox{
                 width: 100%;
                 height: 200px;
@@ -64,13 +68,18 @@ section{
                 background: url(../img/benefits/title_bg.svg) right 110% no-repeat;
                 background-size: contain;
                 @media (max-width:800px){
-                    width: 90%;
-                    margin: 0 auto;
+                    height: 160px;
                     float: unset;
                     position: relative;
                     z-index: 2;
-                    background-position: right 50%;
-                    padding-top: 100px;
+                    background-position: left bottom;
+                    padding-top: 80px;
+                    background-size: auto 100%;
+                }
+                @media (max-width:660px){
+                    height: 100px;
+                    background-size: auto 100%;
+                    padding-top: 40px;
                 }
                 .container{
                     width: 100%;
@@ -146,6 +155,9 @@ section{
                 margin-bottom: 50px;
                 @media (max-width: 800px){
                     text-align: left;
+                }
+                @media (max-width: 600px){
+                    font-size: 14px;
                 }
             }
             ul{

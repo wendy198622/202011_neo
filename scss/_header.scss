@@ -7,15 +7,11 @@
     z-index: 9; 
     transition: all .3s;
     @media (max-width:800px){
-        height: auto;
+        // height: auto;
         padding-bottom: 20px;
     }
     @media (max-width:480px){
         padding-bottom: 0;
-    }
-    &.open{
-        height: 100%;
-        min-height: 100%;
     }
     &.bgopen_black{
         background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
@@ -27,7 +23,7 @@
     &.bgopen{
         background: rgba(0,98,132,1);
     }
-    .logo {
+    .logo, .logo_cover {
         height: 47px;
         display: block;
         float: left;
@@ -65,6 +61,9 @@
         }
         .black{ display: none;}
     }
+    .logo_cover{
+        display: none;
+    }
     .menu-btn { display: none;}
     .menu-icon {
         cursor: pointer;
@@ -76,7 +75,7 @@
         position: relative;
         z-index: 5;
         @media (max-width:800px){
-            margin-top: 25px;
+            margin-top: 22px;
             margin-right: calc(40/800*100%);
         }
         @media (max-width:480px){
@@ -109,6 +108,10 @@
             }
             &:before { top: 4px;}
             &:after { top: -4px;}
+            &.black
+            &:before, &:after {
+                background: #000;
+            }
             @media (max-width:800px){
                 &:before { top: 12px;}
                 &:after { top: -8px;}
@@ -128,7 +131,7 @@
             }
         }
     }
-    .social{
+    .social, .social_cover{
         float: right;
         margin-top: 30px;
         position: relative;
@@ -176,6 +179,9 @@
                 }
             }
         }
+    }
+    .social_cover{
+        display: none;
     }
     input.searchbar{
         width: 0px;
@@ -357,6 +363,17 @@
 
     }
 
+    &.open{
+        height: 100vh;
+        max-height: 1080px;
+        .social{
+            display: none;
+        }
+        .social_cover{
+            display: block;
+        }
+    }
+
     .menu-btn:checked ~ .cover_menu {
         display: block;
     }
@@ -372,13 +389,18 @@
     .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         top: 0;
     }
-    .menu-btn:checked ~ .logo {
-        .ori{
-            display: none;
-        }
-        .cover{
-            display: block;
-        }
+    .menu-btn:checked ~ #logo {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-btn:checked ~ .logo_cover {
+        display: block;
+    }
+    .menu-btn:checked ~ .logo_cover .cover {
+        display: block;
+    }
+    .menu-btn:checked ~ #logo {
+        display: none;
     }
     .menu-btn:checked ~ .social_black li a{
         .ori{ display: none;}
@@ -387,7 +409,9 @@
     
 }
 
-
+.menu .menu-fix {
+    visibility: visible !important;
+}
 
   
   

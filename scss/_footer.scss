@@ -214,6 +214,7 @@ footer{
         @media (max-width:960px){
             width: 100%;
             height: auto;
+            line-height: 1;
             text-align: center;
         }
         &::before{
@@ -241,6 +242,7 @@ footer{
                 float: none;
                 font-size: 12px;
                 line-height: 16px;
+                display: inline-block;
             }
         }
     }

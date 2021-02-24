@@ -109,7 +109,8 @@ section{
             margin-top: 45px;
             @media (max-width:800px){
                 width: 90%;
-                margin-left: 0;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         .bottomtxt{
@@ -377,16 +378,16 @@ section{
         position: absolute;
         top: -9999px;
         left: -9999px;
-        z-index: 10;
+        z-index: 5;
         &.mob{
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
             margin: auto;
-            transform: translateY(200%);
+            transform: translateY(300%);
         }
     }
     .overlay_Video{
@@ -493,7 +494,7 @@ section{
             margin: 100px auto 0;
             @media (max-width:800px){
                 width: 90%;
-                margin-left: 0;
+                // margin-left: 0;
             }
         }
     }
@@ -513,7 +514,7 @@ section{
             margin: 60px auto 0;
             @media (max-width:800px){
                 width: 90%;
-                margin-left: 0;
+                // margin-left: 0;
             }
         }
         .eventBox{
@@ -673,7 +674,7 @@ section{
                 }
                 @media (max-width:800px){
                     width: 90%;
-                    margin-left: 0;
+                    // margin-left: 0;
                 }
             }
         }
@@ -886,7 +887,7 @@ section{
                                 font-size: 40px
                             }
                             @media (max-width:480px){
-                                font-size: 26px
+                                font-size: 36px
                             }
                         }
                     }
@@ -916,7 +917,8 @@ section{
                             width: 100%;
                         }
                         @media (max-width:800px){
-                            padding: 20px;
+                            padding: 80px 20px;
+                            height: auto;
                         }
                         .txtItem{
                             height: 240px;
@@ -926,6 +928,14 @@ section{
                             right: 0;
                             bottom: 0;
                             left: 0;
+                            @media (max-width:800px){
+                                height: auto;
+                                position: static;
+                                top: unset;
+                                right: unset;
+                                bottom: unset;
+                                left: unset;
+                            }
                             h4{
                                 color: #5e6165;
                                 font-size: 30px;
@@ -944,7 +954,7 @@ section{
                                 line-height: 36px;
                                 text-align: center;
                                 @media (max-width:600px){
-                                    font-size: 12px;
+                                    font-size: 14px;
                                     line-height: 22px;
                                 }
                             }

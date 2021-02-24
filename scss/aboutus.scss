@@ -36,7 +36,7 @@ section{
                 @media (max-width:800px){
                     width: 90%;
                     margin: 0 auto;
-                    text-align: left;
+                    // text-align: left;
                     font-size: 4vw;
                 }
                 @media (max-width:600px){
@@ -121,27 +121,31 @@ section{
             // overflow: hidden;
             position: relative;
             @media (max-width:800px){
-                padding-top: 60px;
+                height: 245px;
+                padding-top: 90px;
                 &:after{
                     content: "";
                     width: 100%;
-                    height: 110px;
+                    // height: 110px;
                     background-color: #fff;
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     z-index: 0;
-                    @media (max-width:600px){
-                        height: 120px;
-                    }
-                    @media (max-width:520px){
-                        height: 80px;
-                    }
+                    // @media (max-width:600px){
+                    //     height: 120px;
+                    // }
+                    // @media (max-width:520px){
+                    //     height: 80px;
+                    // }
                 }
             }
-            @media (max-width:520px){
-                height: 300px;
+            @media (max-width:660px){
+                height: 200px;
             }
+            // @media (max-width:520px){
+            //     height: 300px;
+            // }
             .container{
                 width: 100%;
                 max-width: 1600px;
@@ -157,13 +161,18 @@ section{
                 background: url(../img/about/title_bg.svg) right 110% no-repeat;
                 background-size: contain;
                 @media (max-width:800px){
-                    width: 90%;
-                    margin: 0 auto;
+                    height: 160px;
                     float: unset;
                     position: relative;
                     z-index: 2;
-                    background-position: right 50%;
-                    padding-top: 100px;
+                    background-position: left bottom;
+                    padding-top: 80px;
+                    background-size: auto 100%;
+                }
+                @media (max-width:660px){
+                    height: 100px;
+                    background-size: auto 100%;
+                    padding-top: 40px;
                 }
                 .title{
                     font-size: 18px;
@@ -209,10 +218,16 @@ section{
             }
         }
         .aboutImg{
-            // margin-top: -120px;
+            margin-top: 80px;
+            @media (max-width:600px){
+                margin-top: 40px;
+            }
         }
         .aboutIntro{
             margin-top: 120px;
+            @media (max-width:800px){
+                margin-top: 40px;
+            }
             .introduction{
                 .title{
                     font-size: 30px;
@@ -228,6 +243,9 @@ section{
                         font-weight: 300;
                         margin-bottom: 30px;
                         text-align: justify;
+                        @media (max-width:600px){
+                            font-size: 16px;
+                        }
                     }
                 }
                 .sign{
@@ -244,6 +262,7 @@ section{
         }
         .aboutBox{
             background: url(../img/index/about_bg.jpg) 100px 160px no-repeat;
+            padding-top: 80px;
             padding-bottom: 90px;
             overflow: hidden;
             @media (max-width:1600px){
@@ -343,7 +362,7 @@ section{
                     line-height: 36px;
                     font-family: 'Noto Serif TC', serif;
                     font-weight: 700;
-                    margin-top: 100px;
+                    margin-top: 40px;
                 }
                 ul{
                     margin-top: 30px;
@@ -365,7 +384,7 @@ section{
                     }
                     @media (max-width:800px){
                         width: 90%;
-                        margin-left: 0;
+                        // margin-left: 0;
                     }
                 }
             }
@@ -410,7 +429,7 @@ section{
                 margin: 60px auto 0;
                 @media (max-width:800px){
                     width: 90%;
-                    margin-left: 0;
+                    // margin-left: 0;
                 }
             }
             .teamList{
@@ -658,7 +677,7 @@ section{
                                     font-size: 40px
                                 }
                                 @media (max-width:480px){
-                                    font-size: 26px
+                                    font-size: 36px
                                 }
                             }
                         }
@@ -686,6 +705,10 @@ section{
                             @media (max-width:1200px){
                                 width: 100%;
                             }
+                            @media (max-width:800px){
+                                padding: 80px 20px;
+                                height: auto;
+                            }
                             .txtItem{
                                 height: 240px;
                                 position: absolute;
@@ -694,6 +717,14 @@ section{
                                 right: 0;
                                 bottom: 0;
                                 left: 0;
+                                @media (max-width:800px){
+                                    height: auto;
+                                    position: static;
+                                    top: unset;
+                                    right: unset;
+                                    bottom: unset;
+                                    left: unset;
+                                }
                                 h4{
                                     color: #5e6165;
                                     font-size: 30px;
@@ -712,7 +743,7 @@ section{
                                     line-height: 36px;
                                     text-align: center;
                                     @media (max-width:600px){
-                                        font-size: 12px;
+                                        font-size: 14px;
                                         line-height: 22px;
                                     }
                                 }
