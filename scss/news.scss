@@ -124,6 +124,10 @@ section{
                         span{ 
                             display: block;
                             color: #000;
+                            @media (max-width:600px){
+                                display: inline-block;
+                                width: 100%;
+                            }
                             // left: 50%;
                             // transform: translateX(-50%);
                         }

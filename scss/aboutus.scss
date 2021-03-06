@@ -557,6 +557,9 @@ section{
         }
         .charitymemoryBox{
             padding-bottom: 120px;
+            @media (max-width:800px){
+                padding-bottom: 0;
+            }
             &.container{
                 max-width: 1500px;
                 margin: 0 auto;
@@ -706,7 +709,7 @@ section{
                                 width: 100%;
                             }
                             @media (max-width:800px){
-                                padding: 80px 20px;
+                                padding: 80px 20px 120px;
                                 height: auto;
                             }
                             .txtItem{
@@ -810,10 +813,17 @@ section{
                         }
                         @media (max-width:800px){
                             width: calc(100% - 80px);
-                            top: 406px; 
+                            top: 326px; 
                             left: 20px;
                         }
                         @media (max-width:600px){
+                            top: 256px;
+                        }
+                        @media (max-width:440px){
+                            top: 296px;
+                        }
+                        @media (max-width:380px){
+                            top: 316px;
                         }
                         .progressBar {
                             // width: 100%;
@@ -840,6 +850,18 @@ section{
         @media (max-width:1200px){
             bottom: unset;
             top: 450px;
+        }
+        @media (max-width:800px){
+            top: 370px;
+        }
+        @media (max-width:600px){
+            top: 300px;
+        }
+        @media (max-width:440px){
+            top: 340px;
+        }
+        @media (max-width:380px){
+            top: 360px;
         }
         &:before{
             color: #000;
@@ -891,7 +913,7 @@ section{
     .slick-prev, .slick-next{
         width: 36px;
         height: 36px;
-        z-index: 10;
+        z-index: 5;
         background-color: #fff;
         transition: all .3s;
         &:before{

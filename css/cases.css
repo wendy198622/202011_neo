@@ -17,12 +17,13 @@
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-a {
+a, a:hover, a:active, a:visited {
   color: #000000;
   text-decoration: none;
   display: block;
   -webkit-transition: all .3s;
   transition: all .3s;
+  outline: 0;
 }
 
 a.active {
@@ -269,6 +270,10 @@ input, button, textarea {
   visibility: visible;
 }
 
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -441,10 +446,6 @@ input, button, textarea {
 
 .header .menu-icon .navicon:after {
   top: -4px;
-}
-
-.header .menu-icon .navicon.black .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: #000;
 }
 
 @media (max-width: 800px) {
@@ -1493,10 +1494,13 @@ section .theme .top_topic.single .topicBox .title span {
 }
 
 section .theme .casesBox {
+  width: 100%;
   margin-top: 50px;
 }
 
 section .theme .casesBox .listBox {
+  width: 90%;
+  margin: 0 auto;
   margin-top: 50px;
 }
 

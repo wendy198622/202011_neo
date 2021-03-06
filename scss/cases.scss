@@ -129,8 +129,11 @@ section{
             }
         }
         .casesBox{
+            width: 100%;
             margin-top: 50px;
             .listBox{
+                width: 90%;
+                margin: 0 auto;
                 margin-top: 50px;
                 .list{    
                     ul{

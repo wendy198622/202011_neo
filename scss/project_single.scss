@@ -461,10 +461,10 @@ section{
             margin: 0 auto;
             h4{
                 font-size: 28px;
-                line-height: 32px;
+                line-height: 36px;
                 font-weight: 600;
                 color: #000;
-                margin-top: 40px;
+                margin-top: 20px;
                 text-align: left;
                 @media (max-width:1460px){
                     font-size: 26px;
@@ -515,10 +515,11 @@ section{
         }
         &.project_info2{
             position: relative;
+            padding-bottom: 0;
             .photo{
                 .slider_nav2{
                     width: calc(800/1300*100%);
-                    margin-top: 10px;
+                    margin-top: 30px;
                     @media (max-width:960px){
                         width: 102%
                     }
@@ -561,7 +562,7 @@ section{
                     }
                 }
                 p{
-                    height: 110px;
+                    height: 88px;
                     overflow-y: scroll;
                     margin-bottom: 0;
                     @media (max-width:1400px){
@@ -992,7 +993,6 @@ section{
                             margin-top: 10px;
                             transition: all .3s;
                             @media (max-width:1200px){
-                                width: 140px;
                                 float: unset;
                                 margin: 0 auto;
                                 display: block;
@@ -1002,6 +1002,10 @@ section{
                             }
                             @media (max-width:600px){
                                 margin-top: 0px;
+                                width: 120px;
+                                font-size: 18px;
+                                height: 40px;
+                                padding: 0;
                             }
                             &:hover{
                                 cursor: pointer;

@@ -108,10 +108,9 @@
             }
             &:before { top: 4px;}
             &:after { top: -4px;}
-            &.black
-            &:before, &:after {
-                background: #000;
-            }
+            // &:before, &:after {
+            //     background: #000;
+            // }
             @media (max-width:800px){
                 &:before { top: 12px;}
                 &:after { top: -8px;}

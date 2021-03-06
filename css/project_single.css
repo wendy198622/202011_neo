@@ -17,12 +17,13 @@
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-a {
+a, a:hover, a:active, a:visited {
   color: #000000;
   text-decoration: none;
   display: block;
   -webkit-transition: all .3s;
   transition: all .3s;
+  outline: 0;
 }
 
 a.active {
@@ -269,6 +270,10 @@ input, button, textarea {
   visibility: visible;
 }
 
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -441,10 +446,6 @@ input, button, textarea {
 
 .header .menu-icon .navicon:after {
   top: -4px;
-}
-
-.header .menu-icon .navicon.black .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: #000;
 }
 
 @media (max-width: 800px) {
@@ -1985,10 +1986,10 @@ section .project_info .info {
 
 section .project_info .info h4 {
   font-size: 28px;
-  line-height: 32px;
+  line-height: 36px;
   font-weight: 600;
   color: #000;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -2062,11 +2063,12 @@ section .project_info .info p {
 
 section .project_info.project_info2 {
   position: relative;
+  padding-bottom: 0;
 }
 
 section .project_info.project_info2 .photo .slider_nav2 {
   width: calc(800/1300*100%);
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 @media (max-width: 960px) {
@@ -2131,7 +2133,7 @@ section .project_info.project_info2 .info h4 {
 }
 
 section .project_info.project_info2 .info p {
-  height: 110px;
+  height: 88px;
   overflow-y: scroll;
   margin-bottom: 0;
 }
@@ -2734,7 +2736,6 @@ section .project_map .booking .project_contact .contactForm .formBox button {
 
 @media (max-width: 1200px) {
   section .project_map .booking .project_contact .contactForm .formBox button {
-    width: 140px;
     float: unset;
     margin: 0 auto;
     display: block;
@@ -2750,6 +2751,10 @@ section .project_map .booking .project_contact .contactForm .formBox button {
 @media (max-width: 600px) {
   section .project_map .booking .project_contact .contactForm .formBox button {
     margin-top: 0px;
+    width: 120px;
+    font-size: 18px;
+    height: 40px;
+    padding: 0;
   }
 }
 

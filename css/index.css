@@ -17,12 +17,13 @@
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-a {
+a, a:hover, a:active, a:visited {
   color: #000000;
   text-decoration: none;
   display: block;
   -webkit-transition: all .3s;
   transition: all .3s;
+  outline: 0;
 }
 
 a.active {
@@ -269,6 +270,10 @@ input, button, textarea {
   visibility: visible;
 }
 
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -441,10 +446,6 @@ input, button, textarea {
 
 .header .menu-icon .navicon:after {
   top: -4px;
-}
-
-.header .menu-icon .navicon.black .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: #000;
 }
 
 @media (max-width: 800px) {
@@ -1523,6 +1524,7 @@ section .theme .pagingInfo {
   section .theme .pagingInfo {
     width: calc(100% - 150px);
     margin-top: 30px;
+    margin-left: 50px;
   }
 }
 
@@ -2088,6 +2090,7 @@ section .home_benefits .eventBox .bx-wrapper {
           box-shadow: none;
   border: 0;
   background: transparent;
+  margin-bottom: 30px;
 }
 
 section .home_about {
@@ -2325,6 +2328,12 @@ section .home_about .serviceBox img {
 
 section .home_charity {
   padding: 100px 0;
+}
+
+@media (max-width: 800px) {
+  section .home_charity {
+    padding-bottom: 20px;
+  }
 }
 
 section .home_charity.container {
@@ -2599,7 +2608,7 @@ section .home_charitymemory.container .caseBox .caseItem .txtBox {
 
 @media (max-width: 800px) {
   section .home_charitymemory.container .caseBox .caseItem .txtBox {
-    padding: 80px 20px;
+    padding: 80px 20px 120px;
     height: auto;
   }
 }
@@ -2741,8 +2750,26 @@ section .home_charitymemory.container .caseBox .pagingInfo {
 @media (max-width: 800px) {
   section .home_charitymemory.container .caseBox .pagingInfo {
     width: calc(100% - 80px);
-    top: 406px;
+    top: 326px;
     left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .home_charitymemory.container .caseBox .pagingInfo {
+    top: 256px;
+  }
+}
+
+@media (max-width: 440px) {
+  section .home_charitymemory.container .caseBox .pagingInfo {
+    top: 296px;
+  }
+}
+
+@media (max-width: 380px) {
+  section .home_charitymemory.container .caseBox .pagingInfo {
+    top: 316px;
   }
 }
 
@@ -3081,6 +3108,13 @@ section .home_contact .contactForm .formBox button:hover a {
           transform: translate(-10px, -50%);
 }
 
+@media (max-width: 800px) {
+  .slider-img .slick-prev:hover {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
 @media (max-width: 1200px) {
   .slider-img .slick-prev {
     right: 160px;
@@ -3105,6 +3139,13 @@ section .home_contact .contactForm .formBox button:hover a {
 .slider-img .slick-next:hover {
   -webkit-transform: translate(10px, -50%);
           transform: translate(10px, -50%);
+}
+
+@media (max-width: 800px) {
+  .slider-img .slick-next:hover {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -3138,6 +3179,30 @@ section .home_contact .contactForm .formBox button:hover a {
   .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
     bottom: unset;
     top: 450px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 370px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 340px;
+  }
+}
+
+@media (max-width: 380px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 360px;
   }
 }
 

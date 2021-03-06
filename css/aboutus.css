@@ -17,12 +17,13 @@
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-a {
+a, a:hover, a:active, a:visited {
   color: #000000;
   text-decoration: none;
   display: block;
   -webkit-transition: all .3s;
   transition: all .3s;
+  outline: 0;
 }
 
 a.active {
@@ -269,6 +270,10 @@ input, button, textarea {
   visibility: visible;
 }
 
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -441,10 +446,6 @@ input, button, textarea {
 
 .header .menu-icon .navicon:after {
   top: -4px;
-}
-
-.header .menu-icon .navicon.black .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: #000;
 }
 
 @media (max-width: 800px) {
@@ -2090,6 +2091,12 @@ section .theme .charitymemoryBox {
   padding-bottom: 120px;
 }
 
+@media (max-width: 800px) {
+  section .theme .charitymemoryBox {
+    padding-bottom: 0;
+  }
+}
+
 section .theme .charitymemoryBox.container {
   max-width: 1500px;
   margin: 0 auto;
@@ -2279,7 +2286,7 @@ section .theme .charitymemoryBox.container .caseBox .caseItem .txtBox {
 
 @media (max-width: 800px) {
   section .theme .charitymemoryBox.container .caseBox .caseItem .txtBox {
-    padding: 80px 20px;
+    padding: 80px 20px 120px;
     height: auto;
   }
 }
@@ -2420,8 +2427,26 @@ section .theme .charitymemoryBox.container .caseBox .pagingInfo {
 @media (max-width: 800px) {
   section .theme .charitymemoryBox.container .caseBox .pagingInfo {
     width: calc(100% - 80px);
-    top: 406px;
+    top: 326px;
     left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .theme .charitymemoryBox.container .caseBox .pagingInfo {
+    top: 256px;
+  }
+}
+
+@media (max-width: 440px) {
+  section .theme .charitymemoryBox.container .caseBox .pagingInfo {
+    top: 296px;
+  }
+}
+
+@media (max-width: 380px) {
+  section .theme .charitymemoryBox.container .caseBox .pagingInfo {
+    top: 316px;
   }
 }
 
@@ -2445,6 +2470,30 @@ section .theme .charitymemoryBox.container .caseBox .pagingInfo {
   .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
     bottom: unset;
     top: 450px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 370px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 340px;
+  }
+}
+
+@media (max-width: 380px) {
+  .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
+    top: 360px;
   }
 }
 
@@ -2516,7 +2565,7 @@ section .theme .charitymemoryBox.container .caseBox .pagingInfo {
 .slider-time .slick-prev, .slider-time .slick-next {
   width: 36px;
   height: 36px;
-  z-index: 10;
+  z-index: 5;
   background-color: #fff;
   -webkit-transition: all .3s;
   transition: all .3s;
