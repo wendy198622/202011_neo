@@ -434,6 +434,7 @@ section{
         padding: 80px 0 100px;
         background: url(../img/index/news_bg.jpg) center top no-repeat;
         position: relative;
+        background-attachment: fixed;
         @media (max-width:800px){
             background: url(../img/index/news_mob_bg.jpg) center top no-repeat;
             background-size: cover;
@@ -547,6 +548,7 @@ section{
         background: url(../img/index/about_bg.jpg) 100px 160px no-repeat;
         padding-bottom: 90px;
         overflow: hidden;
+        background-attachment: fixed;
         @media (max-width:1600px){
             background-position: 0 160px;
         }

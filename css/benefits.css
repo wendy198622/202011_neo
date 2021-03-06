@@ -204,31 +204,25 @@ input, button, textarea {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 660px) {
   .popup .popup_content.popup_mov {
     width: 400px;
-    height: 855px;
+    height: 226px;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 420px) {
   .popup .popup_content.popup_mov {
-    width: 300px;
-    height: 655px;
+    width: 320px;
+    height: 180px;
   }
 }
 
 @media (max-width: 400px) {
   .popup .popup_content.popup_mov {
-    width: 260px;
-    height: 570px;
+    width: 280px;
+    height: 157px;
   }
-}
-
-.popup .popup_content.popup_mov .content {
-  width: auto;
-  height: 100%;
-  overflow: hidden;
 }
 
 .popup .popup_content.popup_code {
