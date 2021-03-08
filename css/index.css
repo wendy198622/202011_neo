@@ -1877,7 +1877,7 @@ section .mouse_video {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  z-index: 5;
+  z-index: 10;
 }
 
 section .mouse_video.mob {
