@@ -1875,8 +1875,8 @@ section .home_kv .scroll .scroll_content:before {
 
 section .mouse_video {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 
