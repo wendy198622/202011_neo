@@ -1524,7 +1524,6 @@ section .theme .pagingInfo {
   section .theme .pagingInfo {
     width: calc(100% - 150px);
     margin-top: 30px;
-    margin-left: 50px;
   }
 }
 

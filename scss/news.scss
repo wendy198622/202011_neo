@@ -294,12 +294,13 @@ section{
                         flex-wrap: wrap;
                         justify-content: center;
                         li{
+                            width: 50%;
                             margin-bottom: 20px;
-                            display: flex;
-                            flex: 1;
-                            flex-direction: column;
                             padding: 10px;
                             
+                            @media (max-width: 800px){
+                                width: 100%;
+                            }
                             img, span{
                                 display: flex;
                                 flex: 1;
