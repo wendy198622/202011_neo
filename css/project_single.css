@@ -887,6 +887,7 @@ footer {
 @media (max-width: 600px) {
   footer {
     padding: 20px;
+    padding-bottom: 50px;
   }
 }
 
@@ -1101,6 +1102,12 @@ footer .socialBox p {
   }
 }
 
+@media (max-width: 960px) and (max-width: 600px) {
+  footer .socialBox p::after {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   footer .socialBox p {
     top: 70px;
@@ -1185,6 +1192,7 @@ footer .copyright {
   position: relative;
   float: left;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 960px) {
@@ -1198,7 +1206,7 @@ footer .copyright {
 
 footer .copyright::before {
   content: "";
-  width: calc(100% - 380px);
+  width: calc(100% - 480px);
   height: 1px;
   display: block;
   position: absolute;
@@ -1214,7 +1222,7 @@ footer .copyright::before {
 }
 
 footer .copyright p, footer .copyright a {
-  float: right;
+  display: inline-block;
   font-size: 14px;
   font-weight: 300;
   color: #fff;
@@ -1229,6 +1237,17 @@ footer .copyright p, footer .copyright a {
     font-size: 12px;
     line-height: 16px;
     display: inline-block;
+  }
+}
+
+footer .copyright p {
+  float: right;
+}
+
+@media (max-width: 600px) {
+  footer .copyright p {
+    float: unset;
+    margin: 0 auto;
   }
 }
 

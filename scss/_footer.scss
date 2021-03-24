@@ -12,6 +12,7 @@ footer{
     }
     @media (max-width:600px){
         padding: 20px;
+        padding-bottom: 50px;
     }
     .contentBox{
         overflow: hidden;
@@ -148,6 +149,9 @@ footer{
                     top: 50%;
                     right: 0;
                     background-color: #fff;
+                    @media (max-width:600px){
+                        display: none;
+                    }
                 }
             }
             @media (max-width:600px){
@@ -211,15 +215,19 @@ footer{
         position: relative;
         float: left;
         overflow: hidden;
+        padding-bottom: 20px;
         @media (max-width:960px){
             width: 100%;
             height: auto;
             line-height: 1;
             text-align: center;
         }
+        @media (max-width:480px){
+
+        }
         &::before{
             content: "";
-            width: calc(100% - 380px);
+            width: calc(100% - 480px);
             height: 1px;
             display: block;
             position: absolute;
@@ -231,7 +239,7 @@ footer{
             }
         }
         p, a{
-            float: right;
+            display: inline-block;
             font-size: 14px;
             font-weight: 300;
             color: #fff;
@@ -243,6 +251,13 @@ footer{
                 font-size: 12px;
                 line-height: 16px;
                 display: inline-block;
+            }
+        }
+        p{ 
+            float: right;
+            @media (max-width:600px){
+                float: unset;
+                margin: 0 auto;
             }
         }
     }
