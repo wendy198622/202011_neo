@@ -1682,6 +1682,13 @@ section .theme .projectBox ul li:nth-child(3n) {
   }
 }
 
+section .theme .projectBox ul li .imgBox {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
 section .theme .projectBox ul li .titleBox {
   font-size: 30px;
   margin-top: 20px;
