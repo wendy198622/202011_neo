@@ -1408,14 +1408,18 @@ footer.simple .copyright p {
 
 #fullpage .section {
   padding: 50px 0;
-  background: url(../img/messageImage_1617867909617.jpg) center top no-repeat;
+  background: url(../img/messageImage_1617867909617.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
 }
 
 @media (orientation: portrait) and (max-width: 960px) {
   #fullpage .section {
-    background: url(../img/messageImage_1617875025304.jpg) center center no-repeat;
+    background: url(../img/messageImage_1617875025304.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
   }
