@@ -2220,8 +2220,6 @@ section .project_info.project_info1 .photo .list, section .project_info.project_
 }
 
 section .project_info.project_info3 .photo .list {
-  height: 0;
-  padding-bottom: 110%;
   overflow: hidden;
 }
 
