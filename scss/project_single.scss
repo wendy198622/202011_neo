@@ -38,7 +38,7 @@
         // background: url(../img/messageImage_1617867909617.jpg);
         background-position: center top;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: cover;
         background-attachment: fixed;
         position: relative;
         z-index: 1;
@@ -52,14 +52,15 @@
     }
     .bg{ 
         height: 100vh;
+        min-height: 10vh;
         padding: 0;
         background-attachment: fixed;
         position: fixed;
-        z-index: 0;
+        z-index: -1;
         &.pc{
             background-position: center top;
             background-repeat: no-repeat;
-            background-size: 100% auto;
+            background-size: cover;
             background-attachment: fixed;
         }
         &.mob{
@@ -654,7 +655,6 @@ section{
     }
     .project_intro{
         padding: 180px 0;
-        background-color: #fff000;
         @media (max-width:1400px){
             padding: 80px 0;
         }
@@ -819,7 +819,7 @@ section{
             float: right;
             padding-top: 100px;
             @media (max-width:1400px){
-                padding-top: 10px;
+                padding-top: 100px;
                 .title{
                     padding-left: 30px;
                     .type{

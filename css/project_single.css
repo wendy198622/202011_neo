@@ -1412,7 +1412,7 @@ footer.simple .copyright p {
   padding: 50px 0;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-attachment: fixed;
   position: relative;
   z-index: 1;
@@ -1429,16 +1429,17 @@ footer.simple .copyright p {
 
 #fullpage .bg {
   height: 100vh;
+  min-height: 10vh;
   padding: 0;
   background-attachment: fixed;
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 }
 
 #fullpage .bg.pc {
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -2225,7 +2226,6 @@ section .project_info.project_info3 .photo .list {
 
 section .project_intro {
   padding: 180px 0;
-  background-color: #fff000;
 }
 
 @media (max-width: 1400px) {
@@ -2468,7 +2468,7 @@ section .project_map .booking {
 
 @media (max-width: 1400px) {
   section .project_map .booking {
-    padding-top: 10px;
+    padding-top: 100px;
   }
   section .project_map .booking .title {
     padding-left: 30px;
