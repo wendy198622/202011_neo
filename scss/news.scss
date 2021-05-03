@@ -225,6 +225,8 @@ section{
                         }
                     }
                     .imgBox{
+                        height: 0;
+                        padding-bottom: 62%;
                         overflow: hidden;
                         img{ transition: all .3s;}
                     }

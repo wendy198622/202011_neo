@@ -1661,6 +1661,8 @@ section .theme .newsBox ul li .dateBox {
 }
 
 section .theme .newsBox ul li .imgBox {
+  height: 0;
+  padding-bottom: 62%;
   overflow: hidden;
 }
 

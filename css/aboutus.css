@@ -1972,6 +1972,12 @@ section .theme .teamBox .teamList ul li:last-child {
   }
 }
 
+section .theme .teamBox .teamList ul li .img {
+  height: 0;
+  padding-bottom: 76%;
+  overflow: hidden;
+}
+
 section .theme .teamBox .teamList ul li .title {
   color: #006284;
   font-size: 22px;

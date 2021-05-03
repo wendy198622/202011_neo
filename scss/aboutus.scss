@@ -454,6 +454,11 @@ section{
                             margin-right: 0;
                             margin-bottom: 50px;
                         }
+                        .img{
+                            height: 0;
+                            padding-bottom: 76%;
+                            overflow: hidden;                            
+                        }
                         .title{
                             color: #006284;
                             font-size: 22px;

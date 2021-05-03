@@ -1557,6 +1557,12 @@ section .theme .casesBox .listBox .list ul li:nth-child(4n) {
   }
 }
 
+section .theme .casesBox .listBox .list ul li .imgBox {
+  height: 0;
+  padding-bottom: 63%;
+  overflow: hidden;
+}
+
 section .theme .casesBox .listBox .list ul li .titleBox {
   font-size: 24px;
   margin-top: 20px;

@@ -153,7 +153,11 @@ section{
                                 &:nth-child(4n){ margin-right: 30px;}
                                 &:nth-child(2n){ margin-right: 0;}
                             }
-                            .imgBox{}
+                            .imgBox{
+                                height: 0;
+                                padding-bottom: 63%;
+                                overflow: hidden;
+                            }
                             .titleBox{
                                 font-size: 24px;
                                 margin-top: 20px;
