@@ -219,8 +219,9 @@ section{
         .projectBox{
             margin-top: 50px;
             ul{
-                display: table;
+                // display: table;
                 margin-bottom: 86px;
+                overflow: hidden;
                 li{
                     width: calc(100% / 3);
                     float: left;
@@ -232,6 +233,7 @@ section{
                     transition: all .3s;
                     &:nth-child(1), &:nth-child(2), &:nth-child(3){ border-top: 1px solid #c9c9c9;}
                     &:nth-child(3n){ border-right: 1px solid #c9c9c9;}
+                    &:last-child{ border-right: 1px solid #c9c9c9;}
                     @media (max-width: 1000px){
                         padding: 36px;
                     }
