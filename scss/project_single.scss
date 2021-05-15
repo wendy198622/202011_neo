@@ -1100,7 +1100,7 @@ section{
         margin: auto;
         &.popup_img{
             width: 600px;
-            height: 600px;
+            // height: 600px;
             padding: 50px;
             .close{
                 width: 40px;
@@ -1117,8 +1117,9 @@ section{
         }
         &.popup_message{
             width: 320px;
-            height: 60px;
+            height: 360px;
             line-height: 60px;
+            padding: 20px;
         }
     }
     &.is_acted{

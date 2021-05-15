@@ -1636,8 +1636,8 @@ section .theme .projectBox {
 }
 
 section .theme .projectBox ul {
-  display: table;
   margin-bottom: 86px;
+  overflow: hidden;
 }
 
 section .theme .projectBox ul li {
@@ -1657,6 +1657,10 @@ section .theme .projectBox ul li:nth-child(1), section .theme .projectBox ul li:
 }
 
 section .theme .projectBox ul li:nth-child(3n) {
+  border-right: 1px solid #c9c9c9;
+}
+
+section .theme .projectBox ul li:last-child {
   border-right: 1px solid #c9c9c9;
 }
 

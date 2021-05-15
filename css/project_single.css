@@ -2871,7 +2871,6 @@ section .project_map .booking .notice:hover {
 
 .popup .popup_content.popup_img {
   width: 600px;
-  height: 600px;
   padding: 50px;
 }
 
@@ -2891,8 +2890,9 @@ section .project_map .booking .notice:hover {
 
 .popup .popup_content.popup_message {
   width: 320px;
-  height: 60px;
+  height: 360px;
   line-height: 60px;
+  padding: 20px;
 }
 
 .popup.is_acted {
