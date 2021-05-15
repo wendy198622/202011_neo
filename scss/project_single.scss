@@ -952,10 +952,11 @@ section{
                                             height: 40px;
                                             line-height: 20px;
                                         }
-                                        span{ 
+                                        a{ 
                                             font-size: 14px; 
                                             color: #424242;
                                             margin-left: 5px;
+                                            display: inline-block;
                                             @media (max-width:600px){
                                                 font-size: 12px;
                                             }

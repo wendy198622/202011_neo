@@ -2682,14 +2682,15 @@ section .project_map .booking .project_contact .contactForm .formBox .group .ite
   }
 }
 
-section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt span {
+section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt a {
   font-size: 14px;
   color: #424242;
   margin-left: 5px;
+  display: inline-block;
 }
 
 @media (max-width: 600px) {
-  section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt span {
+  section .project_map .booking .project_contact .contactForm .formBox .group .item label.checktxt a {
     font-size: 12px;
   }
 }
