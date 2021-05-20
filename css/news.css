@@ -1640,6 +1640,11 @@ section .theme .newsBox ul li .titleBox {
   font-size: 22px;
   line-height: 30px;
   margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 800px) {

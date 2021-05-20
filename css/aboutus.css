@@ -2358,6 +2358,11 @@ section .theme .charitymemoryBox.container .caseBox .caseItem .txtBox .txtItem p
   font-size: 18px;
   line-height: 36px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 600px) {

@@ -342,9 +342,9 @@ section{
                 max-width: 900px;
             }
         }
-        height: calc(860/1080*100%);
+        // height: calc(860/1080*100%);
         @media (orientation: portrait) and (max-width:960px), (max-width:800px){
-            height: calc(900/1135*100%);
+            // height: calc(900/1135*100%);
         }
 
         .title{
@@ -390,12 +390,69 @@ section{
         }
         iframe, video{
             width: calc(1300/1400*100%);
-            height: calc(920/1080*100%);
+            // height: calc(920/1080*100%);
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 width: 100%;  
-                height: calc(1000/1135*100%);
+                // height: calc(1000/1135*100%);
             }
             
+        }
+        .info{
+            width: calc( 1300/1400*100%);
+            margin: 0 auto;
+            h4{
+                font-size: 28px;
+                line-height: 36px;
+                font-weight: 600;
+                color: #000;
+                margin-top: 20px;
+                text-align: left;
+                @media (max-width:1460px){
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    text-align: left;
+                    font-size: 20px;
+                    line-height: 24px;
+                    // height: 24px;
+                    // overflow: hidden;
+                    margin-top: 20px;
+                }
+                @media (max-width:600px){
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                @media (max-width:600px){
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+            p{
+                font-size: 17px;
+                line-height: 22px;
+                font-weight: 300;
+                color: #000;
+                margin-top: 3px;
+                text-align: justify;
+                letter-spacing: 1px;
+                @media (max-width:1460px){
+                    margin-top: 4px;
+                    font-size: 16px;
+                }
+                @media (orientation: portrait) and (max-width:960px), (max-width:800px){
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                @media (max-width:600px){
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @media (max-width:600px){
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
         }
     }
     .project_info{

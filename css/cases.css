@@ -1568,6 +1568,11 @@ section .theme .casesBox .listBox .list ul li .titleBox {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #006284;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 600px) {
@@ -1578,7 +1583,9 @@ section .theme .casesBox .listBox .list ul li .titleBox {
 
 section .theme .casesBox .listBox .list ul li .introBox {
   font-size: 18px;
+  height: 60px;
   color: #006284;
+  overflow: hidden;
 }
 
 section .theme .casesBox .listBox .list ul li .introBox li {
@@ -1614,6 +1621,12 @@ section .theme .casesBox .listBox .list ul li .introBox li span:nth-child(2) {
   }
   section .theme .casesBox .listBox .list ul li .introBox li span:nth-child(1), section .theme .casesBox .listBox .list ul li .introBox li span:nth-child(2) {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 1600px) {
+  section .theme .casesBox .listBox .list ul li .introBox {
+    height: 120px;
   }
 }
 

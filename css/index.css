@@ -1742,11 +1742,17 @@ section .home_currentpj .txtBox h4 {
 }
 
 section .home_currentpj .txtBox p {
+  width: calc(100% - 60px);
   font-size: 18px;
   line-height: 32px;
   margin-left: 60px;
   text-align: justify;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 800px) {
@@ -2676,6 +2682,11 @@ section .home_charitymemory.container .caseBox .caseItem .txtBox .txtItem p {
   font-size: 18px;
   line-height: 36px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 600px) {

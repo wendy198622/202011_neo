@@ -285,11 +285,18 @@ section{
                 }
             }
             p{
+                width: calc(100% - 60px);
                 font-size: 18px;
                 line-height: 32px;
                 margin-left: 60px;
                 text-align: justify;
                 font-weight: 300;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+
                 @media (max-width:800px){
                     margin-left: 0;
                 }
@@ -963,6 +970,11 @@ section{
                                 font-size: 18px;
                                 line-height: 36px;
                                 text-align: center;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 5;
+                                -webkit-box-orient: vertical;
                                 @media (max-width:600px){
                                     font-size: 14px;
                                     line-height: 22px;

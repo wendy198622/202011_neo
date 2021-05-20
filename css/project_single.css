@@ -1808,10 +1808,6 @@ section .project_view iframe {
   }
 }
 
-section .project_inside {
-  height: calc(860/1080*100%);
-}
-
 section .project_inside.container {
   width: 100%;
   max-width: 1300px;
@@ -1827,12 +1823,6 @@ section .project_inside.container {
 @media (max-width: 1200px) {
   section .project_inside.container {
     max-width: 900px;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
-  section .project_inside {
-    height: calc(900/1135*100%);
   }
 }
 
@@ -1889,13 +1879,93 @@ section .project_inside .title .type.chinese {
 
 section .project_inside iframe, section .project_inside video {
   width: calc(1300/1400*100%);
-  height: calc(920/1080*100%);
 }
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   section .project_inside iframe, section .project_inside video {
     width: 100%;
-    height: calc(1000/1135*100%);
+  }
+}
+
+section .project_inside .info {
+  width: calc( 1300/1400*100%);
+  margin: 0 auto;
+}
+
+section .project_inside .info h4 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 20px;
+  text-align: left;
+}
+
+@media (max-width: 1460px) {
+  section .project_inside .info h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  section .project_inside .info h4 {
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_inside .info h4 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_inside .info h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+section .project_inside .info p {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #000;
+  margin-top: 3px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1460px) {
+  section .project_inside .info p {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  section .project_inside .info p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_inside .info p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  section .project_inside .info p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

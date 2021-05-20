@@ -1697,6 +1697,11 @@ section .theme .projectBox ul li .titleBox {
   font-size: 30px;
   margin-top: 20px;
   color: #006284;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 600px) {
@@ -1708,6 +1713,11 @@ section .theme .projectBox ul li .titleBox {
 section .theme .projectBox ul li .tagBox {
   font-size: 18px;
   font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 section .theme .projectBox ul li .tagBox span {
