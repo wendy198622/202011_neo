@@ -1713,6 +1713,32 @@ section .project_kv .scroll .scroll_content:before {
   }
 }
 
+section .project_kv.animatephoto .title {
+  width: 454px;
+  height: 259px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  section .project_kv.animatephoto .title {
+    width: 414px;
+    height: 228px;
+  }
+}
+
+@media (max-width: 460px) {
+  section .project_kv.animatephoto .title {
+    width: calc(414 / 480 * 100%);
+    height: 0;
+    padding-bottom: calc(228 / 414 * 100%);
+  }
+}
+
 section .hr {
   border-bottom: 1px solid #b9b9b9;
 }
