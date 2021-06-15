@@ -2008,6 +2008,9 @@ section .theme .teamBox .teamList ul li .desc {
   font-weight: 300;
   color: #707070;
   margin-bottom: 16px;
+  margin-top: 6px;
+  min-height: 56px;
+  overflow: hidden;
 }
 
 @media (max-width: 480px) {
