@@ -1,0 +1,105 @@
+@import '_setting';
+@import '_header';
+@import '_footer';
+
+// *{ outline: 1px solid red;}
+section{
+    .theme{
+        .container{
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            @media (max-width:1600px){
+                width: 90%;
+            }
+        }
+        .search_title{
+            margin-top: 160px;
+            text-align: center;
+            position: relative;
+            font-size: 36px;
+            height: 80px;
+            line-height: 80px;
+            @media (max-width:800px){
+                font-size: 28px;
+            }
+        }
+        .search_txt{
+            text-align: center;
+            font-size: 20px;
+            height: 60px;
+            line-height: 60px;
+            font-weight: 300;
+            position: relative;
+            @media (max-width:800px){
+                font-size: 18px;
+            }
+            &:before{
+                content: "";
+                width: 100px;
+                height: 1px;
+                background-color: #000;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .searchBox{
+            margin-top: 50px;
+            ul{
+                padding-bottom: 50px;;
+                li{
+                    overflow: hidden;
+                    border-top: 1px solid #000;
+                    @media (max-width:800px){
+                        padding: 20px 0;
+                    }
+                    .imgBox{
+                        width: 420px;
+                        float: left;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        @media (max-width:800px){
+                            width: 100%;
+                        }
+                    }
+                    .txtBox{
+                        width: calc(100% - 420px);
+                        float: right;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        @media (max-width:800px){
+                            width: 100%;
+                        }
+                        h4{
+                            font-size: 24px;
+                            line-height: 30px;
+                            // margin-top: 72px;
+                            // margin-left: 60px;
+                            margin-bottom: 20px;
+                            font-weight: 600;
+                            color: #000;
+                        }
+                        p{
+                            width: calc(100% - 60px);
+                            font-size: 18px;
+                            line-height: 32px;
+                            // margin-left: 60px;
+                            text-align: justify;
+                            font-weight: 300;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                        .btn{
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
