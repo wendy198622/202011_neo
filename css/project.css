@@ -569,7 +569,6 @@ input, button, textarea {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   border: 0;
-  color: #fff;
   position: absolute;
   z-index: 1;
   right: 210px;
@@ -595,7 +594,6 @@ input, button, textarea {
 .header input.searchbar.is_acted {
   width: 250px;
   padding: 10px 40px 10px 20px;
-  border: 1px solid #fff;
 }
 
 @media (max-width: 800px) {
@@ -610,6 +608,22 @@ input, button, textarea {
   .header input.searchbar.is_acted {
     margin: 60px auto 20px;
   }
+}
+
+.header input.searchbar.black {
+  color: #303439;
+}
+
+.header input.searchbar.black.is_acted {
+  border: 1px solid #303439;
+}
+
+.header input.searchbar.white {
+  color: #fff;
+}
+
+.header input.searchbar.white.is_acted {
+  border: 1px solid #fff;
 }
 
 .header .cover_menu {

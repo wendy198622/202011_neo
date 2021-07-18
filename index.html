@@ -48,11 +48,15 @@
 			<li><a href="https://www.facebook.com/Neo.vision" id="icon3" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""><img class="black" src="img/nav_facebook_black.svg" alt=""></a></li>
 		</ul>
 		<ul class="social_cover">
-			<li><a href="javascript:;" class="search"><img class="white" src="img/nav_search.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search white"><img class="white" src="img/nav_search.svg" alt=""></a>
+				<a href="javascript:;" class="search black"><img class="black" src="img/nav_search_black.svg" alt=""></a>
+			</li>
 			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="white" src="img/nav_line.svg" alt=""></a></li>
 			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""></a></li>
 		</ul>
-		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar"/>
+		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar white"/>
+		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar black"/>
 		<div class="cover_menu">
 			<ul class="menu">
 					<div class="box">
@@ -897,6 +901,17 @@
 			} else {
 				$('#icon3 .white').css('display','block');
 				$('#icon3 .black').css('display','none');
+			}
+			if (checkIconNeedHighlight($('.search'))) {
+				$('.search.white').css('display','none');
+				$('.search.black').css('display','block');
+				$('.searchbar.white').css('display','none');
+				$('.searchbar.black').css('display','block');
+			} else {
+				$('.search.white').css('display','block');
+				$('.search.black').css('display','none');
+				$('.searchbar.white').css('display','none');
+				$('.searchbar.black').css('display','block');
 			}
 			if (checkIconNeedHighlight($('#navicon'))) {
 				$('#navicon').addClass('black');
