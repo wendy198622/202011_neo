@@ -43,7 +43,18 @@
 			<img class="cover" src="img/logo_txt.svg" alt="">
 		</a>
 		<ul class="social social_black">
-			<li><a href="javascript:;" class="search" id="icon1"><img class="white" src="img/nav_search.svg" alt=""><img class="black" src="img/nav_search_black.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search is_acted" id="icon1">
+				<img class="white" src="img/nav_search.svg" alt="">
+				<img class="black" src="img/nav_search_black.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="search_active" id="search_active">
+					<img class="white" src="img/nav_search.svg" alt="">
+					<img class="black" src="img/nav_search_black.svg" alt="">
+				</a>
+			</li>
 			<li><a href="https://lin.ee/9UtHShi" target="_blank" id="icon2"><img class="white" src="img/nav_line.svg" alt=""><img class="black" src="img/nav_line_black.svg" alt=""></a></li>
 			<li><a href="https://www.facebook.com/Neo.vision" id="icon3" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""><img class="black" src="img/nav_facebook_black.svg" alt=""></a></li>
 		</ul>
@@ -631,6 +642,8 @@
 	//search bar
 	$('.search').on('click', function () {
 		$('.searchbar').addClass('is_acted');
+		$('.search_active').addClass('is_acted');
+		$('.search').removeClass('is_acted');
 
 		if ($(window).width() < 480) {
 			$('.menu').css('margin-top','130px');		
@@ -888,6 +901,13 @@
 			} else {
 				$('#icon1 .white').css('display','block');
 				$('#icon1 .black').css('display','none');
+			}
+			if (checkIconNeedHighlight($('#icon1'))) {
+				$('#search_active .white').css('display','none');
+				$('#search_active .black').css('display','block');
+			} else {
+				$('#search_active .white').css('display','block');
+				$('#search_active .black').css('display','none');
 			}
 			if (checkIconNeedHighlight($('#icon2'))) {
 				$('#icon2 .white').css('display','none');

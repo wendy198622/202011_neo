@@ -512,6 +512,22 @@ input, button, textarea {
   z-index: 5;
 }
 
+.header .social li a.search, .header .social_cover li a.search {
+  display: none;
+}
+
+.header .social li a.search.is_acted, .header .social_cover li a.search.is_acted {
+  display: block;
+}
+
+.header .social li a.search_active, .header .social_cover li a.search_active {
+  display: none;
+}
+
+.header .social li a.search_active.is_acted, .header .social_cover li a.search_active.is_acted {
+  display: block;
+}
+
 .header .social li a img, .header .social_cover li a img {
   width: 20px;
   height: 20px;

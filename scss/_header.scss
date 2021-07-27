@@ -151,6 +151,18 @@
                 padding: 10px;
                 position: relative;
                 z-index: 5;
+                &.search{ 
+                    display: none;
+                    &.is_acted{
+                        display: block;
+                    }
+                }
+                &.search_active{ 
+                    display: none;
+                    &.is_acted{
+                        display: block;
+                    }
+                }
                 img{
                     width: 20px;
                     height: 20px;
