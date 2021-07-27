@@ -184,7 +184,7 @@ input, button, textarea {
   }
 }
 
-.popup .popup_content.popup_mov {
+.popup .popup_content.popup_mov, .popup .popup_content iframe {
   width: 1080px;
   height: 608px;
   outline: 10px solid #fff;
@@ -192,35 +192,35 @@ input, button, textarea {
 }
 
 @media (max-width: 1200px) {
-  .popup .popup_content.popup_mov {
+  .popup .popup_content.popup_mov, .popup .popup_content iframe {
     width: 800px;
     height: 450px;
   }
 }
 
 @media (max-width: 1000px) {
-  .popup .popup_content.popup_mov {
+  .popup .popup_content.popup_mov, .popup .popup_content iframe {
     width: 640px;
     height: 362px;
   }
 }
 
 @media (max-width: 660px) {
-  .popup .popup_content.popup_mov {
+  .popup .popup_content.popup_mov, .popup .popup_content iframe {
     width: 400px;
     height: 226px;
   }
 }
 
 @media (max-width: 420px) {
-  .popup .popup_content.popup_mov {
+  .popup .popup_content.popup_mov, .popup .popup_content iframe {
     width: 320px;
     height: 180px;
   }
 }
 
 @media (max-width: 400px) {
-  .popup .popup_content.popup_mov {
+  .popup .popup_content.popup_mov, .popup .popup_content iframe {
     width: 280px;
     height: 157px;
   }
