@@ -42,12 +42,20 @@
 			<img class="cover" src="img/logo_txt.svg" alt="">
 		</a>
 		<ul class="social social_black">
-			<li><a href="javascript:;" class="search"><img src="img/nav_search_black.svg" alt=""></a></li>
+			<li><a href="javascript:;" class="search is_acted"><img src="img/nav_search_black.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search_active" id="search_active">
+					<img src="img/nav_search_black.svg" alt="">
+				</a>
+			</li>
 			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line_black.svg" alt=""></a></li>
 			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook_black.svg" alt=""></a></li>
 		</ul>
 		<ul class="social_cover">
-			<li><a href="javascript:;" class="search"><img class="white" src="img/nav_search.svg" alt=""></a></li>
+			<li><a href="javascript:;" class="search is_acted"><img class="white" src="img/nav_search.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search_active white"><img class="white" src="img/nav_search.svg" alt=""></a>
+			</li>
 			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="white" src="img/nav_line.svg" alt=""></a></li>
 			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""></a></li>
 		</ul>
@@ -270,6 +278,21 @@
 	//search bar
 	$('.search').on('click', function () {
 		$('.searchbar').addClass('is_acted');
+		$('.search_active').addClass('is_acted');
+		$('.search').removeClass('is_acted');
+
+		if ($(window).width() < 480) {
+			$('.menu').css('margin-top','130px');		
+		}else if ($(window).width() < 800) {
+			$('.menu').css('margin-top','160px');	
+		}else {
+			$('.menu').css('margin-top','auto');	
+		}
+	});
+	$('.search_cover').on('click', function () {
+		$('.searchbar').addClass('is_acted');
+		$('.search_active').addClass('is_acted');
+		$('.search_cover').removeClass('is_acted');
 
 		if ($(window).width() < 480) {
 			$('.menu').css('margin-top','130px');		

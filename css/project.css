@@ -528,6 +528,14 @@ input, button, textarea {
   display: block;
 }
 
+.header .social li a.search_cover, .header .social_cover li a.search_cover {
+  display: none;
+}
+
+.header .social li a.search_cover.is_acted, .header .social_cover li a.search_cover.is_acted {
+  display: block;
+}
+
 .header .social li a img, .header .social_cover li a img {
   width: 20px;
   height: 20px;

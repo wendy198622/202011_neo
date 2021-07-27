@@ -163,6 +163,12 @@
                         display: block;
                     }
                 }
+                &.search_cover{ 
+                    display: none;
+                    &.is_acted{
+                        display: block;
+                    }
+                }
                 img{
                     width: 20px;
                     height: 20px;
