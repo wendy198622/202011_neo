@@ -94,7 +94,8 @@
 		</div>
 	</header>
 	<section>
-		<div class="theme" id="block1">
+		<!-- 影片模組 -->
+		<!-- <div class="theme" id="block1">
 			<div class="home_kv">
 				<div class="item mob111">
 					<video class="pc" width="100%" height="100%" preload autoplay muted loop>
@@ -111,6 +112,19 @@
 			</div>
 			<div class="mouse_video pc" id="mouse_video" style="opacity: 0;"><img src="img/index/videoplay.svg"></div>
 			<div class="mouse_video mob"><img src="img/index/videoplay.svg"></div>
+		</div> -->
+		<!-- 圖片模組 -->
+		<div class="theme">
+			<div class="home_kvImg">
+				<div class="imgBox slider_kv">
+					<div><img class="pc" src="img/index/kvImg1.jpg" alt=""><img class="mob" src="img/index/kvImg_mob1.jpg" alt=""></div>
+					<div><img class="pc" src="img/index/kvImg2.jpg" alt=""><img class="mob" src="img/index/kvImg_mob2.jpg" alt=""></div>
+				</div>
+				<div class="scroll">
+					<p>SCROLL</p>
+					<div class="scroll_content"></div>
+				</div>
+			</div>
 		</div>
 		<div class="theme online_project" id="block2">
 			<div class="blockItem white">current project</div>
@@ -722,6 +736,15 @@
 		setTimeout(() => {
 			$('.popup_send').removeClass('is_acted');			
 		},5000)
+	});
+
+	$('.slider_kv').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: false,
+		fade: true,
+		cssEase: 'ease-in'
 	});
 
 	//CURRENT PROJECT輪播

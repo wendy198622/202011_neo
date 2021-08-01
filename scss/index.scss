@@ -306,15 +306,13 @@ section{
             }
         }
     }
-    .home_kv{
+    .home_kv, .home_kvImg{
         width: auto;
-        // min-width: 100vw;
-        // max-width: 100vw;
         height: 100vh;
         position: relative;
         overflow: hidden;
         @media (max-width:800px){
-            // height: auto;
+            height: 80vh;
         }
         .item{
             margin-bottom: -4px;
@@ -385,6 +383,13 @@ section{
         }
 
     }
+    .home_kvImg{
+        height: 0;
+        padding-bottom: calc(842/1920*100%);
+        @media (max-width:800px){
+            padding-bottom: calc(1654/1125*100%);
+        }
+    }
     .mouse_video{
         position: absolute;
         top: 0;
@@ -398,7 +403,7 @@ section{
             bottom: 0;
             left: 0;
             margin: auto;
-            transform: translateY(300%);
+            transform: translateY(200%);
         }
     }
     .overlay_Video{
@@ -1462,4 +1467,73 @@ section{
             content: '\e5cc';
           }
     }
+}
+.slider_kv{
+    .slick-dots {
+        bottom: 25px;
+        li{
+            width: 50px;
+            height: 10px;
+            @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+                width: 30px;
+            }
+            @media (max-width: 540px) {
+                width: 15px;
+                margin: 0 3px;
+            }
+            button{
+                width: 50px;
+                height: 10px;
+                padding: 0;
+                @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+                    width: 30px;
+                }
+                @media (max-width: 540px) {
+                    width: 15px;
+                }
+                &:before{
+                    content: '';
+                    width: 50px;
+                    height: 3px;
+                    background: #000;
+                    opacity: .5;
+                    @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+                        width: 30px;
+                    }
+                    @media (max-width: 540px) {
+                        width: 15px;
+                    }
+                }
+            }
+            &.slick-active{
+                button{
+                    &:before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-slide{
+    position: relative;
+    &:before{
+        content: "";
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+}
+.slick-current{
+    &:before{
+        animation: cover 1s;
+    }
+}
+@keyframes cover{
+    from{ height: 100%;}
+    to  { height: 0;}
 }

@@ -1805,35 +1805,41 @@ section .home_currentpj .txtBox p {
   }
 }
 
-section .home_kv {
+section .home_kv, section .home_kvImg {
   width: auto;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-section .home_kv .item {
+@media (max-width: 800px) {
+  section .home_kv, section .home_kvImg {
+    height: 80vh;
+  }
+}
+
+section .home_kv .item, section .home_kvImg .item {
   margin-bottom: -4px;
 }
 
-section .home_kv img.pc {
+section .home_kv img.pc, section .home_kvImg img.pc {
   display: block;
 }
 
-section .home_kv img.mob {
+section .home_kv img.mob, section .home_kvImg img.mob {
   display: none;
 }
 
 @media (max-width: 800px) {
-  section .home_kv img.pc {
+  section .home_kv img.pc, section .home_kvImg img.pc {
     display: none;
   }
-  section .home_kv img.mob {
+  section .home_kv img.mob, section .home_kvImg img.mob {
     display: block;
   }
 }
 
-section .home_kv .scroll {
+section .home_kv .scroll, section .home_kvImg .scroll {
   width: 20px;
   height: 192px;
   position: absolute;
@@ -1843,19 +1849,19 @@ section .home_kv .scroll {
 }
 
 @media (max-width: 960px) {
-  section .home_kv .scroll {
+  section .home_kv .scroll, section .home_kvImg .scroll {
     height: 160px;
     left: 30px;
   }
 }
 
 @media (max-width: 960px) {
-  section .home_kv .scroll {
+  section .home_kv .scroll, section .home_kvImg .scroll {
     display: none;
   }
 }
 
-section .home_kv .scroll p {
+section .home_kv .scroll p, section .home_kvImg .scroll p {
   color: #fff;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -1869,12 +1875,12 @@ section .home_kv .scroll p {
 }
 
 @media (max-width: 960px) {
-  section .home_kv .scroll p {
+  section .home_kv .scroll p, section .home_kvImg .scroll p {
     font-size: 14px;
   }
 }
 
-section .home_kv .scroll .scroll_content {
+section .home_kv .scroll .scroll_content, section .home_kvImg .scroll .scroll_content {
   width: 1px;
   height: 120px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -1886,12 +1892,12 @@ section .home_kv .scroll .scroll_content {
 }
 
 @media (max-width: 960px) {
-  section .home_kv .scroll .scroll_content {
+  section .home_kv .scroll .scroll_content, section .home_kvImg .scroll .scroll_content {
     height: 100px;
   }
 }
 
-section .home_kv .scroll .scroll_content:before {
+section .home_kv .scroll .scroll_content:before, section .home_kvImg .scroll .scroll_content:before {
   content: "";
   width: 1px;
   height: 72px;
@@ -1904,7 +1910,7 @@ section .home_kv .scroll .scroll_content:before {
 }
 
 @media (max-width: 960px) {
-  section .home_kv .scroll .scroll_content:before {
+  section .home_kv .scroll .scroll_content:before, section .home_kvImg .scroll .scroll_content:before {
     height: 60px;
   }
 }
@@ -1939,6 +1945,17 @@ section .home_kv .scroll .scroll_content:before {
   }
 }
 
+section .home_kvImg {
+  height: 0;
+  padding-bottom: calc(842/1920*100%);
+}
+
+@media (max-width: 800px) {
+  section .home_kvImg {
+    padding-bottom: calc(1654/1125*100%);
+  }
+}
+
 section .mouse_video {
   position: absolute;
   top: 0;
@@ -1954,8 +1971,8 @@ section .mouse_video.mob {
   bottom: 0;
   left: 0;
   margin: auto;
-  -webkit-transform: translateY(300%);
-          transform: translateY(300%);
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
 }
 
 section .overlay_Video {
@@ -3377,5 +3394,106 @@ section .home_contact .contactForm .formBox button:hover a {
 .slider-time .slick-next:before {
   font-family: 'Material Icons';
   content: '\e5cc';
+}
+
+.slider_kv .slick-dots {
+  bottom: 25px;
+}
+
+.slider_kv .slick-dots li {
+  width: 50px;
+  height: 10px;
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  .slider_kv .slick-dots li {
+    width: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .slider_kv .slick-dots li {
+    width: 15px;
+    margin: 0 3px;
+  }
+}
+
+.slider_kv .slick-dots li button {
+  width: 50px;
+  height: 10px;
+  padding: 0;
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  .slider_kv .slick-dots li button {
+    width: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .slider_kv .slick-dots li button {
+    width: 15px;
+  }
+}
+
+.slider_kv .slick-dots li button:before {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #000;
+  opacity: .5;
+}
+
+@media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
+  .slider_kv .slick-dots li button:before {
+    width: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .slider_kv .slick-dots li button:before {
+    width: 15px;
+  }
+}
+
+.slider_kv .slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slick-slide:before {
+  content: "";
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.slick-current:before {
+  -webkit-animation: cover 1s;
+          animation: cover 1s;
+}
+
+@-webkit-keyframes cover {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes cover {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

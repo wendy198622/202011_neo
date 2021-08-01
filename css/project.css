@@ -1647,20 +1647,28 @@ section .theme .tagContent {
 
 section .theme .tagContent ul li {
   font-size: 18px;
+  line-height: 36px;
   padding: 0;
   font-weight: 300;
-  padding: 3px 10px;
+  padding: 0px 10px;
+  vertical-align: middle;
 }
 
-section .theme .tagContent ul li input:checked ~ label {
-  color: #006284;
-  font-weight: 600;
+section .theme .tagContent ul li span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border: 1px solid #006284;
+  vertical-align: middle;
 }
 
-section .theme .tagContent ul li input:hover ~ label {
-  color: #006284;
-  font-weight: 600;
-  cursor: pointer;
+section .theme .tagContent ul li label {
+  height: 18px;
+  vertical-align: middle;
+}
+
+section .theme .tagContent ul li input:checked ~ span {
+  background-color: #006284;
 }
 
 @media (max-width: 800px) {
