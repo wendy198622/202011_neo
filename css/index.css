@@ -2179,7 +2179,6 @@ section .home_about {
   background: url(../img/index/about_bg.jpg) center 160px no-repeat;
   padding-bottom: 90px;
   overflow: hidden;
-  background-attachment: fixed;
 }
 
 @media (max-width: 1600px) {
