@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 // @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
@@ -17,6 +17,7 @@
     }
 }
 // setting
+body{ font-family: 'Noto Sans TC', sans-serif ;}
 *{ box-sizing: border-box; color: #000000; font-family: 'Noto Sans TC', sans-serif ;}
 a, a:hover, a:active, a:visited{ color: #000000; text-decoration: none; display: block; transition: all .3s; outline: 0;}
 a.active{ color: #00b2e3;}

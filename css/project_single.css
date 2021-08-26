@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
   .material-icons {
@@ -8,6 +9,10 @@
     /* For IE6-8 */
     src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
   }
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 * {
@@ -1357,7 +1362,6 @@ footer.simple {
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   footer.simple {
     height: auto;
-    bottom: 40px;
   }
 }
 
@@ -1533,8 +1537,7 @@ footer.simple .copyright p {
 
 #section1 .img {
   width: 100%;
-  height: 100vh;
-  background-position: left top !important;
+  background-position: center center !important;
 }
 
 #section11 {
@@ -1689,6 +1692,18 @@ section {
   position: relative;
 }
 
+section ul {
+  text-align: left;
+  list-style: disc;
+  margin-left: 20px;
+}
+
+section ol {
+  text-align: left;
+  list-style: decimal;
+  margin-left: 20px;
+}
+
 section .project_kv {
   width: 100%;
   position: relative;
@@ -1802,7 +1817,6 @@ section .project_kv .scroll .scroll_content:before {
 
 section .project_kv .group {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 
@@ -3015,8 +3029,8 @@ section .project_map .booking .notice:hover {
 }
 
 #section1 .title {
-  width: 454px;
-  height: 259px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   margin: auto;
   top: 0;
@@ -3036,8 +3050,8 @@ section .project_map .booking .notice:hover {
 
 @media (orientation: portrait) and (max-width: 960px), (max-width: 800px) {
   #section1 .title {
-    width: 414px;
-    height: 228px;
+    width: 100%;
+    height: 100%;
   }
   #section1 .title.pc {
     display: none;
