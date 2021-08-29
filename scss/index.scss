@@ -1526,9 +1526,6 @@ section{
         left: 0;
         z-index: 5;
     }
-
-}
-.slick-current{
     &:before{
         animation: cover 1s;
     }
@@ -1537,3 +1534,13 @@ section{
     from{ height: 100%;}
     to  { height: 0;}
 }
+
+// .slick-current:first-child{
+//     &:before{
+//         animation: cover 1s;
+//     }
+// }
+// @keyframes cover{
+//     from{ height: 100%;}
+//     to  { height: 0;}
+// }

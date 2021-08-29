@@ -3477,7 +3477,7 @@ section .home_contact .contactForm .formBox button:hover a {
   z-index: 5;
 }
 
-.slick-current:before {
+.slick-slide:before {
   -webkit-animation: cover 1s;
           animation: cover 1s;
 }
