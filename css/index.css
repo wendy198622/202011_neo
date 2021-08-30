@@ -1458,7 +1458,7 @@ section .theme .blockItem.white {
 section .theme .desc {
   font-size: 18px;
   line-height: 32px;
-  font-weight: 300;
+  font-weight: 100;
   margin-top: 50px;
   text-align: center;
 }
