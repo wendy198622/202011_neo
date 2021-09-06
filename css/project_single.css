@@ -1470,13 +1470,6 @@ footer.simple .copyright p {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: block;
-}
-
-@media (max-width: 960px) {
-  #fullpage .bg.pc {
-    display: none;
-  }
 }
 
 #fullpage .bg.mob {
@@ -1484,13 +1477,6 @@ footer.simple .copyright p {
   background-repeat: no-repeat;
   background-size: auto 100vh;
   background-attachment: fixed;
-  display: none;
-}
-
-@media (max-width: 960px) {
-  #fullpage .bg.mob {
-    display: block;
-  }
 }
 
 #fullpage #section1, #fullpage #section10, #fullpage #section11 {

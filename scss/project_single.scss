@@ -62,20 +62,12 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            display: block;
-            @media (max-width:960px){
-                display: none;
-            }
         }
         &.mob{
             background-position: center center;
             background-repeat: no-repeat;
             background-size: auto 100vh;
             background-attachment: fixed;
-            display: none;
-            @media (max-width:960px){
-                display: block;
-            }
             
         }
     }
