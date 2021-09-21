@@ -1077,7 +1077,10 @@
 			updateSliderCounter(slick, currentSlide);
 		});
 
-		$slider.slick();
+		$slider.slick({
+			fade: true,
+			cssEase: 'ease-in',
+		});
 	}
 
 	</script>
@@ -1094,7 +1097,7 @@
 			var updateSliderCounter = function(slick, currentIndex) {
 				currentSlide = slick.slickCurrentSlide() + 1;
 				slidesCount = slick.slideCount;
-				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
 			};
 	
 			$slider.on('init', function(event, slick) {
@@ -1106,7 +1109,10 @@
 				updateSliderCounter(slick, currentSlide);
 			});
 	
-			$slider.slick();
+			$slider.slick({
+				fade: true,
+				cssEase: 'ease-in',
+			});
 		}
 	
 	</script>
@@ -1123,7 +1129,7 @@
 			var updateSliderCounter = function(slick, currentIndex) {
 				currentSlide = slick.slickCurrentSlide() + 1;
 				slidesCount = slick.slideCount;
-				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
 			};
 	
 			$slider.on('init', function(event, slick) {
@@ -1134,8 +1140,11 @@
 			$slider.on('afterChange', function(event, slick, currentSlide) {
 				updateSliderCounter(slick, currentSlide);
 			});
-	
-			$slider.slick();
+
+			$slider.slick({
+				fade: true,
+				cssEase: 'ease-in',
+			});
 		}
 	
 	</script>
@@ -1152,7 +1161,7 @@
 			var updateSliderCounter = function(slick, currentIndex) {
 				currentSlide = slick.slickCurrentSlide() + 1;
 				slidesCount = slick.slideCount;
-				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
 			};
 	
 			$slider.on('init', function(event, slick) {
@@ -1163,8 +1172,11 @@
 			$slider.on('afterChange', function(event, slick, currentSlide) {
 				updateSliderCounter(slick, currentSlide);
 			});
-	
-			$slider.slick();
+
+			$slider.slick({
+				fade: true,
+				cssEase: 'ease-in',
+			});
 		}
 	
 	</script>

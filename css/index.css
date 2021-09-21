@@ -2832,7 +2832,7 @@ section .home_charitymemory.container .caseBox .caseItem .slick-slide.slick-acti
 
 section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
   font-family: 'Noto Serif TC', serif !important;
-  width: 300px;
+  width: 400px;
   position: absolute;
   z-index: 5;
   bottom: 60px;
@@ -2892,6 +2892,7 @@ section .home_charitymemory.container .caseBox .pagingInfo .progressBar, section
 }
 
 section .home_charitymemory.container .caseBox .pagingInfo .progressBar .coverline, section .home_charitymemory.container .caseBox .slider__counter .progressBar .coverline {
+  width: 20%;
   height: 1px;
   left: 0;
   top: 0;
