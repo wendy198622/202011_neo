@@ -2844,7 +2844,7 @@ section .home_charitymemory.container .caseBox .pagingInfo, section .home_charit
   section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     width: calc(100% - 200px);
     bottom: unset;
-    top: 400px;
+    top: 440px;
   }
 }
 
@@ -2874,10 +2874,29 @@ section .home_charitymemory.container .caseBox .pagingInfo, section .home_charit
   }
 }
 
+section .home_charitymemory.container .caseBox .pagingInfo .progressBar, section .home_charitymemory.container .caseBox .slider__counter .progressBar {
+  width: 100%;
+  display: inline-block;
+  width: 240px;
+  height: 1px;
+  position: relative;
+  background: #bbb;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
 @media (max-width: 1200px) {
   section .home_charitymemory.container .caseBox .pagingInfo .progressBar, section .home_charitymemory.container .caseBox .slider__counter .progressBar {
     width: calc( 100% - 100px);
   }
+}
+
+section .home_charitymemory.container .caseBox .pagingInfo .progressBar .coverline, section .home_charitymemory.container .caseBox .slider__counter .progressBar .coverline {
+  height: 1px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #000;
 }
 
 section .home_contact {
