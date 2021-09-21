@@ -552,6 +552,46 @@
 										</a>
 									</div>
 								</div>
+								<div>
+									<div class="txtBox">
+										<div class="txtItem">
+											<h4 class="wow fadeInUp">2021新理想30而立 愛在桃園公益園遊會2</h4>
+											<p class="wow fadeInUp" data-wow-delay=".3s">在桃園房產市場深耕30年的新理想行銷團隊，<br>
+												為了回饋已購顧客並響應公益活動，10月11日（日）聯手桃園市政府，<br>
+												在青埔棒球場旁舉辦「愛在桃園感恩回饋．公益園遊會」，<br>
+												由九天民俗技藝團磅礡開場，接著由桃猿樂天女孩、人氣歌手李千娜、<br>
+												艾怡良接力演出，還有小朋友最愛的YOYO家族和紙風車劇團，<br>
+												把氣氛帶到最高點，當天估計湧進上萬人次，<br>
+												園遊會所得將全數捐做公益。</p>
+										</div>
+									</div>
+									<div class="imgBox">
+										<a href="news_single.html">
+											<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+											<img src="img/index/home_case01.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="txtBox">
+										<div class="txtItem">
+											<h4 class="wow fadeInUp">2021新理想30而立 愛在桃園公益園遊會2</h4>
+											<p class="wow fadeInUp" data-wow-delay=".3s">在桃園房產市場深耕30年的新理想行銷團隊，<br>
+												為了回饋已購顧客並響應公益活動，10月11日（日）聯手桃園市政府，<br>
+												在青埔棒球場旁舉辦「愛在桃園感恩回饋．公益園遊會」，<br>
+												由九天民俗技藝團磅礡開場，接著由桃猿樂天女孩、人氣歌手李千娜、<br>
+												艾怡良接力演出，還有小朋友最愛的YOYO家族和紙風車劇團，<br>
+												把氣氛帶到最高點，當天估計湧進上萬人次，<br>
+												園遊會所得將全數捐做公益。</p>
+										</div>
+									</div>
+									<div class="imgBox">
+										<a href="news_single.html">
+											<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+											<img src="img/index/home_case01.jpg" alt="">
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!-- <div class="pagingInfo pagingInfo_charitymemory">
@@ -874,6 +914,7 @@
 	});
 
 	function setProgressBar(bar, current, next) {
+	console.log(current, next);
 		if (current >= next) {
 			let id = setInterval(() => {
 				if (next >= current) {
@@ -897,7 +938,6 @@
 			}, 10)
 		}
 	}
-
 	$('#mouse_video').css("pointer-events","none")
 	$('.home_kv').on('mousemove', onMouseMove1)
 	$('.home_kv').on('mouseenter', onMouseHover1)
@@ -1065,119 +1105,159 @@
 		var updateSliderCounter = function(slick, currentIndex) {
 			currentSlide = slick.slickCurrentSlide() + 1;
 			slidesCount = slick.slideCount;
-			$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
+			$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity1"></div></div>' +'0'+ slidesCount)
 		};
 
+		
+	
 		$slider.on('init', function(event, slick) {
 			$slider.append(sliderCounter);
 			updateSliderCounter(slick);
+			let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+			setProgressBar($("#coverline_charity1"), 0, nextIndex)
 		});
-
-		$slider.on('afterChange', function(event, slick, currentSlide) {
-			updateSliderCounter(slick, currentSlide);
-		});
+			
+		// $slider.on('afterChange', function(event, slick, currentSlide) {
+		// 	updateSliderCounter(slick, currentSlide);
+		// });
 
 		$slider.slick({
 			fade: true,
 			cssEase: 'ease-in',
 		});
+
+		$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+			let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+			setProgressBar($("#coverline_charity1"), currentIndex, nextIndex)
+		});
 	}
 
 	</script>
 
-	<script>
-		var $slider = $('.slider-singlecase2');
-	
-		if ($slider.length) {
-			var currentSlide;
-			var slidesCount;
-			var sliderCounter = document.createElement('div');
-			sliderCounter.classList.add('slider__counter');
-			
-			var updateSliderCounter = function(slick, currentIndex) {
-				currentSlide = slick.slickCurrentSlide() + 1;
-				slidesCount = slick.slideCount;
-				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
-			};
-	
-			$slider.on('init', function(event, slick) {
-				$slider.append(sliderCounter);
-				updateSliderCounter(slick);
-			});
-	
-			$slider.on('afterChange', function(event, slick, currentSlide) {
-				updateSliderCounter(slick, currentSlide);
-			});
-	
-			$slider.slick({
-				fade: true,
-				cssEase: 'ease-in',
-			});
-		}
-	
-	</script>
+<script>
+var $slider = $('.slider-singlecase2');
 
-	<script>
-		var $slider = $('.slider-singlecase3');
+if ($slider.length) {
+	var currentSlide;
+	var slidesCount;
+	var sliderCounter = document.createElement('div');
+	sliderCounter.classList.add('slider__counter');
 	
-		if ($slider.length) {
-			var currentSlide;
-			var slidesCount;
-			var sliderCounter = document.createElement('div');
-			sliderCounter.classList.add('slider__counter');
-			
-			var updateSliderCounter = function(slick, currentIndex) {
-				currentSlide = slick.slickCurrentSlide() + 1;
-				slidesCount = slick.slideCount;
-				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
-			};
-	
-			$slider.on('init', function(event, slick) {
-				$slider.append(sliderCounter);
-				updateSliderCounter(slick);
-			});
-	
-			$slider.on('afterChange', function(event, slick, currentSlide) {
-				updateSliderCounter(slick, currentSlide);
-			});
+	var updateSliderCounter = function(slick, currentIndex) {
+		currentSlide = slick.slickCurrentSlide() + 1;
+		slidesCount = slick.slideCount;
+		$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity2"></div></div>' +'0'+ slidesCount)
+	};
 
-			$slider.slick({
-				fade: true,
-				cssEase: 'ease-in',
-			});
-		}
-	
-	</script>
 
-	<script>
-		var $slider = $('.slider-singlecase4');
-	
-		if ($slider.length) {
-			var currentSlide;
-			var slidesCount;
-			var sliderCounter = document.createElement('div');
-			sliderCounter.classList.add('slider__counter');
-			
-			var updateSliderCounter = function(slick, currentIndex) {
-				currentSlide = slick.slickCurrentSlide() + 1;
-				slidesCount = slick.slideCount;
-				$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity"></div></div>' +'0'+ slidesCount)
-			};
-	
-			$slider.on('init', function(event, slick) {
-				$slider.append(sliderCounter);
-				updateSliderCounter(slick);
-			});
-	
-			$slider.on('afterChange', function(event, slick, currentSlide) {
-				updateSliderCounter(slick, currentSlide);
-			});
+	$slider.on('init', function(event, slick) {
+		$slider.append(sliderCounter);
+		updateSliderCounter(slick);
+		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+		setProgressBar($("#coverline_charity2"), 0, nextIndex)
+	});
+		
+	// $slider.on('afterChange', function(event, slick, currentSlide) {
+	// 	updateSliderCounter(slick, currentSlide);
+	// });
 
-			$slider.slick({
-				fade: true,
-				cssEase: 'ease-in',
-			});
-		}
+	$slider.slick({
+		fade: true,
+		cssEase: 'ease-in',
+	});
+
+	$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+		setProgressBar($("#coverline_charity2"), currentIndex, nextIndex)
+	});
+}
+
+</script>
+
+<script>
+var $slider = $('.slider-singlecase3');
+
+if ($slider.length) {
+	var currentSlide;
+	var slidesCount;
+	var sliderCounter = document.createElement('div');
+	sliderCounter.classList.add('slider__counter');
 	
-	</script>
+	var updateSliderCounter = function(slick, currentIndex) {
+		currentSlide = slick.slickCurrentSlide() + 1;
+		slidesCount = slick.slideCount;
+		$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity3"></div></div>' +'0'+ slidesCount)
+	};
+
+	
+
+	$slider.on('init', function(event, slick) {
+		$slider.append(sliderCounter);
+		updateSliderCounter(slick);
+		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+		setProgressBar($("#coverline_charity3"), 0, nextIndex)
+	});
+		
+	// $slider.on('afterChange', function(event, slick, currentSlide) {
+	// 	updateSliderCounter(slick, currentSlide);
+	// });
+
+	$slider.slick({
+		fade: true,
+		cssEase: 'ease-in',
+	});
+
+	$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+		setProgressBar($("#coverline_charity3"), currentIndex, nextIndex)
+	});
+}
+
+</script>
+
+<script>
+var $slider = $('.slider-singlecase4');
+
+if ($slider.length) {
+	var currentSlide;
+	var slidesCount;
+	var sliderCounter = document.createElement('div');
+	sliderCounter.classList.add('slider__counter');
+	
+	var updateSliderCounter = function(slick, currentIndex) {
+		currentSlide = slick.slickCurrentSlide() + 1;
+		slidesCount = slick.slideCount;
+		$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity4"></div></div>' +'0'+ slidesCount)
+	};
+
+	
+
+	$slider.on('init', function(event, slick) {
+		$slider.append(sliderCounter);
+		updateSliderCounter(slick);
+		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+		setProgressBar($("#coverline_charity4"), 0, nextIndex)
+	});
+		
+	// $slider.on('afterChange', function(event, slick, currentSlide) {
+	// 	updateSliderCounter(slick, currentSlide);
+	// });
+
+	$slider.slick({
+		fade: true,
+		cssEase: 'ease-in',
+	});
+
+	$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+		setProgressBar($("#coverline_charity4"), currentIndex, nextIndex)
+	});
+}
+
+</script>
+
 </html>
