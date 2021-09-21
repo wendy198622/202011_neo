@@ -1036,12 +1036,14 @@ section{
 
                     }
                 }
-                .pagingInfo{
+                .pagingInfo, .slider__counter{
+                    font-family: 'Noto Serif TC', serif !important;
                     width: 300px;
                     position: absolute;
                     z-index: 5;
                     bottom: 60px;
                     left: 50px;
+                    font-size: 16px;
                     @media (max-width:1200px){
                         width: calc(100% - 200px);
                         bottom: unset;  
@@ -1359,6 +1361,7 @@ section{
 
 //首頁charity輪播
 .slider-singlecase{
+    position: relative;
     .slick-prev, .slick-next{
         width: 36px;
         height: 36px;
@@ -1544,3 +1547,14 @@ section{
 //     from{ height: 100%;}
 //     to  { height: 0;}
 // }
+.slider__counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    // mix-blend-mode: difference;
+    pointer-events: none;
+  }

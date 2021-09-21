@@ -2830,16 +2830,18 @@ section .home_charitymemory.container .caseBox .caseItem .slick-slide.slick-acti
   }
 }
 
-section .home_charitymemory.container .caseBox .pagingInfo {
+section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
+  font-family: 'Noto Serif TC', serif !important;
   width: 300px;
   position: absolute;
   z-index: 5;
   bottom: 60px;
   left: 50px;
+  font-size: 16px;
 }
 
 @media (max-width: 1200px) {
-  section .home_charitymemory.container .caseBox .pagingInfo {
+  section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     width: calc(100% - 200px);
     bottom: unset;
     top: 400px;
@@ -2847,7 +2849,7 @@ section .home_charitymemory.container .caseBox .pagingInfo {
 }
 
 @media (max-width: 800px) {
-  section .home_charitymemory.container .caseBox .pagingInfo {
+  section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     width: calc(100% - 80px);
     top: 326px;
     left: 20px;
@@ -2855,25 +2857,25 @@ section .home_charitymemory.container .caseBox .pagingInfo {
 }
 
 @media (max-width: 600px) {
-  section .home_charitymemory.container .caseBox .pagingInfo {
+  section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     top: 256px;
   }
 }
 
 @media (max-width: 440px) {
-  section .home_charitymemory.container .caseBox .pagingInfo {
+  section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     top: 296px;
   }
 }
 
 @media (max-width: 380px) {
-  section .home_charitymemory.container .caseBox .pagingInfo {
+  section .home_charitymemory.container .caseBox .pagingInfo, section .home_charitymemory.container .caseBox .slider__counter {
     top: 316px;
   }
 }
 
 @media (max-width: 1200px) {
-  section .home_charitymemory.container .caseBox .pagingInfo .progressBar {
+  section .home_charitymemory.container .caseBox .pagingInfo .progressBar, section .home_charitymemory.container .caseBox .slider__counter .progressBar {
     width: calc( 100% - 100px);
   }
 }
@@ -3253,6 +3255,10 @@ section .home_contact .contactForm .formBox button:hover a {
   content: '\e5cc';
 }
 
+.slider-singlecase {
+  position: relative;
+}
+
 .slider-singlecase .slick-prev, .slider-singlecase .slick-next {
   width: 36px;
   height: 36px;
@@ -3507,5 +3513,16 @@ section .home_contact .contactForm .formBox button:hover a {
   to {
     height: 0;
   }
+}
+
+.slider__counter {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  pointer-events: none;
 }
 /*# sourceMappingURL=index.css.map */

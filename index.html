@@ -372,7 +372,7 @@
 					<div class="caseBox">
 						<div class="slider slider-case">
 							<!-- 2018 -->
-							<div class="caseItem slider-singlecase">
+							<div class="caseItem slider-singlecase slider-singlecase1">
 								<div>
 									<div class="txtBox">
 										<div class="txtItem" data-wow-delay="0.5s">
@@ -411,7 +411,7 @@
 								</div>
 							</div>
 							<!-- 2019 -->
-							<div class="caseItem slider-singlecase">
+							<div class="caseItem slider-singlecase slider-singlecase2">
 								<div>
 									<div class="txtBox">
 										<div class="txtItem">
@@ -448,9 +448,27 @@
 										</a>
 									</div>
 								</div>
+								<div>
+									<div class="txtBox">
+										<div class="txtItem">
+											<h4 class="wow fadeInUp">2019人間有愛 愛心傳承2</h4>
+											<p class="wow fadeInUp" data-wow-delay=".3s">新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
+												固定每年捐助桃園家扶中心及少年之家，<br>
+												且於歲末公會尾牙，邀請院方孩童們餐與表演及餐敘同樂，<br>
+												讓他們感受到被社會關懷的幸福能量。<br>
+												也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
+										</div>
+									</div>
+									<div class="imgBox">
+										<a href="news_single.html">
+											<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+											<img src="img/index/home_case01.jpg" alt="">
+										</a>
+									</div>
+								</div>
 							</div>
 							<!-- 2020 -->
-							<div class="caseItem slider-singlecase">
+							<div class="caseItem slider-singlecase slider-singlecase3">
 								<div>
 									<div class="txtBox">
 										<div class="txtItem">
@@ -493,7 +511,7 @@
 								</div>
 							</div>
 							<!-- 2021 -->
-							<div class="caseItem slider-singlecase">
+							<div class="caseItem slider-singlecase slider-singlecase4">
 								<div>
 									<div class="txtBox">
 										<div class="txtItem">
@@ -536,13 +554,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="pagingInfo pagingInfo_charitymemory">
+						<!-- <div class="pagingInfo pagingInfo_charitymemory">
 							<div class="firstNum">01</div>
 							<div class="progressBar">
 								<div class="coverline" id="coverline_charity"></div>
 							</div>
 							<div class="lastNum">02</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -808,26 +826,26 @@
 	});
 
 	//單一年度單一個案輪播
-	$('.slider-singlecase').on('init', function (event, slick) {
-		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
-		setProgressBar($("#coverline_charity"), 0, nextIndex)
-	});
+	// $('.slider-singlecase').on('init', function (event, slick) {
+	// 	let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+	// 	setProgressBar($("#coverline_charity"), 0, nextIndex)
+	// });
 
-	$('.slider-singlecase').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		fade: true,
-        cssEase: 'ease-in',
-        touchThreshold: 100
-	});
+	// $('.slider-singlecase').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	dots: false,
+	// 	arrows: true,
+	// 	fade: true,
+    //     cssEase: 'ease-in',
+    //     touchThreshold: 100
+	// });
 
-	$('.slider-singlecase').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
-		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
-		setProgressBar($("#coverline_charity"), currentIndex, nextIndex)
-	});
+	// $('.slider-singlecase').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+	// 	let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+	// 	let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+	// 	setProgressBar($("#coverline_charity"), currentIndex, nextIndex)
+	// });
 
 
 	//charity輪播
@@ -1033,6 +1051,121 @@
 			return true;
 		}
 
-</script>
+	</script>
 
+	<script>
+	var $slider = $('.slider-singlecase1');
+
+	if ($slider.length) {
+		var currentSlide;
+		var slidesCount;
+		var sliderCounter = document.createElement('div');
+		sliderCounter.classList.add('slider__counter');
+		
+		var updateSliderCounter = function(slick, currentIndex) {
+			currentSlide = slick.slickCurrentSlide() + 1;
+			slidesCount = slick.slideCount;
+			$(sliderCounter).text('0'+ currentSlide + '/' +'0'+ slidesCount)
+		};
+
+		$slider.on('init', function(event, slick) {
+			$slider.append(sliderCounter);
+			updateSliderCounter(slick);
+		});
+
+		$slider.on('afterChange', function(event, slick, currentSlide) {
+			updateSliderCounter(slick, currentSlide);
+		});
+
+		$slider.slick();
+	}
+
+	</script>
+
+	<script>
+		var $slider = $('.slider-singlecase2');
+	
+		if ($slider.length) {
+			var currentSlide;
+			var slidesCount;
+			var sliderCounter = document.createElement('div');
+			sliderCounter.classList.add('slider__counter');
+			
+			var updateSliderCounter = function(slick, currentIndex) {
+				currentSlide = slick.slickCurrentSlide() + 1;
+				slidesCount = slick.slideCount;
+				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+			};
+	
+			$slider.on('init', function(event, slick) {
+				$slider.append(sliderCounter);
+				updateSliderCounter(slick);
+			});
+	
+			$slider.on('afterChange', function(event, slick, currentSlide) {
+				updateSliderCounter(slick, currentSlide);
+			});
+	
+			$slider.slick();
+		}
+	
+	</script>
+
+	<script>
+		var $slider = $('.slider-singlecase3');
+	
+		if ($slider.length) {
+			var currentSlide;
+			var slidesCount;
+			var sliderCounter = document.createElement('div');
+			sliderCounter.classList.add('slider__counter');
+			
+			var updateSliderCounter = function(slick, currentIndex) {
+				currentSlide = slick.slickCurrentSlide() + 1;
+				slidesCount = slick.slideCount;
+				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+			};
+	
+			$slider.on('init', function(event, slick) {
+				$slider.append(sliderCounter);
+				updateSliderCounter(slick);
+			});
+	
+			$slider.on('afterChange', function(event, slick, currentSlide) {
+				updateSliderCounter(slick, currentSlide);
+			});
+	
+			$slider.slick();
+		}
+	
+	</script>
+
+	<script>
+		var $slider = $('.slider-singlecase4');
+	
+		if ($slider.length) {
+			var currentSlide;
+			var slidesCount;
+			var sliderCounter = document.createElement('div');
+			sliderCounter.classList.add('slider__counter');
+			
+			var updateSliderCounter = function(slick, currentIndex) {
+				currentSlide = slick.slickCurrentSlide() + 1;
+				slidesCount = slick.slideCount;
+				$(sliderCounter).text(currentSlide + '/' +slidesCount)
+			};
+	
+			$slider.on('init', function(event, slick) {
+				$slider.append(sliderCounter);
+				updateSliderCounter(slick);
+			});
+	
+			$slider.on('afterChange', function(event, slick, currentSlide) {
+				updateSliderCounter(slick, currentSlide);
+			});
+	
+			$slider.slick();
+		}
+	
+	</script>
 </html>
