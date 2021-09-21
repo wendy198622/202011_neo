@@ -249,7 +249,6 @@
     .cover_menu{
         width: 100%;
         min-height: 100%;
-        background: url(../img/menu_bg.png) center center no-repeat #303439;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -271,6 +270,7 @@
             left: 0;
             margin: auto;
             overflow: hidden;
+            display: none;
             @media (max-width:800px){
                 height: auto;
                 position: relative;
@@ -350,6 +350,7 @@
             position: absolute;
             right: 10%;
             bottom: 50px;
+            display: none;
             @media (max-width:800px){
                 width: 90%;
                 position: relative;
@@ -392,7 +393,14 @@
 
     &.open{
         height: 100vh;
-        max-height: 1080px;
+        // max-height: 1080px;
+        .cover_menu{
+            display: block;
+            background: url(../img/menu_bg.png) center center no-repeat #303439;
+            .menu, .copyright {
+                display: block;
+            }
+        }
         .social{
             display: none;
         }

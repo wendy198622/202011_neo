@@ -658,7 +658,6 @@ input, button, textarea {
 .header .cover_menu {
   width: 100%;
   min-height: 100%;
-  background: url(../img/menu_bg.png) center center no-repeat #303439;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -686,6 +685,7 @@ input, button, textarea {
   left: 0;
   margin: auto;
   overflow: hidden;
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -795,6 +795,7 @@ input, button, textarea {
   position: absolute;
   right: 10%;
   bottom: 50px;
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -846,7 +847,15 @@ input, button, textarea {
 
 .header.open {
   height: 100vh;
-  max-height: 1080px;
+}
+
+.header.open .cover_menu {
+  display: block;
+  background: url(../img/menu_bg.png) center center no-repeat #303439;
+}
+
+.header.open .cover_menu .menu, .header.open .cover_menu .copyright {
+  display: block;
 }
 
 .header.open .social {
