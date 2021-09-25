@@ -2156,7 +2156,6 @@ section .home_benefits .btn {
 
 section .home_benefits .eventBox {
   width: 120%;
-  margin-left: -10%;
   margin-top: 100px;
 }
 
@@ -2181,6 +2180,7 @@ section .home_benefits .eventBox ul li:hover a, section .home_benefits .eventBox
 }
 
 section .home_benefits .eventBox .bx-wrapper {
+  width: 100%;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 0;

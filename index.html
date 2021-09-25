@@ -275,6 +275,9 @@
 						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img src="img/index/home_event03.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img src="img/index/home_event04.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay="1.2s"><a href="project_single.html" target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img src="img/index/home_event03.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img src="img/index/home_event04.jpg" alt=""></a></li>
+						<li class="wow fadeInUp" data-wow-delay="1.2s"><a href="project_single.html" target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li>
 					</ul>
 				</div>
 				<div class="eventBox mob">
@@ -594,13 +597,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="pagingInfo pagingInfo_charitymemory">
-							<div class="firstNum">01</div>
-							<div class="progressBar">
-								<div class="coverline" id="coverline_charity"></div>
-							</div>
-							<div class="lastNum">02</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -865,29 +861,6 @@
 		$('.slider-img').slick('slickGoTo', slideno - 1);
 	});
 
-	//單一年度單一個案輪播
-	// $('.slider-singlecase').on('init', function (event, slick) {
-	// 	let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
-	// 	setProgressBar($("#coverline_charity"), 0, nextIndex)
-	// });
-
-	// $('.slider-singlecase').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	dots: false,
-	// 	arrows: true,
-	// 	fade: true,
-    //     cssEase: 'ease-in',
-    //     touchThreshold: 100
-	// });
-
-	// $('.slider-singlecase').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-	// 	let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
-	// 	let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
-	// 	setProgressBar($("#coverline_charity"), currentIndex, nextIndex)
-	// });
-
-
 	//charity輪播
 	$('.slider-case').slick({
 		slidesToShow: 1,
@@ -974,17 +947,17 @@
 		maxSlides = 6;
 	}
 	$('.bxslider').bxSlider({
-		minSlides: maxSlides,
-		maxSlides: maxSlides,
-		slideWidth: 450,
+		minSlides: 5,
+		maxSlides: 8,
+		slideWidth: 480,
 		slideMargin: 30,
 		ticker: true,
 		tickerHover:true,
 		speed: 100000
 	});
 	$('.bxslider2').bxSlider({
-		minSlides: maxSlides,
-		maxSlides: maxSlides,
+		minSlides: 3,
+		maxSlides: 3,
 		slideWidth: 450,
 		slideMargin: 30,
 		ticker: true,
@@ -1108,18 +1081,12 @@
 			$(sliderCounter).html('0'+ currentSlide + '<div class="progressBar"><div class="coverline" id="coverline_charity1"></div></div>' +'0'+ slidesCount)
 		};
 
-		
-	
 		$slider.on('init', function(event, slick) {
 			$slider.append(sliderCounter);
 			updateSliderCounter(slick);
 			let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
 			setProgressBar($("#coverline_charity1"), 0, nextIndex)
 		});
-			
-		// $slider.on('afterChange', function(event, slick, currentSlide) {
-		// 	updateSliderCounter(slick, currentSlide);
-		// });
 
 		$slider.slick({
 			fade: true,

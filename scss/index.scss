@@ -536,7 +536,7 @@ section{
         }
         .eventBox{
             width: 120%;
-            margin-left: -10%;
+            // margin-left: -10%;
             margin-top: 100px;
             ul{
                 width: 100%;
@@ -554,6 +554,7 @@ section{
                 }
             }
             .bx-wrapper{
+                width: 100%;
                 box-shadow: none;
                 border: 0;
                 background: transparent;
@@ -1574,3 +1575,5 @@ section{
     // mix-blend-mode: difference;
     pointer-events: none;
   }
+
+

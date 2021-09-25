@@ -1925,4 +1925,9 @@ section .theme .newsContent .btn {
   font-family: 'Material Icons';
   content: '\e5cc';
 }
+
+.slider_year .slick-track.sliderFix {
+  -webkit-transform: translate3d(0px, 0px, 0px) !important;
+          transform: translate3d(0px, 0px, 0px) !important;
+}
 /*# sourceMappingURL=cases.css.map */
