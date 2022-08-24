@@ -19,7 +19,7 @@ section{
                 width: 100%;
             }
         }
-        .tag-btn{ display: none;}
+        // .tag-btn{ display: none;}
         .top_topic{
             height: 350px;
             // background: url(../img/news/title_bg.svg) right 110% no-repeat #cbeeff;
@@ -209,14 +209,41 @@ section{
                         display: inline-block;
                         border: 1px solid #006284;
                         vertical-align: middle;
+                        display: none;
                     }
                     label{
-                        height: 18px;
+                        line-height: 1;
                         vertical-align: middle;
                     }
-                    input:checked ~ span{
-                        background-color: #006284;
+                    input{
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0;
+                        outline: 1px solid #006284;
+                        &:before{
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            background: url(../img/check_white.svg) 0 0 no-repeat;
+                            display: none;
+                        }
                     }
+                    input:checked{
+                        &:before{
+                            background-color: #006284;
+                            display: block;
+                        }
+                    }
+                    // input:checked ~ span{
+                    //     background-color: #006284;
+                    // }
                     @media (max-width:800px){
                         font-size: 16px;
                     }

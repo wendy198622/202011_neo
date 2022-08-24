@@ -1533,6 +1533,10 @@ footer.simple .copyright p {
   background-position: center center !important;
 }
 
+#section10 {
+  background-size: cover;
+}
+
 #section11 {
   position: relative;
 }

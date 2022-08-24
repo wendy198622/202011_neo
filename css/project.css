@@ -1437,10 +1437,6 @@ section .theme .container {
   }
 }
 
-section .theme .tag-btn {
-  display: none;
-}
-
 section .theme .top_topic {
   height: 350px;
   background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
@@ -1673,15 +1669,39 @@ section .theme .tagContent ul li span {
   display: inline-block;
   border: 1px solid #006284;
   vertical-align: middle;
+  display: none;
 }
 
 section .theme .tagContent ul li label {
-  height: 18px;
+  line-height: 1;
   vertical-align: middle;
 }
 
-section .theme .tagContent ul li input:checked ~ span {
+section .theme .tagContent ul li input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  outline: 1px solid #006284;
+}
+
+section .theme .tagContent ul li input:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../img/check_white.svg) 0 0 no-repeat;
+  display: none;
+}
+
+section .theme .tagContent ul li input:checked:before {
   background-color: #006284;
+  display: block;
 }
 
 @media (max-width: 800px) {
