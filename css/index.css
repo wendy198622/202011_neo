@@ -1636,6 +1636,69 @@ section .home_currentpj {
   }
 }
 
+section .home_currentpj .filterBox {
+  width: calc(650/1920*100%);
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  font-size: 16px;
+  text-align: center;
+  z-index: 5;
+}
+
+@media (max-width: 1200px) {
+  section .home_currentpj .filterBox {
+    top: auto;
+    position: relative;
+    left: auto;
+    width: 80%;
+    text-align: left;
+    margin: 20px auto;
+  }
+}
+
+section .home_currentpj .filterBox .title {
+  width: 60px;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+section .home_currentpj .filterBox ul {
+  display: inline-block;
+  vertical-align: top;
+}
+
+section .home_currentpj .filterBox ul li {
+  display: inline-block;
+  margin-right: 16px;
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 520px) {
+  section .home_currentpj .filterBox ul li {
+    margin-right: 12px;
+  }
+}
+
+section .home_currentpj .filterBox ul li.active {
+  color: #fff;
+  background: #006284;
+}
+
+section .home_currentpj .filterBox ul li:hover {
+  cursor: pointer;
+}
+
+section .home_currentpj .filterBox .category ul li:hover {
+  color: #fff;
+  background: #006284;
+}
+
 section .home_currentpj .imgBox {
   width: calc(1136/1920*100%);
   float: left;
@@ -1664,9 +1727,7 @@ section .home_currentpj .imgBox .innerBox {
 
 section .home_currentpj .imgBox .innerBox .photo {
   width: 100%;
-  height: 0;
-  padding: 0 20px 66%;
-  overflow: hidden;
+  padding: 0 20px;
 }
 
 section .home_currentpj .txtBox {
