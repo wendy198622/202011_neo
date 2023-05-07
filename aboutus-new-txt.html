@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>新理想官網-關於我們</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="Resource-type" content="" />
+	<link rel="icon" href="img/logo.ico">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/aboutus.css" />
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/imgLiquid-min.js"></script>
+	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<!-- <script type="text/javascript" src="js/vue.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span id="navicon" class="navicon black"></span></label>
+		<a href="index.html" class="logo" id="logo">
+			<img class="ori" src="img/logo_black.svg" alt="">
+		</a>
+		<a href="index.html" class="logo_cover">
+			<img class="cover" src="img/logo_txt.svg" alt="">
+		</a>
+		<ul class="social social_black">
+			<li><a href="javascript:;" class="search is_acted"><img src="img/nav_search_black.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search_active" id="search_active">
+					<img src="img/nav_search_black.svg" alt="">
+				</a>
+			</li>
+			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line_black.svg" alt=""></a></li>
+			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook_black.svg" alt=""></a></li>
+		</ul>
+		<ul class="social_cover">
+			<li><a href="javascript:;" class="search is_acted"><img class="white" src="img/nav_search.svg" alt=""></a></li>
+			<li>
+				<a href="javascript:;" class="search_active white"><img class="white" src="img/nav_search.svg" alt=""></a>
+			</li>
+			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="white" src="img/nav_line.svg" alt=""></a></li>
+			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="white" src="img/nav_facebook.svg" alt=""></a></li>
+		</ul>
+		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar black"/>
+		<div class="cover_menu">
+			<ul class="menu">
+					<div class="box">
+						<li class="animated slideInLeft"><a href="news.html"><span>news</span>最新消息</a></li>
+						<li class="animated slideInLeft" data-wow-delay=".1s"><a href="aboutus.html"><span>about us</span>關於我們</a></li>
+						<li class="animated slideInLeft" data-wow-delay=".2s"><a href="project.html"><span>online project</span>線上個案</a></li>
+						<li class="animated slideInLeft" data-wow-delay=".3s"><a href="cases.html"><span>HISTORY cases</span>歷年個案</a></li>
+					</div>
+					<div class="box">
+						<li class="animated slideInLeft" data-wow-delay=".4s"><a href="contactus.html"><span>contact us</span>聯絡我們</a></li>
+						<li class="animated slideInLeft" data-wow-delay=".5s"><a href="benefits.html"><span>VIP BENEFITS</span>專屬好康</a></li>
+						<li class="animated slideInLeft" data-wow-delay=".6s"><a href="http://210.71.197.175/cs01/MLogin/LoginF.asp" target="_blank"><span>Staff only</span>員工園地</a></li>
+					</div>
+			</ul>
+			<ul class="social_mob">
+				<li><a href="https://lin.ee/9UtHShi" target="_blank"><img src="img/nav_line.svg" alt=""></a></li>
+				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt=""></a></li>
+			</ul>
+			<div class="copyright">
+				<p>Copyright © 2021 新理想廣告股份有限公司 版權所有</p>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="theme">
+			<div class="top_topic">
+				<div class="container">
+					<div class="topicBox">
+						<div class="title"><span style="font-family: 'Playfair Display', serif;">about us</span>關於我們</div>
+					</div>
+				</div>
+			</div>
+			<div class="aboutNav about-nav">
+				<div><a href="javascript:;">董事長的話<span class="material-icons">trending_flat</span></a></div>
+				<div><a href="javascript:;">公司簡介<span class="material-icons">trending_flat</span></a></div>
+				<div><a href="javascript:;">部門介紹<span class="material-icons">trending_flat</span></a></div>
+				<div><a href="javascript:;">愛心公益<span class="material-icons">trending_flat</span></a></div>
+			</div>
+			<div class="aboutBox about-box">
+				<!-- 1 -->
+				<div class="aboutTheme">
+					<div class="aboutIntro">
+						<div class="container">
+							<div class="introduction">
+								<div class="photo">
+									<img src="img/about/ceo.jpg" alt="">
+								</div>
+								<div class="intro">
+									<div class="title wow fadeInUp">
+										<img src="img/about/aboutTitle.jpg" alt="">
+									</div>
+									<div class="desc wow fadeInUp">劉董事長的話</div>
+									<div class="subtitle wow fadeInUp">抓住不景氣 展現戰鬥力</div>
+									<div class="sign wow fadeInUp" data-wow-delay=".6s">
+										<img src="img/about/sign.jpg" alt="">
+									</div>
+									<div class="content wow fadeInUp" data-wow-delay=".3s">
+										<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+										
+										<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+										
+										<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+										
+										<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+									</div>
+								</div>
+							</div>
+							<div class="analyze">
+								<div class="box">
+									<p>假字假字假字假字假字假字假字</p>
+									<table>
+										<tr>
+											<th>漲跌區分</th>
+											<th>房價調整區分</th>
+											<th>房價調整之區域特性</th>
+											<th>預估調整幅度</th>
+										</tr>
+										<tr>
+											<td rowspan="2">1</td>
+											<td>1</td>
+											<td class="text-left">
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字
+											</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td class="text-left">
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字
+											</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>3</td>
+											<td class="text-left">
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字
+											</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>4</td>
+											<td class="text-left">
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字<br>
+												・假字假字假字假字假字假字假字
+											</td>
+											<td>4</td>
+										</tr>
+									</table>
+									<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+								</div>
+								<div class="box">
+									<div class="group">
+										<p>
+											<b>執行上述對策與計畫之積極作法</b>
+										</p>
+										<hr>
+									</div>
+									<p>
+										<b>假字假字假字假字假字假字假字</b><br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字
+									</p>
+									<p>
+										<b>假字假字假字假字假字假字假字</b><br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字<br>
+										<span>・</span>假字假字假字
+									</p>
+									<hr>
+									<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+									<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+									<p>假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字</p>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="aboutImg"><img src="img/about/aboutImg.jpg" alt=""></div>
+				</div>
+				<!-- 2 -->
+				<div class="aboutTheme">
+					<div class="aboutCompany">
+						<div class="container clearfix">
+							<div class="topBox">
+								<div class="awards wow fadeInUp"><img src="img/index/awards.png" alt=""></div>
+								<h3 class="wow fadeInUp">有家就有新理想-1991-年創立<br>
+									榮獲福爾摩沙建築金獅獎</h3>
+								<p class="pc wow fadeInUp">第一家房地產代銷通過 ISO9001 國際驗證<br>
+									第一家房地產代銷引進 SGS 國際認證 連續五年蟬聯全國十大代銷公司</p>
+								<p class="mob wow fadeInUp">第一家房地產代銷通過 ISO9001 國際驗證<br>
+										第一家房地產代銷引進 SGS 國際認證 <br>
+											連續五年蟬聯全國十大代銷公司</p>
+							</div>
+							<div class="txtBox wow fadeInUp" data-wow-delay=".5s">
+								<div class="number"><img src="img/index/about_logo.png" alt=""></div>
+								<div class="title"><span>Introduction</span>公司簡介</div>
+							</div>
+							<div class="serviceBox">
+								<img class="wow fadeInUp" data-wow-delay=".3s" src="img/index/service.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay=".6s" src="img/index/service_01.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay=".9s" src="img/index/service_02.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="1.2s" src="img/index/service_03.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="1.5s" src="img/index/service_04.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="1.8s" src="img/index/service_05.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="2.1s" src="img/index/service_06.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="2.4s" src="img/index/service_07.svg" alt="">
+								<img class="wow fadeInUp" data-wow-delay="2.7s" src="img/index/service_08.svg" alt="">
+							</div>
+							<div class="txtBox">
+								<h4 class="wow fadeInUp">全方位「住」的行銷</h4>
+								<ul>
+									<li class="wow fadeInUp"><span>建築規劃</span>　<span>集結頂尖精英 打造優質建案</span></li>
+									<li class="wow fadeInUp" data-wow-delay=".3s"><span>產品定位</span>　<span>產品定問能力卓越 製造競爭優勢</span></li>
+									<li class="wow fadeInUp" data-wow-delay=".6s"><span>行銷策畫</span>　<span>定期檢討個案 調整行銷策略</span></li>
+									<li class="wow fadeInUp" data-wow-delay=".9s"><span>土地評估</span>　<span>協助業主評估土地效益</span></li>
+									<li class="wow fadeInUp" data-wow-delay="1.2s"><span>市場分析</span>　<span>掌握市場趨勢脈絡 精準提供市調分析</span></li>
+									<li class="wow fadeInUp" data-wow-delay="1.5s"><span>廣告企劃</span>　<span>量身規劃廣告策略 創造市場差異化</span></li>
+									<li class="wow fadeInUp" data-wow-delay="1.8s"><span>數位資訊</span>　<span>大數據時代來臨 精準有效投放網路媒體</span></li>
+									<li class="wow fadeInUp" data-wow-delay="2.1s"><span>客服部門</span>　<span>銷售前後貼心服務 揪甘心</span></li>
+								</ul>
+								<!-- <div class="btn wow fadeInUp"><a href="aboutus.html">MORE DETAILS<span class="material-icons">arrow_forward</span></a></div> -->
+							</div>
+						</div>
+					</div>
+					<div class="aboutImg"><img src="img/about/aboutImg.jpg" alt=""></div>
+				</div>
+				<!-- 3 -->
+				<div class="aboutTheme">
+					<div class="teamBox">
+						<div class="txtBox">
+							<div class="title"><span>our team</span>部門介紹</div>
+						</div>
+						<div class="teamList">
+							<ul>
+								<li class="wow fadeInUp">
+									<div class="title"><span>Marketing team</span>行銷團隊</div>
+									<div class="desc">產品定位：產品定問能力卓越，製造競爭優勢。</div>
+									<div class="img"><img src="img/about/teamImg01.jpg" alt=""></div>
+								</li>
+								<li class="wow fadeInUp" data-wow-delay=".3s">
+									<div class="title"><span>Planning team</span>向企研</div>
+									<div class="desc">廣告企劃：量身規劃廣告策略，創造市場差異化。</div>
+									<div class="img"><img src="img/about/teamImg02.jpg" alt=""></div>
+								</li>
+								<li class="wow fadeInUp" data-wow-delay=".6s">
+									<div class="title"><span>Digital team</span>摩爾數位</div>
+									<div class="desc">數位資訊：大數據時代來臨，精準有效投放網路媒體。</div>
+									<div class="img"><img src="img/about/teamImg03.jpg" alt=""></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="aboutImg"><img src="img/about/aboutImg.jpg" alt=""></div>
+				</div>
+				<!-- 4 -->
+				<div class="aboutTheme">
+					<div class="charityeventBox container">
+						<div class="txtBox">
+							<div class="title"><span>charity</span>愛心公益</div>
+						</div>
+						<div class="charityBox wow fadeInUp">
+							<p>新理想行銷團隊自一九九一年成立以來，即將邁入三十週年，我們將繼續秉持劉董事長興烘先生創立公司時的願景：讓生命更美麗，追求成長的喜悅，<br>
+								給家人更多的愛，為社會盡一份力，這四大目標，期盼全體員工能夠發揮人飢己飢、人溺己溺的精神，抱持企業回饋的理念，將愛永續傳承下去。</p>
+						</div>
+					</div>
+					<div class="charitymemoryBox container">
+						<div id="slider_charitymemory">
+							<div class="timeBox">
+								<div class="innerBox">
+									<div class="slider slider-time">
+										<div class="year">
+											<span>2018</span>
+										</div>
+										<div class="year">
+											<span>2019</span>
+										</div>
+										<div class="year">
+											<span>2020</span>
+										</div>
+										<div class="year">
+											<span>2021</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="caseBox">
+								<div class="slider slider-case">
+									<!-- 2018 -->
+									<div class="caseItem slider-singlecase">
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2018人間有愛 愛心傳承</h4>
+													<p>新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
+														固定每年捐助桃園家扶中心及少年之家，<br>
+														且於歲末公會尾牙，邀請院方孩童們餐與表演及餐敘同樂，<br>
+														讓他們感受到被社會關懷的幸福能量。<br>
+														也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2018人間有愛 愛心傳承</h4>
+													<p>新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
+														固定每年捐助桃園家扶中心及少年之家，<br>
+														且於歲末公會尾牙，邀請院方孩童們餐與表演及餐敘同樂，<br>
+														讓他們感受到被社會關懷的幸福能量。<br>
+														也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2018人間有愛 愛心傳承</h4>
+													<p>新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
+														固定每年捐助桃園家扶中心及少年之家，<br>
+														且於歲末公會尾牙，邀請院方孩童們餐與表演及餐敘同樂，<br>
+														讓他們感受到被社會關懷的幸福能量。<br>
+														也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- 2019 -->
+									<div class="caseItem">
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2019人間有愛 愛心傳承</h4>
+													<p>新理想行銷團隊每年在回饋社會和愛心傳承方面不遺餘力，<br>
+														固定每年捐助桃園家扶中心及少年之家，<br>
+														且於歲末公會尾牙，邀請院方孩童們餐與表演及餐敘同樂，<br>
+														讓他們感受到被社會關懷的幸福能量。<br>
+														也因為有機會幫助他們，讓我們有幸成為上人語錄中最幸福的人。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- 2020 -->
+									<div class="caseItem">
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2020新理想30而立 愛在桃園公益園遊會</h4>
+													<p>在桃園房產市場深耕30年的新理想行銷團隊，<br>
+														為了回饋已購顧客並響應公益活動，10月11日（日）聯手桃園市政府，<br>
+														在青埔棒球場旁舉辦「愛在桃園感恩回饋．公益園遊會」，<br>
+														由九天民俗技藝團磅礡開場，接著由桃猿樂天女孩、人氣歌手李千娜、<br>
+														艾怡良接力演出，還有小朋友最愛的YOYO家族和紙風車劇團，<br>
+														把氣氛帶到最高點，當天估計湧進上萬人次，<br>
+														園遊會所得將全數捐做公益。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- 2021 -->
+									<div class="caseItem">
+										<div>
+											<div class="txtBox">
+												<div class="txtItem">
+													<h4>2021新理想30而立 愛在桃園公益園遊會</h4>
+													<p>在桃園房產市場深耕30年的新理想行銷團隊，<br>
+														為了回饋已購顧客並響應公益活動，10月11日（日）聯手桃園市政府，<br>
+														在青埔棒球場旁舉辦「愛在桃園感恩回饋．公益園遊會」，<br>
+														由九天民俗技藝團磅礡開場，接著由桃猿樂天女孩、人氣歌手李千娜、<br>
+														艾怡良接力演出，還有小朋友最愛的YOYO家族和紙風車劇團，<br>
+														把氣氛帶到最高點，當天估計湧進上萬人次，<br>
+														園遊會所得將全數捐做公益。</p>
+												</div>
+											</div>
+											<div class="imgBox">
+												<a href="news_single.html">
+													<!-- <div class="case_overlay" data-wow-delay="0.5s"></div> -->
+													<img src="img/index/home_case01.jpg" alt="">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pagingInfo pagingInfo_charitymemory">
+									<div class="firstNum">01</div>
+									<div class="progressBar">
+										<div class="coverline" id="coverline_charity"></div>
+									</div>
+									<div class="lastNum">02</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aboutImg"><img src="img/about/aboutImg.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup popup_line">
+			<div class="popup_content popup_code">
+				<div class="close"><i class="material-icons">clear</i></div>
+				<img src="img/gotoline.svg" alt="">
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="contentBox">
+			<div class="logo">
+				<a href="index.html">
+					<img src="img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="navItem">
+				<ul>
+					<li><a href="news.html"><span>news</span>最新消息</a></li>
+					<li><a href="aboutus.html"><span>about us</span>關於我們</a></li>
+					<li><a href="project.html"><span>online project</span>線上個案</a></li>
+					<li><a href="cases.html"><span>HISTORY cases</span>歷年個案</a></li>
+				</ul>
+				<ul>
+					<li><a href="contactus.html"><span>contact us</span>聯絡我們</a></li>
+					<li><a href="benefits.html"><span>VIP BENEFITS</span>專屬好康</a></li>
+					<li><a href="http://210.71.197.175/cs01/MLogin/LoginF.asp" target="_blank"><span>Staff only</span>員工園地</a></li>
+				</ul>
+			</div>
+			<div class="companyInfo">
+				<div class="add"><a href="https://goo.gl/maps/8y7g99qWPYEXvdpX7" target="_blank">33048<br>桃園市桃園區鎮一街111號1樓</a></div>
+				<div class="tel">Tel - <a href="tel:033396726">03-3396726</a><br>Mail - <a
+						href="mailto:service@neo-vision.com">service@neo-vision.com</a></div>
+				<div class="time">Service time<br>周一至周五 9:00-18:00</div>
+			</div>
+		</div>
+		<div class="socialBox">
+			<p>追蹤我們獲得更多優惠內容和最新消息</p>
+			<ul class="social">
+				<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img src="img/nav_facebook.svg" alt="">facebook</a></li>
+				<li><a class="gotoline" href="javascript:;"><img src="img/nav_line.svg" alt="">line</a></li>
+				<li><a href="https://www.instagram.com/neovision.ad/" target="_blank"><img src="img/nav_instagram.svg" alt="">instagram</a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			<p>Copyright © 2021  <a href="index.html">新理想廣告股份有限公司</a>版權所有 <a href="img/privacy.pdf" target="_blank">隱私權政策規範</a></p>
+		</div>
+		<div class="goTop"><img src="img/goTop.svg" alt=""></div>
+	</footer>
+</body>
+<script>
+
+	new WOW().init();
+	$(".imgLiquidFill").imgLiquid();
+
+// ---------- header ----------
+
+	//search bar
+	$('.search').on('click', function () {
+		$('.searchbar').addClass('is_acted');
+		$('.search_active').addClass('is_acted');
+		$('.search').removeClass('is_acted');
+
+		if ($(window).width() < 480) {
+			$('.menu').css('margin-top','130px');		
+		}else if ($(window).width() < 800) {
+			$('.menu').css('margin-top','160px');	
+		}else {
+			$('.menu').css('margin-top','auto');	
+		}
+	});
+	$('.search_cover').on('click', function () {
+		$('.searchbar').addClass('is_acted');
+		$('.search_active').addClass('is_acted');
+		$('.search_cover').removeClass('is_acted');
+
+		if ($(window).width() < 480) {
+			$('.menu').css('margin-top','130px');		
+		}else if ($(window).width() < 800) {
+			$('.menu').css('margin-top','160px');	
+		}else {
+			$('.menu').css('margin-top','auto');	
+		}
+	});
+
+	//menu open
+	$(".menu-icon").click(function () {
+		$(".header").toggleClass("open");
+	});
+
+
+// ---------- footer ----------
+
+	//back top
+	$(".goTop").on("click", function () {
+		$("html, body").animate({ scrollTop: 0 }, 500);
+	});
+
+	//line popup
+	$('.gotoline').on('click', function () {
+		$('.popup_line').addClass('is_acted');
+	});
+	$('.close').on('click', function () {
+		$('.popup_line').removeClass('is_acted');
+	});
+
+
+// ---------- content ----------
+
+
+	// 關於我們選單
+	$('.about-box').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		draggable: false,
+		adaptiveHeight: true,
+		asNavFor: '.about-nav'
+	});
+	$('.about-nav').slick({
+		slidesToShow: 4,
+		// slidesToScroll: 1,
+		// centerMode: true,
+		asNavFor: '.about-box',
+		arrows: false,
+		dots: false,
+		infinite: false,
+		focusOnSelect: true
+	});
+
+
+	//charity 輪播
+	$('.slider-case').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-time'
+	});
+	$('.slider-time').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		asNavFor: '.slider-case',
+		arrows: true,
+		dots: false,
+		infinite: false,
+		focusOnSelect: true
+	});
+
+	$('a[data-slide]').click(function (e) {
+		e.preventDefault();
+		var slideno = $(this).data('slide');
+		$('.slider-time').slick('slickGoTo', slideno - 1);
+	});
+
+	//單一年度單一個案輪播
+	$('.slider-singlecase').on('init', function (event, slick) {
+		let nextIndex = (100 / slick.slideCount) * (slick.currentSlide + 1)
+		setProgressBar($("#coverline_charity"), 0, nextIndex)
+	});
+
+	$('.slider-singlecase').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		fade: true,
+        cssEase: 'ease-in-out',
+        touchThreshold: 100
+	});
+
+	$('.slider-singlecase').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		let currentIndex = (100 / slick.slideCount) * (currentSlide + 1)
+		let nextIndex = (100 / slick.slideCount) * (nextSlide + 1)
+		setProgressBar($("#coverline_charity"), currentIndex, nextIndex)
+	});
+
+	//首頁charity輪播
+	$('.slider-case').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-time'
+	});
+	$('.slider-time').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		asNavFor: '.slider-case',
+		arrows: true,
+		dots: false,
+		infinite: false,
+		focusOnSelect: true
+	});
+
+	$('a[data-slide]').click(function (e) {
+		e.preventDefault();
+		var slideno = $(this).data('slide');
+		$('.slider-time').slick('slickGoTo', slideno - 1);
+	});
+
+	function setProgressBar(bar, current, next) {
+		if (current >= next) {
+			let id = setInterval(() => {
+				if (next >= current) {
+					clearInterval(id);
+				} else {
+					current--;
+					bar.css("width", current + '%');
+				}
+			}, 10)
+		} else {
+			if (current >= 100) {
+				current = 0
+			}
+			let id = setInterval(() => {
+				if (current >= next) {
+					clearInterval(id);
+				} else {
+					current++;
+					bar.css("width", current + '%');
+				}
+			}, 10)
+		}
+	}
+
+</script>
+
+</html>
