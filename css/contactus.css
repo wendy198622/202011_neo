@@ -288,6 +288,7 @@ input, button, textarea {
   z-index: 9;
   -webkit-transition: all .3s;
   transition: all .3s;
+  background: rgba(255, 255, 255, 0);
 }
 
 @media (max-width: 800px) {
@@ -300,6 +301,10 @@ input, button, textarea {
   .header {
     padding-bottom: 0;
   }
+}
+
+.header.scroll_bg {
+  background: white;
 }
 
 .header.bgopen_black {
@@ -351,6 +356,7 @@ input, button, textarea {
 .header .logo .ori, .header .logo_cover .ori {
   width: 212px;
   display: block;
+  mix-blend-mode: difference;
 }
 
 @media (max-width: 800px) {
@@ -391,6 +397,10 @@ input, button, textarea {
   margin-right: 40px;
   position: relative;
   z-index: 5;
+  background: #fff;
+  border-radius: 100px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 @media (max-width: 800px) {
@@ -436,7 +446,7 @@ input, button, textarea {
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
   content: '';
-  background: #fff;
+  background: #000;
   display: block;
   width: 100%;
   height: 100%;
@@ -538,6 +548,14 @@ input, button, textarea {
 }
 
 .header .social li a.search_cover.is_acted, .header .social_cover li a.search_cover.is_acted {
+  display: block;
+}
+
+.header .social li a.search_cover_active, .header .social_cover li a.search_cover_active {
+  display: none;
+}
+
+.header .social li a.search_cover_active.is_acted, .header .social_cover li a.search_cover_active.is_acted {
   display: block;
 }
 
@@ -845,6 +863,11 @@ input, button, textarea {
   }
 }
 
+.header.bg .menu-icon .navicon:before, .header.bg .menu-icon .navicon:after {
+  content: '';
+  background: #000;
+}
+
 .header.open {
   height: 100vh;
 }
@@ -868,6 +891,10 @@ input, button, textarea {
 
 .header .menu-btn:checked ~ .cover_menu {
   display: block;
+}
+
+.header .menu-btn:checked ~ .menu-icon {
+  background: transparent;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
@@ -1415,23 +1442,24 @@ footer.simple .copyright p {
   }
 }
 
-section .theme {
+.theme {
   position: relative;
+  background: #fff;
 }
 
-section .theme .container {
+.theme .container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
 
 @media (max-width: 1600px) {
-  section .theme .container {
+  .theme .container {
     width: 90%;
   }
 }
 
-section .theme .top_topic {
+.theme .top_topic {
   height: 350px;
   background: -webkit-gradient(linear, left bottom, right top, from(#e7f9ff), to(#d8f5ff));
   background: linear-gradient(to right top, #e7f9ff, #d8f5ff);
@@ -1442,11 +1470,11 @@ section .theme .top_topic {
 }
 
 @media (max-width: 800px) {
-  section .theme .top_topic {
+  .theme .top_topic {
     height: 245px;
     padding-top: 90px;
   }
-  section .theme .top_topic:after {
+  .theme .top_topic:after {
     content: "";
     width: 100%;
     background-color: #fff;
@@ -1458,12 +1486,12 @@ section .theme .top_topic {
 }
 
 @media (max-width: 660px) {
-  section .theme .top_topic {
+  .theme .top_topic {
     height: 200px;
   }
 }
 
-section .theme .top_topic .topicBox {
+.theme .top_topic .topicBox {
   width: 100%;
   height: 200px;
   background: url(../img/contact/title_bg.svg) right 110% no-repeat;
@@ -1471,7 +1499,7 @@ section .theme .top_topic .topicBox {
 }
 
 @media (max-width: 800px) {
-  section .theme .top_topic .topicBox {
+  .theme .top_topic .topicBox {
     height: 160px;
     float: unset;
     position: relative;
@@ -1483,27 +1511,27 @@ section .theme .top_topic .topicBox {
 }
 
 @media (max-width: 660px) {
-  section .theme .top_topic .topicBox {
+  .theme .top_topic .topicBox {
     height: 100px;
     background-size: auto 100%;
     padding-top: 40px;
   }
 }
 
-section .theme .top_topic .topicBox .title {
+.theme .top_topic .topicBox .title {
   font-size: 18px;
   color: #006284;
 }
 
 @media (max-width: 800px) {
-  section .theme .top_topic .topicBox .title {
+  .theme .top_topic .topicBox .title {
     position: relative;
     font-size: 3.6vw;
     font-weight: 300;
   }
 }
 
-section .theme .top_topic .topicBox .title span {
+.theme .top_topic .topicBox .title span {
   font-size: 110px;
   color: #000;
   font-family: 'Playfair Display', serif;
@@ -1514,19 +1542,19 @@ section .theme .top_topic .topicBox .title span {
 }
 
 @media (max-width: 1120px) {
-  section .theme .top_topic .topicBox .title span {
+  .theme .top_topic .topicBox .title span {
     font-size: 92px;
   }
 }
 
 @media (max-width: 1120px) {
-  section .theme .top_topic .topicBox .title span {
+  .theme .top_topic .topicBox .title span {
     font-size: 74px;
   }
 }
 
 @media (max-width: 800px) {
-  section .theme .top_topic .topicBox .title span {
+  .theme .top_topic .topicBox .title span {
     height: 110px;
     line-height: 110px;
     font-size: 10.4vw;
@@ -1538,25 +1566,25 @@ section .theme .top_topic .topicBox .title span {
 }
 
 @media (max-width: 600px) {
-  section .theme .top_topic .topicBox .title span {
+  .theme .top_topic .topicBox .title span {
     height: 90px;
     line-height: 90px;
   }
 }
 
 @media (max-width: 520px) {
-  section .theme .top_topic .topicBox .title span {
+  .theme .top_topic .topicBox .title span {
     height: 66px;
     line-height: 66px;
   }
 }
 
-section .theme .contactBox {
-  margin-top: 100px;
+.theme .contactBox {
+  padding-top: 100px;
   padding-bottom: 60px;
 }
 
-section .theme .contactBox .introduction {
+.theme .contactBox .introduction {
   font-size: 18px;
   line-height: 30px;
   font-weight: 100;
@@ -1565,56 +1593,56 @@ section .theme .contactBox .introduction {
 }
 
 @media (max-width: 600px) {
-  section .theme .contactBox .introduction {
+  .theme .contactBox .introduction {
     font-size: 14px;
     margin-bottom: 0;
   }
 }
 
-section .theme .contactBox .contactForm {
+.theme .contactBox .contactForm {
   background: url(../img/contact/form_bg.jpg) center center no-repeat;
   background-size: cover;
   padding: 140px 200px;
 }
 
 @media (max-width: 1600px) {
-  section .theme .contactBox .contactForm {
+  .theme .contactBox .contactForm {
     padding: 140px 100px;
   }
 }
 
 @media (max-width: 1260px) {
-  section .theme .contactBox .contactForm {
+  .theme .contactBox .contactForm {
     padding: 140px 50px;
   }
 }
 
 @media (max-width: 800px) {
-  section .theme .contactBox .contactForm {
+  .theme .contactBox .contactForm {
     background: url(../img/contact/form_bg_mob.jpg) center center no-repeat;
     padding: 80px 50px;
   }
 }
 
 @media (max-width: 480px) {
-  section .theme .contactBox .contactForm {
+  .theme .contactBox .contactForm {
     padding: 50px 30px;
   }
 }
 
-section .theme .contactBox .contactForm.container {
+.theme .contactBox .contactForm.container {
   width: 90%;
   max-width: 1500px;
   margin: 60px auto 0;
   padding: 50px;
 }
 
-section .theme .contactBox .contactForm .formBox {
+.theme .contactBox .contactForm .formBox {
   overflow: hidden;
   padding-bottom: 30px;
 }
 
-section .theme .contactBox .contactForm .formBox input, section .theme .contactBox .contactForm .formBox button, section .theme .contactBox .contactForm .formBox textarea {
+.theme .contactBox .contactForm .formBox input, .theme .contactBox .contactForm .formBox button, .theme .contactBox .contactForm .formBox textarea {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1624,47 +1652,47 @@ section .theme .contactBox .contactForm .formBox input, section .theme .contactB
   position: relative;
 }
 
-section .theme .contactBox .contactForm .formBox .group {
+.theme .contactBox .contactForm .formBox .group {
   width: 48%;
   float: left;
   margin-right: 4%;
 }
 
 @media (max-width: 1200px) {
-  section .theme .contactBox .contactForm .formBox .group {
+  .theme .contactBox .contactForm .formBox .group {
     width: 100%;
     float: unset;
     margin: 0 auto;
   }
 }
 
-section .theme .contactBox .contactForm .formBox .group:nth-child(2) {
+.theme .contactBox .contactForm .formBox .group:nth-child(2) {
   margin-right: 0;
 }
 
 @media (max-width: 1200px) {
-  section .theme .contactBox .contactForm .formBox .group:nth-child(2) {
+  .theme .contactBox .contactForm .formBox .group:nth-child(2) {
     margin: 0 auto;
   }
 }
 
-section .theme .contactBox .contactForm .formBox .group .item {
+.theme .contactBox .contactForm .formBox .group .item {
   width: 100%;
   border-bottom: 1px solid #9c9c9c;
   margin-top: 20px;
   overflow: hidden;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item:first-child {
+.theme .contactBox .contactForm .formBox .group .item:first-child {
   margin-top: 0;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item.noline {
+.theme .contactBox .contactForm .formBox .group .item.noline {
   border-bottom: 0;
   margin-top: 30px;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item label {
+.theme .contactBox .contactForm .formBox .group .item label {
   width: 120px;
   float: left;
   height: 80px;
@@ -1674,35 +1702,35 @@ section .theme .contactBox .contactForm .formBox .group .item label {
 }
 
 @media (max-width: 800px) {
-  section .theme .contactBox .contactForm .formBox .group .item label {
+  .theme .contactBox .contactForm .formBox .group .item label {
     width: 90px;
   }
 }
 
 @media (max-width: 600px) {
-  section .theme .contactBox .contactForm .formBox .group .item label {
+  .theme .contactBox .contactForm .formBox .group .item label {
     font-size: 15px;
   }
 }
 
-section .theme .contactBox .contactForm .formBox .group .item label.checktxt {
+.theme .contactBox .contactForm .formBox .group .item label.checktxt {
   width: calc( 100% - 200px);
 }
 
 @media (max-width: 800px) {
-  section .theme .contactBox .contactForm .formBox .group .item label.checktxt {
+  .theme .contactBox .contactForm .formBox .group .item label.checktxt {
     width: calc( 100% - 34px);
     display: block;
   }
 }
 
 @media (max-width: 480px) {
-  section .theme .contactBox .contactForm .formBox .group .item label.checktxt {
+  .theme .contactBox .contactForm .formBox .group .item label.checktxt {
     font-size: 14px;
   }
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="text"] {
+.theme .contactBox .contactForm .formBox .group .item input[type="text"] {
   width: calc(100% - 120px);
   height: 80px;
   line-height: 80px;
@@ -1712,16 +1740,16 @@ section .theme .contactBox .contactForm .formBox .group .item input[type="text"]
 }
 
 @media (max-width: 800px) {
-  section .theme .contactBox .contactForm .formBox .group .item input[type="text"] {
+  .theme .contactBox .contactForm .formBox .group .item input[type="text"] {
     width: calc(100% - 90px);
   }
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="text"]:focus {
+.theme .contactBox .contactForm .formBox .group .item input[type="text"]:focus {
   outline: 0;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"] {
+.theme .contactBox .contactForm .formBox .group .item input[type="checkbox"] {
   width: 24px;
   height: 24px;
   float: left;
@@ -1730,16 +1758,16 @@ section .theme .contactBox .contactForm .formBox .group .item input[type="checkb
   margin-right: 10px;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:focus {
+.theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:focus {
   outline: 0;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked {
+.theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked {
   outline: 0;
   bottom: 0;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked:after {
+.theme .contactBox .contactForm .formBox .group .item input[type="checkbox"]:checked:after {
   width: 20px;
   height: 20px;
   content: "";
@@ -1750,7 +1778,7 @@ section .theme .contactBox .contactForm .formBox .group .item input[type="checkb
   left: 0;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item textarea {
+.theme .contactBox .contactForm .formBox .group .item textarea {
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -1759,11 +1787,11 @@ section .theme .contactBox .contactForm .formBox .group .item textarea {
   resize: none;
 }
 
-section .theme .contactBox .contactForm .formBox .group .item textarea:checked, section .theme .contactBox .contactForm .formBox .group .item textarea:focus {
+.theme .contactBox .contactForm .formBox .group .item textarea:checked, .theme .contactBox .contactForm .formBox .group .item textarea:focus {
   outline: 0;
 }
 
-section .theme .contactBox .contactForm .formBox button {
+.theme .contactBox .contactForm .formBox button {
   width: 160px;
   float: left;
   height: 50px;
@@ -1780,7 +1808,7 @@ section .theme .contactBox .contactForm .formBox button {
 }
 
 @media (max-width: 800px) {
-  section .theme .contactBox .contactForm .formBox button {
+  .theme .contactBox .contactForm .formBox button {
     font-size: 16px;
     float: unset;
     display: block;
@@ -1790,7 +1818,7 @@ section .theme .contactBox .contactForm .formBox button {
   }
 }
 
-section .theme .contactBox .contactForm .formBox button::after {
+.theme .contactBox .contactForm .formBox button::after {
   content: "";
   width: 0;
   height: 100%;
@@ -1803,7 +1831,7 @@ section .theme .contactBox .contactForm .formBox button::after {
   transition: all .3s;
 }
 
-section .theme .contactBox .contactForm .formBox button span {
+.theme .contactBox .contactForm .formBox button span {
   width: 20px;
   height: 2px;
   display: block;
@@ -1816,7 +1844,7 @@ section .theme .contactBox .contactForm .formBox button span {
   display: none;
 }
 
-section .theme .contactBox .contactForm .formBox button a {
+.theme .contactBox .contactForm .formBox button a {
   -webkit-transition: all .3s;
   transition: all .3s;
   text-transform: uppercase;
@@ -1825,15 +1853,15 @@ section .theme .contactBox .contactForm .formBox button a {
   z-index: 5;
 }
 
-section .theme .contactBox .contactForm .formBox button:hover {
+.theme .contactBox .contactForm .formBox button:hover {
   cursor: pointer;
 }
 
-section .theme .contactBox .contactForm .formBox button:hover::after {
+.theme .contactBox .contactForm .formBox button:hover::after {
   width: 100%;
 }
 
-section .theme .contactBox .contactForm .formBox button:hover span {
+.theme .contactBox .contactForm .formBox button:hover span {
   height: auto;
   background: transparent;
   color: #fff;
@@ -1865,11 +1893,11 @@ section .theme .contactBox .contactForm .formBox button:hover span {
   }
 }
 
-section .theme .contactBox .contactForm .formBox button:hover a {
+.theme .contactBox .contactForm .formBox button:hover a {
   color: #fff;
 }
 
-section .popup {
+.popup {
   width: 100%;
   min-height: 100%;
   position: fixed;
@@ -1883,7 +1911,7 @@ section .popup {
   transition: all .5s;
 }
 
-section .popup .popup_content {
+.popup .popup_content {
   text-align: center;
   background-color: #fff;
   color: #000000;
@@ -1895,21 +1923,21 @@ section .popup .popup_content {
   margin: auto;
 }
 
-section .popup .popup_content.popup_img {
+.popup .popup_content.popup_img {
   width: 600px;
   height: 600px;
   padding: 50px;
 }
 
 @media (max-width: 600px) {
-  section .popup .popup_content.popup_img {
+  .popup .popup_content.popup_img {
     width: 100vw;
     height: 100vw;
     padding: 10vw;
   }
 }
 
-section .popup .popup_content.popup_img .close {
+.popup .popup_content.popup_img .close {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -1918,18 +1946,18 @@ section .popup .popup_content.popup_img .close {
   text-align: center;
 }
 
-section .popup .popup_content.popup_img .close i {
+.popup .popup_content.popup_img .close i {
   font-size: 32px;
   line-height: 40px;
 }
 
-section .popup .popup_content.popup_message {
+.popup .popup_content.popup_message {
   width: 320px;
   height: 60px;
   line-height: 60px;
 }
 
-section .popup.is_acted {
+.popup.is_acted {
   opacity: 1;
   visibility: visible;
 }

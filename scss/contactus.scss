@@ -3,9 +3,10 @@
 @import '_footer';
 
 // *{ outline: 1px solid red;}
-section{
+// section{
     .theme{
         position: relative;
+        background: #fff;
         // &:after{
         //     content: "";
         //     width: 100%;
@@ -127,7 +128,7 @@ section{
             }
         }
         .contactBox{
-            margin-top: 100px;
+            padding-top: 100px;
             padding-bottom: 60px;
             .introduction{
                 font-size: 18px;
@@ -404,4 +405,4 @@ section{
                 visibility: visible;
             }
         }
-}
+// }
