@@ -222,7 +222,7 @@
         border: 0;
         position: absolute;
         z-index: 1;
-        right: 210px;
+        right: 220px;
         top: 30px;
         padding-right: 40px;
         padding: 0;
@@ -425,11 +425,26 @@
                 display: block;
             }
         }
-        .social{
-            display: none;
+        .social_black{
+            display: none !important;
+            width: 0 !important;
+            overflow: hidden !important;
         }
         .social_cover{
             display: block;
+        }
+        #logo{
+            display: none !important;
+            width: 0 !important;
+            overflow: hidden !important;
+        }
+        input.searchbar{
+            &.black{
+                color: #fff;
+                &.is_acted{
+                    border: 1px solid #fff;
+                }
+            }
         }
     }
 

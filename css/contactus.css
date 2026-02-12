@@ -618,7 +618,7 @@ input, button, textarea {
   border: 0;
   position: absolute;
   z-index: 1;
-  right: 210px;
+  right: 220px;
   top: 30px;
   padding-right: 40px;
   padding: 0;
@@ -881,12 +881,28 @@ input, button, textarea {
   display: block;
 }
 
-.header.open .social {
-  display: none;
+.header.open .social_black {
+  display: none !important;
+  width: 0 !important;
+  overflow: hidden !important;
 }
 
 .header.open .social_cover {
   display: block;
+}
+
+.header.open #logo {
+  display: none !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
+.header.open input.searchbar.black {
+  color: #fff;
+}
+
+.header.open input.searchbar.black.is_acted {
+  border: 1px solid #fff;
 }
 
 .header .menu-btn:checked ~ .cover_menu {

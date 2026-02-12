@@ -595,7 +595,7 @@
             }
         }
         .eventBox{
-            width: 120%;
+            width: 100%;
             // margin-left: -10%;
             margin-top: 100px;
             ul{
@@ -619,6 +619,7 @@
                 border: 0;
                 background: transparent;
                 margin-bottom: 30px;
+                margin: 0 auto;
             }
         }
     }

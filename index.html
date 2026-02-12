@@ -72,15 +72,18 @@
 						alt=""></a>
 			</li>
 			<li>
-				<a href="javascript:;" class="search_active white"><img class="white" src="img/nav_search.svg"
+				<a href="javascript:;" class="search_active white">
+					<img class="white" src="img/nav_search.svg"
 						alt=""></a>
 			</li>
-			<li><a href="https://lin.ee/9UtHShi" target="_blank"><img class="white" src="img/nav_line.svg" alt=""></a>
+			<li><a href="https://lin.ee/9UtHShi" target="_blank">
+				<img class="white" src="img/nav_line.svg" alt=""></a>
 			</li>
-			<li><a href="https://www.facebook.com/Neo.vision" target="_blank"><img class="white"
+			<li><a href="https://www.facebook.com/Neo.vision" target="_blank">
+				<img class="white"
 						src="img/nav_facebook.svg" alt=""></a></li>
 		</ul>
-		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar white" />
+		<input type="text" v-model="name" name="name" placeholder="" required class="searchbar black" />
 		<div class="cover_menu">
 			<ul class="menu">
 				<div class="box">
@@ -326,7 +329,7 @@
 									src="img/index/home_event01.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay=".3s"><a href="project_single.html" target="_blank"><img
 									src="img/index/home_event02.jpg" alt=""></a></li>
-						<li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img
+						<!-- <li class="wow fadeInUp" data-wow-delay=".6s"><a href="project_single.html" target="_blank"><img
 									src="img/index/home_event03.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img
 									src="img/index/home_event04.jpg" alt=""></a></li>
@@ -337,7 +340,7 @@
 						<li class="wow fadeInUp" data-wow-delay=".9s"><a href="project_single.html" target="_blank"><img
 									src="img/index/home_event04.jpg" alt=""></a></li>
 						<li class="wow fadeInUp" data-wow-delay="1.2s"><a href="project_single.html"
-								target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li>
+								target="_blank"><img src="img/index/home_event05.jpg" alt=""></a></li> -->
 					</ul>
 				</div>
 				<div class="eventBox mob">
@@ -1067,13 +1070,13 @@
 		maxSlides = 6;
 	}
 	$('.bxslider').bxSlider({
-		minSlides: 5,
+		minSlides: 4,
 		maxSlides: 8,
 		slideWidth: 480,
-		slideMargin: 30,
-		ticker: true,
-		tickerHover: true,
-		speed: 100000
+		slideMargin: 20,
+		// ticker: true,
+		// tickerHover: true,
+		// speed: 100000
 	});
 	$('.bxslider2').bxSlider({
 		minSlides: 3,

@@ -145,7 +145,7 @@
 }
 .project_social{
     width: 280px;
-    height: 60px;
+    height: 64px;
     position: fixed;
     z-index: 10;
     right: 10px;
@@ -173,14 +173,14 @@
             text-align: center;
             -webkit-transition: all .3s;
             transition: all .3s;
-            border-radius: 100px;
+            border-radius: 10px;
             padding-top: 10px;
             margin-left: 10px;
             &:hover{
                 cursor: pointer;
                 opacity: 1;
-                background-color: #fff;
-                text-shadow: 0 0 10px rgba(0,0,0,.5);
+                background-color:  rgba(4,0,0,0.3);
+                // text-shadow: 0 0 10px rgba(0,0,0,.5);
             }
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                 width: 25%;
@@ -189,12 +189,12 @@
                 padding-top: 0;
             }
             a{
-                font-size: 12px;
+                font-size: 13px;
                 line-height: 20px;
-                color: #ffffff;
+                color: rgba(4,0,0,0.7);
                 -webkit-transition: all .3s;
                 transition: all .3s;
-                text-shadow: 0 0 10px rgba(0,0,0,.5);
+                // text-shadow: 0 0 10px rgba(0,0,0,.5);
                 @media (orientation: portrait) and (max-width:960px), (max-width:800px){
                     width: 100%;
                     display: block;
@@ -202,25 +202,25 @@
                     padding: 0;
                     margin-top: 10px;
                     color: #000;
-                    text-shadow: none;              
+                    // text-shadow: none;              
                 }
                 i{
                     display: block;
-                    font-size: 16px;
+                    font-size: 24px;
                     vertical-align: middle;
                     margin-bottom: 5px;
-                    color: #ffffff;
+                    color: rgba(4,0,0,0.7);
                     -webkit-transition: all .3s;
                     transition: all .3s;
-                    text-shadow: 0 0 10px rgba(0,0,0,.5);
+                    // text-shadow: 0 0 10px rgba(0,0,0,.5);
                 }
             }
             &:hover a{
-                color: #000000;
-                text-shadow: none;
+                color: #fff;
+                // text-shadow: none;
                 i{
-                    color: #000000;
-                    text-shadow: none;
+                    color: #fff;
+                    // text-shadow: none;
                 }
             }
             @media (orientation: portrait) and (max-width:960px), (max-width:800px){
@@ -1192,6 +1192,41 @@ section{
                 }
             }
         }
+    }
+    .project_video{
+        // padding-top: 40px;
+        .title{
+            width: 100%;
+            max-width: 1300px;
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            @media (max-width:1460px){
+                max-width: 1200px;
+            }
+            @media (max-width:1200px){
+                width: 90%;
+                max-width: 900px;
+            }
+
+            .type{
+                color: #fff;
+            }
+        }
+        .video-container {
+            width: 100%;           /* 容器寬度，可依需求調整 (例如 800px) */
+            max-width: 1920px;     /* 最大寬度限制 */
+            aspect-ratio: 16 / 9;  /* 強制鎖定 1920x1080 的比例 */
+            overflow: hidden;      /* 確保內容不溢出 */
+            background: #000;      /* 載入前的底色 */
+          }
+        
+          .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;     /* 關鍵：確保影片填滿容器且不變形 */
+          }
     }
 }
 
