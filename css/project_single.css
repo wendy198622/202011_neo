@@ -3098,7 +3098,8 @@ section .project_video .video-container {
   /* 載入前的底色 */
 }
 
-section .project_video .video-container video {
+section .project_video .video-container video,
+section .project_video .video-container iframe {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

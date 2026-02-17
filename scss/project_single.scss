@@ -1193,41 +1193,7 @@ section{
             }
         }
     }
-    .project_video{
-        // padding-top: 40px;
-        .title{
-            width: 100%;
-            max-width: 1300px;
-            position: absolute;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            @media (max-width:1460px){
-                max-width: 1200px;
-            }
-            @media (max-width:1200px){
-                width: 90%;
-                max-width: 900px;
-            }
-
-            .type{
-                color: #fff;
-            }
-        }
-        .video-container {
-            width: 100%;           /* 容器寬度，可依需求調整 (例如 800px) */
-            max-width: 1920px;     /* 最大寬度限制 */
-            aspect-ratio: 16 / 9;  /* 強制鎖定 1920x1080 的比例 */
-            overflow: hidden;      /* 確保內容不溢出 */
-            background: #000;      /* 載入前的底色 */
-          }
-        
-          .video-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;     /* 關鍵：確保影片填滿容器且不變形 */
-          }
-    }
+      
 }
 
 #section1{
@@ -1421,3 +1387,41 @@ section{
         }
     }
 }
+
+/* 只針對影片那個 section：取消全域 section padding */
+#fullpage #section8.section{
+    padding: 0;
+  }
+  
+  /* 滿版影片區塊 */
+  .project_video{
+    width: 100%;
+    position: relative;
+    background: #000;
+  
+    /* 影片容器：直接吃 viewport 寬，置中拉回 */
+    .video-container{
+      width: 100vw;
+      max-width: none;        /* ✅ 不要再被 1920 限制（否則大螢幕會露邊） */
+      margin-left: 50%;
+      transform: translateX(-50%);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+      display: block;
+  
+      iframe{
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        border: 0;
+      }
+    }
+  
+    /* 如果標題要壓在影片上：維持你的 absolute 設定 */
+    .title{
+      pointer-events: none;
+      z-index: 2;
+    }
+  }
+  
